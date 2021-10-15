@@ -1,0 +1,237 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8E7E7;
+}
+
+/* SIDEINNHOLDSCONTAINERE */
+
+#indexContainer{
+    height: 2000px;      /* Definerer høyden på forsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+}
+
+#programContainer{
+    height: 2000px;      /* Definerer høyden på programsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+}
+
+#billettkjopContainer{
+    height: 2000px;      /* Definerer høyden på billettkjøpsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+}
+
+#omFestivalenContainer{
+    height: 2000px;      /* Definerer høyden på om festivalen-siden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+}
+
+#kontaktinfoContainer{
+    height: 2000px;      /* Definerer høyden på kontaktinfosiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+}
+
+/* NAVBAR */
+
+#navbar{
+    width: 100%;
+    height: 180px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+#navbarLogo{
+    width: 180px;
+    height: 180px;
+    position: absolute; 
+    transition: 0.2s;
+}
+
+#navbarElements{
+    background-color: white;
+    height: 90px;
+    width: 100%;
+    top: 0px;
+}
+
+#navbarElements ul{
+    list-style-type: none;
+    float: right;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+#navbarElements li{
+    display: inline;
+}
+
+.otherPage{
+    padding: 18px;
+    color: black;
+    text-decoration: none;
+    font-size: 13pt;
+}
+
+#currentPage {
+    color: #6D7B48;
+    border-bottom: solid #6D7B48 2px;
+    text-decoration: none;
+    font-size: 13pt;
+    padding: 18px;
+}
+
+#navbarElements a:hover{
+    color: #B7C68B;
+    border-bottom: solid #B7C68B 2px;
+}
+
+/* @media only screen and (max-width: 900px) {
+    #navbarLogo {
+        height: 90px;
+        width: 90px;
+    }
+} 
+
+KOMMENTAR FRA JARL: Må prøve å finnen en funksjon for å resize bildet når skjermen har  en viss bredde som ikke krasjer med scrollfunksjonen.
+
+*/
+
+@media only screen and (max-width: 900px) {
+    #navbarElements a{
+        padding: 10px;
+        font-size: 8pt;
+    }
+}
+
+/* FOOTER */
+
+#footer{
+    width: 101.5%;
+    height: 170px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #6D7B48;
+}
+
+#soMeButtons{
+    width: 250px;
+    padding-left: 25px;
+    padding-top: 55px;
+    float: left;
+}
+
+#soMeButtons img{
+    width: 60px;
+    padding-right: 20px;
+}
+
+#mainSponsorButtons{
+    width: 300px;
+    padding-top: 35px;
+    float: right;
+    padding-right: 25px;
+}
+
+#mainSponsorButtons img{
+    width: 80px;
+    padding-left: 20px;
+    float: right;
+}
+
+#toTopOfPageDefault {
+    position: absolute;
+    width: 100px;
+    left: 45%;
+    right: 45%;
+    bottom: 35px;  
+}
+
+#toTopOfPageDefault img {
+    width: 100px;
+}
+
+#toTopOfPageHover {
+    position: absolute;
+    width: 100px;
+    left: 45%;
+    right: 45%;
+    bottom: 35px;
+    color: #B7C68B;
+}
+
+#toTopOfPageHover img {
+    width: 100px;
+}
+
+#toTopOfPageDefault:hover img{
+    visibility: hidden;
+}
+
+#copyright {
+    color: white;
+    position: absolute;
+    width: 100px;
+    left: 45%;
+    right: 45%;
+    font-size: 8pt;
+    bottom: 2px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 900px) {
+
+    #mainSponsorButtons{
+        width: 250px;
+        padding-top: 55px;
+    }
+
+    #mainSponsorButtons img {
+        width: 50px;
+        padding-left: 15px;
+    }
+
+    #toTopOfPageDefault img {
+        width: 70px;
+    }
+
+    #toTopOfPageHover img {
+        width: 70px;
+    }
+
+    #copyright {
+        width: 70px;
+    }
+
+    #soMeButtons img{
+        width: 40px;
+        padding-right: 15px;
+    }
+
+    #soMeButtons{
+        width: 200px;
+        padding-top: 65px;
+        float: left;
+    }
+}
