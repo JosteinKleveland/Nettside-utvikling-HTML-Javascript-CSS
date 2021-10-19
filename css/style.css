@@ -63,7 +63,7 @@ body{
 #navbarLogo{
     width: 180px;
     height: 180px;
-    position: absolute; 
+    position: absolute;
     transition: 0.2s;
 }
 
@@ -110,9 +110,9 @@ body{
         height: 90px;
         width: 90px;
     }
-} 
+}
 
-KOMMENTAR FRA JARL: Må prøve å finnen en funksjon for å resize bildet når skjermen har  en viss bredde som ikke krasjer med scrollfunksjonen.
+KOMMENTAR FRA JARL: Må prøve å finnen en funksjon for å resize bildet når skjermen har en viss bredde som ikke krasjer med scrollfunksjonen.
 
 */
 
@@ -165,7 +165,7 @@ KOMMENTAR FRA JARL: Må prøve å finnen en funksjon for å resize bildet når s
     width: 100px;
     left: 45%;
     right: 45%;
-    bottom: 35px;  
+    bottom: 35px;
 }
 
 #toTopOfPageDefault img {
@@ -235,3 +235,5 @@ KOMMENTAR FRA JARL: Må prøve å finnen en funksjon for å resize bildet når s
         float: left;
     }
 }
+
+/* Dette er en testkommentar fra Jostein */
