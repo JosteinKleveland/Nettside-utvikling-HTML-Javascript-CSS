@@ -1,6 +1,9 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #E8E7E7;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
 }
 
 /* SIDEINNHOLDSCONTAINERE */
@@ -9,45 +12,30 @@ body{
     height: 2000px;      /* Definerer høyden på forsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
     width: 100%;
     position: relative;
-    bottom: -10px;
-    left: -10px;
-    right: -10px;
 }
 
 #programContainer{
     height: 2000px;      /* Definerer høyden på programsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
     width: 100%;
     position: relative;
-    bottom: -10px;
-    left: -10px;
-    right: -10px;
 }
 
 #billettkjopContainer{
     height: 2000px;      /* Definerer høyden på billettkjøpsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
     width: 100%;
     position: relative;
-    bottom: -10px;
-    left: -10px;
-    right: -10px;
 }
 
 #omFestivalenContainer{
     height: 2000px;      /* Definerer høyden på om festivalen-siden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
     width: 100%;
     position: relative;
-    bottom: -10px;
-    left: -10px;
-    right: -10px;
 }
 
 #kontaktinfoContainer{
     height: 2000px;      /* Definerer høyden på kontaktinfosiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
     width: 100%;
     position: relative;
-    bottom: -10px;
-    left: -10px;
-    right: -10px;
 }
 
 /* NAVBAR */
@@ -126,12 +114,10 @@ KOMMENTAR FRA JARL: Må prøve å finnen en funksjon for å resize bildet når s
 /* FOOTER */
 
 #footer{
-    width: 101.5%;
+    width: 100%;
     height: 170px;
     position: absolute;
     bottom: 0px;
-    left: 0px;
-    right: 0px;
     background-color: #6D7B48;
 }
 
@@ -235,10 +221,3 @@ KOMMENTAR FRA JARL: Må prøve å finnen en funksjon for å resize bildet når s
         float: left;
     }
 }
-
-/* Dette er en testkommentar fra Jostein */
-
-/*Dette er en kommentar  fra Jarl. */
-
-/*Dette er på linje 243 */
-/*Dette er en ny kommentar fra Jarl */
