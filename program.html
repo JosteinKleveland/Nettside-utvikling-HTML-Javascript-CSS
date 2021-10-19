@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marka 2022 - Program</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--KJØRER EN MIDLERTIDIG CSS-STYLING HER-->
+    <style>
+        h1 {
+            margin-top: 150px;
+            text-align: center;
+            font-size: 60px;
+        }
+        p {
+            font-size: 20px;
+        }
+        #flexContainer_Buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .buttons {
+            font-size: 25px;
+            margin: 0 10px 80px 10px;
+            height: 75px;
+            width: 245px;
+           
+        }
+        #flexContainer_Artists {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        .artists, .artistInfo {
+            width: 37%;
+            height: 23%;
+            margin: 0 40px 80px 40px;
+        }
+        .artistInfo {
+            text-align: center;
+            font-size: 50px;
+            word-break: break-all;
+            
+        }
+        
+    </style>
+
+</head>
+<body>
+<div id="programContainer">
+    <div id="navbar">
+        <a href="index.html"><img id="navbarLogo" src="img/logo_placeholder.png" alt="Logo"> </a>
+        <div id="navbarElements">
+            <ul>
+                <li><a class="otherPage" href="index.html">Forside</a></li>
+                <li><a id="currentPage" href="program.html">Program</a></li>
+                <li><a class="otherPage" href="billettkjop.html">Billettkjøp</a></li>
+                <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
+                <li><a class="otherPage" href="kontaktinfo.html">Kontaktinfo</a></li>
+            </ul>
+        </div>
+    </div>
+    <!---------------------------BEGYNN Å KODE HER------------------------------------------------->
+    <div id="programBody"> <!--class="flexContainer"-->
+        <h1>Program</h1>
+        <div id="flexContainer_Buttons">
+            <button class="buttons">Fredag</button>
+            <button class="buttons">Lørdag</button>
+            <button class="buttons">Søndag</button>
+        </div>
+
+        <div id="flexContainer_Artists">
+            <img class = "artists" src="img/bilde_placeholder.jpg" alt="bilde_placeholder">
+
+            <div class = "artistInfo">
+                <h6>Artistnavn</h6>
+                <p>Klokkeslett: 00:00</p>
+                <p>Sted: Scene Amfiet</p>
+                <button class="buttons">Les mer</button>
+            </div>
+            <img class = "artists" src="img/bilde_placeholder.jpg" alt="bilde_placeholder">
+            <img class = "artists" src="img/bilde_placeholder.jpg" alt="bilde_placeholder">
+            <img class = "artists" src="img/bilde_placeholder.jpg" alt="bilde_placeholder">
+            <img class = "artists" src="img/bilde_placeholder.jpg" alt="bilde_placeholder">
+            
+
+
+        </div>
+
+    </div>
+
+
+
+    <!---------------------------SLUTT Å KODE HER------------------------------------------------->
+    <div id="footer">
+        <div id="soMeButtons">
+            <img src="img/logo_placeholder.png" alt="Facebook">
+            <img src="img/logo_placeholder.png" alt="Instagram">
+            <img src="img/logo_placeholder.png" alt="TikTok">
+        </div>
+        <div id="mainSponsorButtons">
+            <img src="img/logo_placeholder.png" alt="Hovedsponsor 1">
+            <img src="img/logo_placeholder.png" alt="Hovedsponsor 2">
+            <img src="img/logo_placeholder.png" alt="Hovedsponsor 3">
+        </div>
+        
+        <div onclick="toTop()" id="toTopOfPageHover">
+            <img src="img/tilToppsHover_placeholder.png" alt="Til toppen av siden">
+        </div>
+        <div onclick="toTop()" id="toTopOfPageDefault">
+            <img src="img/tilToppsDefault_placeholder.png" alt="Til toppen av siden">
+        </div>
+        <p id="copyright"> © Marka 2020 </p>
+    </div>
+        
+</div>
+<script type="text/javascript" src="javaScript/modulation.js"></script>
+<script type="text/javascript" src="javaScript/expansion.js"></script>
+</body>
+</html>
