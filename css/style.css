@@ -49,10 +49,7 @@ body{
 }
 
 #navbarLogo{
-    width: 180px;
-    height: 180px;
     position: absolute;
-    transition: 0.2s;
 }
 
 #navbarElements{
