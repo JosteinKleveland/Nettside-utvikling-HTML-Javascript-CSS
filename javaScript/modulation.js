@@ -1,5 +1,5 @@
 
-/* Funksjon som lager logoen i navbaren. Sørger for at transitions ikke ødelegger loadingen. */
+/* Funksjon som lager logoen i navbaren. Sørger for at transitions ikke ødelegger lastingen. */
 
 window.onload = function() {onLoadLogo()};
 
@@ -16,7 +16,7 @@ function onLoadLogo() {
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         document.getElementById("navbarLogo").style.height = "90px";
         document.getElementById("navbarLogo").style.width = "90px";
-        document.getElementById("navbarLogo").style.transition = "0.6s"
+        document.getElementById("navbarLogo").style.transition = "0.6s";
     }
     else {
         if (window.innerWidth > 900) {
@@ -27,7 +27,7 @@ function onLoadLogo() {
         else {
             document.getElementById("navbarLogo").style.height = "90px";
             document.getElementById("navbarLogo").style.width = "90px";
-            document.getElementById("navbarLogo").style.transition = "0.6s"
+            document.getElementById("navbarLogo").style.transition = "0.6s";
         }
     }
 }
@@ -52,7 +52,7 @@ function logoScroll() {
         if (window.innerWidth > 900) {
             document.getElementById("navbarLogo").style.width = "180px";
             document.getElementById("navbarLogo").style.height = "180px";
-            document.getElementById("navbarLogo").style.transition = "0.6s"
+            document.getElementById("navbarLogo").style.transition = "0.6s";
         }
         else {
             document.getElementById("navbarLogo").style.height = "90px";
@@ -68,7 +68,7 @@ function logoResize() {
     if (window.innerWidth < 900) {
         document.getElementById("navbarLogo").style.height = "90px";
         document.getElementById("navbarLogo").style.width = "90px";
-        document.getElementById("navbarLogo").style.transition = "0.6s"
+        document.getElementById("navbarLogo").style.transition = "0.6s";
     }
     else {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
