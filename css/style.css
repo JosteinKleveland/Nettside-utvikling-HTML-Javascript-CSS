@@ -115,7 +115,7 @@ body{
 }
 
 #soMeButtons img{
-    width: 60px;
+    height: 60px;
     padding-right: 20px;
 }
 
@@ -134,27 +134,27 @@ body{
 
 #toTopOfPageDefault {
     position: absolute;
-    width: 100px;
+    width: 80px;
     left: 45%;
     right: 45%;
-    bottom: 35px;
+    bottom: 45px;
 }
 
 #toTopOfPageDefault img {
-    width: 100px;
+    width: 80px;
 }
 
 #toTopOfPageHover {
     position: absolute;
-    width: 100px;
+    width: 80px;
     left: 45%;
     right: 45%;
-    bottom: 35px;
+    bottom: 45px;
     color: #B7C68B;
 }
 
 #toTopOfPageHover img {
-    width: 100px;
+    width: 80px;
 }
 
 #toTopOfPageDefault:hover img{
@@ -164,11 +164,11 @@ body{
 #copyright {
     color: white;
     position: absolute;
-    width: 100px;
+    width: 80px;
     left: 45%;
     right: 45%;
     font-size: 8pt;
-    bottom: 2px;
+    bottom: 10px;
     text-align: center;
 }
 
@@ -185,19 +185,21 @@ body{
     }
 
     #toTopOfPageDefault img {
-        width: 70px;
+        width: 60px;
     }
 
     #toTopOfPageHover img {
-        width: 70px;
+        width: 60px;
     }
 
     #copyright {
-        width: 70px;
+        width: 60px;
+        font-size: 7px;
+        bottom: 15px;
     }
 
     #soMeButtons img{
-        width: 40px;
+        height: 40px;
         padding-right: 15px;
     }
 
