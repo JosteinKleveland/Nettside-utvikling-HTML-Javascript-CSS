@@ -22,6 +22,82 @@
         </div>
     </div>
 
+
+    <h1 id="headLiner">Billettkjøp</h1>
+        <div id="formDiv">
+            <form action="#" method="post" name="form" id="formId">
+                <div class="collectionDiv">
+                    <div id="firstColumn1">
+                        <label for="type">Billettype: </label>
+                        <select class="input1" id="type" name="type">
+                            <option value="Helgepass">Helgepass</option>
+                            <option value="Fredagspass">Fredagspass</option>
+                            <option value="Lørdagspass">Lørdagspass</option>
+                        </select>
+                    </div>
+                    <div id="secondColumn1">
+                        <label for="quantity">Antall: </label>
+                        <select class="input1" id="quantity" name="quantity">
+                        </select>
+                    </div>
+                </div>
+                <div class="collectionDiv">
+                    <div id="firstColumn2">
+                        <label for="firstName">Fornavn: </label>
+                        <input class="input1" required id="firstName" type="text" name="firstName" pattern="[a-zA-zæøåÆØÅ'-'\s]*" title="Kun bokstaver">
+                    </div>
+                    <div id="secondColumn2">
+                        <label for="surName">Etternavn: </label>
+                        <input class="input1" required id="surName" type="text" name="name" pattern="[a-zA-zæøåÆØÅ'-'\s]*" title="Kun bokstaver"> 
+                    </div>
+                </div>
+                <div class="mainColumn">
+                    <label for="tlf">Telefon: </label>
+                    <input class="input2" required id="tlf" type="tel" name="tlf" pattern="[0-9]{3} - [0-9]{2} - [0-9]{3}" title="123 - 45 - 678">
+                </div>
+                <div class="mainColumn">
+                    <label for="eMail">E-mail: </label>
+                    <input class="input2" required id="eMail" type="email" name="eMail">
+                </div>
+                <div class="mainColumn">
+                    <label for="address">Adresse: </label>
+                    <input class="input2" required id="address" type="text" name="address"> 
+                </div>
+                <div class="mainColumn">
+                    <label for="postNr">Postnr.: </label>
+                    <input class="input2" required id="postNr" type="tel" name="postNr" pattern="[0-9]{4}" title="1234">
+                </div>
+                <div class="mainColumn">
+                    <label for="cardNr">Kortnr.: </label>
+                    <input class="input2" required id="cardNr" type="tel" name="cardNr" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" title="1234-5678-1234-5678">
+                </div>
+                <div class="collectionDiv">
+                    <div id="firstColumn3">
+                        <label for="cvc">CVC: </label>
+                        <input class="input1" required id="cvc" type="tel" name="tax" pattern="[0-9]{3}" title="123">
+                    </div>
+                    <div id="secondColumn3">
+                        <label for="expiryDate">Dato: </label>
+                        <input required id="expiryDate" type="month" name="expiryDate">
+                    </div>
+                </div>
+                <br>
+                <input type="checkbox" id="conditions" name="conditions">
+                <label id="conditionsLabel" for="conditions">Jeg aksepterer Markas <a href="billettkjop.html">salgsbetingelser</a></label>
+                <br>
+                <input type="checkbox" id="updates" name="updates">
+                <label id="updatesLabel" for="updates">Jeg ønsker jevnlige oppdateringer om festivalen</label>
+                <br>
+                <button type="submit" id="submit">Kjøp billett</button>
+            </form>
+        </div>
+        <div id="imgDiv">
+            <img id="ticketImg" src="billettKjopBilde.png" alt="Bildet kunne ikke vises">
+        </div>
+         
+        <script src="validation.js"></script>
+
+
     <div id="footer">
         <div id="soMeButtons">
             <a href="https://www.facebook.com" target="_blank"><img src="img/facebookLogoIcon.svg" alt="Facebook"></a>
