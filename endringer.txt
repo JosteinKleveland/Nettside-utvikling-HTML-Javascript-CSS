@@ -3,3 +3,6 @@ Her legger du inn eventuelle avvik i koden fra designplanen med begrunnelse:
 -Jarl: Droppa skyggen på aktiv side i navbar, passet ikke bra overens med resten av elementene i navbaren.
 
 -Alle: En del av fontstørrelsene må endres.
+
+-Simen: Gjorde font-størrelsen i billettkjop til 20px
+	Fjerna [Student/ honnør ...] ikke så relevant som vi trodde
