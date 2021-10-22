@@ -214,12 +214,12 @@ body{
 
 /* BILLETTKJØP: */
 
-#headLiner123  {
-    font-size: 50px;
+#billettkjopHeading  {
+    font-size: 60px;
     position: relative;
     text-align: center;
-    margin-top: 130px;
-    margin-bottom: 50px;
+    margin-top: 150px;
+    /* margin-bottom: 50px; */
 }
 
 #imgDiv {
@@ -259,7 +259,7 @@ body{
 #formDiv    {
     position: relative;
     margin-left: 10%;
-    margin-top: 50px;
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
     width: 40%;
