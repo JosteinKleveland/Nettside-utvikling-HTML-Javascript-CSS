@@ -21,9 +21,10 @@ body{
 }
 
 #billettkjopContainer{
-    height: 2000px;      /* Definerer høyden på billettkjøpsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
+    height: 1000px;      /* Definerer høyden på billettkjøpsiden. Sørger for at footer alltid er på bunn. Endre på denne om du trenger mer/mindre plass. */
     width: 100%;
     position: relative;
+    font-size: 20px;
 }
 
 #omFestivalenContainer{
@@ -209,3 +210,277 @@ body{
         float: left;
     }
 }
+
+
+/* BILLETTKJØP: */
+
+#headLiner123  {
+    font-size: 50px;
+    position: relative;
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
+
+#imgDiv {
+    position: absolute;
+    width: 35%;
+    right: 10%;
+    top: 210px;
+}
+
+#ticketImg  {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#conditionsLabel, #updatesLabel {
+    font-size: 15px;
+}
+
+#submit {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 359px;
+    height: 35px;
+    background-color: #6D7B48;
+    font-size: 20px;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+#submit:hover   {
+    background-color: #B7C68B;
+    transform: scale(1.03);
+}
+
+#formDiv    {
+    position: relative;
+    margin-left: 10%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    /* border: 2px solid black; */
+}
+
+.collectionDiv  {
+    position: relative;
+    display: flex;
+}
+
+#firstColumn1, #firstColumn2, #firstColumn3    {
+    position: relative;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+#secondColumn1  {
+    position: relative;
+    margin: 5px;
+    left: 21px;
+}
+
+#secondColumn2   {
+    position: relative;
+    margin: 5px;
+    left: 19px;
+}
+
+#secondColumn3  {
+    position: relative;
+    margin: 5px;
+    left: 17px;
+}
+
+.mainColumn {
+    position: relative;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+.input1 {
+    width: 150px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.input2 {
+    width: 250px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-right: 10px;
+}
+
+#type   {
+    width: 166px;
+}
+
+#quantity   {
+    width: 166px;
+}
+
+#firstName  {
+    position: relative;
+    left: 0;
+}
+
+#surName    {
+    position: relative;
+    left: 0px;
+}
+
+#tlf    {
+    position: relative;
+    left: 19px;
+}
+
+#eMail  {
+    position: relative;
+    left: 27px;
+}
+
+#address    {
+    position: relative;
+    left: 10px;
+}
+
+#postNr {
+    position: relative;
+    left: 21px;
+}
+
+#cardNr {
+    position: relative;
+    left: 24px;
+}
+
+#cvc    {
+    position: relative;
+    left: 0;
+}
+
+#expiryDate {
+    position: relative;
+    left: 0;
+    width: 154px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+@media screen and (min-width: 955px)    {
+    .collectionDiv  {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 704px)    {
+    .collectionDiv  {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #formDiv    {
+        width: 40%;
+        margin-left: 20%;
+    }
+
+    #imgDiv {
+        display: none;
+    }
+
+    #submit {
+        width: 216px;
+    }
+
+    .input1, .input2 {
+        width: 200px;
+    }
+
+    #type, #quantity   {
+        margin-right: 35px;
+    }
+
+    #secondColumn1, #secondColumn2, #secondColumn3  {
+        margin: 0 15px 0 0;
+        left: 10px;
+    }
+
+    #firstName, #surName, #tlf, #eMail, #address, #postNr, #cardNr, #cvc  {
+        left: 0;
+    }
+
+    #expiryDate {
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 705px) and (max-width: 955px)    {
+    .collectionDiv  {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #imgDiv {
+        top: 260px;
+    }
+
+    #submit {
+        width: 261px;
+    }
+
+    .input2 {
+        width: 150px;
+    }
+
+    #firstColumn3   {
+        margin: 0 0 5px 5px;
+        left: 5px;
+    }
+
+    #secondColumn1   {
+        margin: 0;
+        left: 10px;
+    }
+
+    #secondColumn2   {
+        margin: 0;
+        left: 10px;
+    }
+
+    #secondColumn3  {
+        margin: 0 0 5px;
+        left: 10px;
+    }
+
+    #type   {
+        position: relative;
+        left: 2px;
+    }
+
+    #quantity   {
+        position: relative;
+        left: 33px;
+    }
+
+    #firstName  {
+        left: 10px;
+    }
+
+    #surName    {
+        left: -2px;
+    }
+
+    #cvc    {
+        left: 41px;
+    }
+
+    #expiryDate {
+        left: 41px;
+    }
+}
+
