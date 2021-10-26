@@ -6,3 +6,5 @@ Her legger du inn eventuelle avvik i koden fra designplanen med begrunnelse:
 
 -Simen: Gjorde font-størrelsen i billettkjop til 20px
 	Fjerna [Student/ honnør ...] ikke så relevant som vi trodde
+
+-Jarl: På kontaktinfosiden - Har foreløpig 2 "kontaktpersonbokser" i bredden i stedet for 1, og satt bredden på boksene til å være statisk (likevel responsiv pga flexbox). 80% bredde for hver slik boks blir etter min mening altfor dominerende mtp at dette er kontaktinfo.
