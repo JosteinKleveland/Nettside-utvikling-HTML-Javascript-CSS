@@ -215,8 +215,12 @@ body{
 .programButtons:hover {
     background-color: #B7C68B;
 }
+.consertDay {
+    font-size: 40px;
+    text-align: center;
+}
 
-#flexContainer_Artists {
+.flexContainerProgram {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -243,50 +247,63 @@ body{
 }
 .artistInfo {
     flex-direction: column;
+    overflow: auto;
 }
 .artistInfo p {
     margin: 1px;
     font-size: 20px;
 }
 
-/* CSS for popup */
+/* CSS for popup/modal (expansions - JavaScript) */
 
-.popupContainer {
-    background-color: rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.modal {
     position: fixed;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
     top: 0;
     left: 0;
-    width: 100vh;
-    height: 100vh;
-} 
-
-.popupContainer.show {
-    pointer-events: auto;
-    opacity: 1;
-}
-
-.flexContainer_Artists.hide {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1000;
+    overflow: auto;
     display: none;
+    justify-content: center;
+    align-items: flex-start;
 }
-
-.popup {
+.modal-content {
+    position: relative;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2s);
-    border-radius: 5px;
-    padding: 30px 50px;
     width: 50%;
-    max-width: 100%;
+    max-height: 75%;
+    margin: 5rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: auto;
+}
+.modal-content h1 {
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-.popup h1 {
-    margin: 0;
+.modal-content p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.modal-close { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0 0.75rem;
+    color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    user-select: none;
+}
+
+.modal-close:hover, .modal-close:focus {
+    color: rgba(0,0,0,0.5);
 }
 
 
@@ -294,7 +311,7 @@ body{
     #programHeading {
         font-size: 40px;
     }
-    
+
     .programButtons {
         font-size: 20px;
         height: 55px;
@@ -308,6 +325,15 @@ body{
 @media screen and (max-width: 600px) {
     .artists, #flexContainerButtons {
         display: none;
+    }
+    .flexContainerProgram {
+        flex-direction: column;
+    }
+    .consertDay {
+        font-size: 30px;
+    }
+    .artistInfo {
+        margin: 0;
     }
 }
 

@@ -23,59 +23,143 @@
     </div>
 </div>
 
-<!---------------------------BEGYNN Å KODE HER------------------------------------------------->
-<div id="programBody"> <!--class="flexContainer"-->
+<div id="programBody"> 
     <h1 id="programHeading">Program</h1>
     <div id="flexContainerButtons">
-        <button class="programButtons">Fredag</button>
-        <button class="programButtons">Lørdag</button>
-        <button class="programButtons">Søndag</button>
+        <button class="programButtons" id="friday">Fredag</button>
+        <button class="programButtons" id="saturday">Lørdag</button>
+        <button class="programButtons" id="sunday">Søndag</button>
     </div>
 
-    <div id="flexContainer_Artists">
+    <h1 class="consertDay" id="fridayHeader">Fredag</h1>
+    <div class="flexContainerProgram">
         
         <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
         <div class = "artistInfo">
-            <h2>KYGO</h2>
-            <p>Klokkeslett: 00:00</p>
-            <p> Sted: Scene Amfiet</p>
-            <button class="programButtons open">Les mer</button>
-            <div class="popupContainer">
-                <div class="popup">
-                    <h1>ARTIST</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Iusto, illum! Adipisci quis dolorem quisquam libero officia 
-                        molestias consequuntur quasi sapiente, eos tenetur provident 
-                        eius similique vero obcaecati cupiditate illum tempore!
-                    </p>
-                    <button class="programButtons close">Lukk</button>
+            <h2>Postgirobygget</h2>
+            <p>Fredag - kl.20.00</p>
+            <p>Sted: Scene Amfiet</p>
+            <button class="programButtons" data-modal-target="modal1">Les mer</button>
+            <div class="modal" id="modal1">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h1>Postgirobygget</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
                 </div>
             </div>
         </div>
-        <div class = "artistInfo">
-            <h2>Astrid S</h2>
-            <p>Klokkeslett: 00:00</p>
-            <p>Sted: Scene Amfiet</p>
-            <button class="programButtons">Les mer</button>
-        </div> 
-        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
-        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+
         <div class = "artistInfo">
             <h2>DDE</h2>
-            <p>Klokkeslett: 00:00</p>
+            <p>Fredag - kl.21.00</p>
             <p>Sted: Scene Amfiet</p>
-            <button class="programButtons">Les mer</button>
-        </div> 
-        
-        
+            <button class="programButtons" data-modal-target="modal2">Les mer</button>
+            <div class="modal" id="modal2">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h1>DDE</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                </div>
+            </div>
+        </div>
 
+        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+        <div class = "artistInfo">
+            <h2>Rotlaus</h2>
+            <p>Fredag - kl.22.00</p>
+            <p>Sted: Scene Amfiet</p>
+            <button class="programButtons" data-modal-target="modal3">Les mer</button>
+            <div class="modal" id="modal3">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h1>Rotlaus</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <h1 class="consertDay" id="saturdayHeader">Lørdag</h1>
+
+    <div class="flexContainerProgram">
+        <div class = "artistInfo">
+            <h2>Henning Kvitnes</h2>
+            <p>Lørdag - kl.21.00</p>
+            <p>Sted: Scene Amfiet</p>
+            <button class="programButtons" data-modal-target="modal4">Les mer</button>
+            <div class="modal" id="modal4">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h1>Henning Kvitnes</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                </div>
+            </div>
+        </div> 
+        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+        <div class = "artistInfo">
+            <h2>Staut</h2>
+            <p>Lørdag - kl.22.00</p>
+            <p>Sted: Scene Amfiet</p>
+            <button class="programButtons" data-modal-target="modal5">Les mer</button>
+            <div class="modal" id="modal5">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h1>Staut</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                </div>
+            </div>
+        </div> 
+        <div class = "artistInfo">
+            <h2>DumDumBoys</h2>
+            <p>Lørdag - kl.23.00</p>
+            <p>Sted: Scene Amfiet</p>
+            <button class="programButtons" data-modal-target="modal6">Les mer</button>
+            <div class="modal" id="modal6">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h1>DumDumBoys</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                </div>
+            </div>
+        </div> 
+        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+    </div>
+
+    <h1 class="consertDay" id="sundayHeader">Søndag</h1>
+    <div class="flexContainerProgram">
+        <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+        <div class = "artistInfo">
+            <h2>Odd Norstoga</h2>
+            <p>Søndag - kl.13.00</p>
+            <p>Sted: Scene Amfiet</p>
+            <button class="programButtons" data-modal-target="modal7">Les mer</button>
+            <div class="modal" id="modal7">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h1>Odd Norstoga</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                </div>
+            </div>
+        </div> 
+    </div>
 </div>
 
-
-
-<!---------------------------SLUTT Å KODE HER------------------------------------------------->
 <div id="footer">
     <div id="soMeButtons">
         <a href="https://www.facebook.com" target="_blank"><img src="img/facebookLogoIcon.svg" alt="Facebook"></a>
@@ -97,7 +181,7 @@
     <p id="copyright"> © Marka 2021 </p>
 </div>
 
-<script type="text/javascript" src="javaScript/modulation.js"></script>
-<script type="text/javascript" src="javaScript/expansion.js"></script>
+    <script type="text/javascript" src="javaScript/modulation.js"></script>
+    <script type="text/javascript" src="javaScript/expansion.js"></script>
 </body>
 </html>

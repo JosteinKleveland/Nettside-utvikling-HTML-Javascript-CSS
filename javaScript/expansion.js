@@ -1,15 +1,54 @@
-const open = document.getElementsByClassName("open");
-const close = document.getElementsByClassName("close");
-const popupContainer = document.getElementsByClassName("popupContainer");
+const modalTriggerButtons = document.querySelectorAll("[data-modal-target]");
+const modals = document.querySelectorAll(".modal");
+const modalCloseButtons = document.querySelectorAll(".modal-close");
 
-const flexContainer = document.getElementsByID("flexContainer_Artists");
+modalTriggerButtons.forEach(elem => {
+    elem.addEventListener("click", event => toggleModal(event.currentTarget.getAttribute("data-modal-target")));
+})
 
-open.addEventListener("click", () => {
-    popupContainer.classList.add("show");
-    flexContainer.classList.add("hide");
-});
+modalCloseButtons.forEach(elem => {
+    elem.addEventListener("click", event => toggleModal(event.currentTarget.closest(".modal").id));
+})
 
-close.addEventListener("click", () => {
-    popupContainer.classList.remove("show");
-    flexContainer.classList.remove("hide");
-});
+modals.forEach(elem => {
+    elem.addEventListener("click", event => {
+        if(event.currentTarget===event.target) toggleModal(event.currentTarget.id);
+    });
+})
+
+function toggleModal(modalId) {
+
+    const modal = document.getElementById(modalId);
+
+    if(getComputedStyle(modal).display==="flex") {
+        modal.style.display = "none";
+        document.body.style.overflow = "initial";
+    }
+    else {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+}
+
+
+const fridayButton = document.getElementById("friday");
+const saturdayButton = document.getElementById("saturday");
+const sundayButton = document.getElementById("sunday");
+
+const fridayHeader = document.getElementById("fridayHeader");
+const saturdayHeader = document.getElementById("saturdayHeader");
+const sundayHeader = document.getElementById("sundayHeader");
+
+
+fridayButton.addEventListener("click", () => {
+    fridayHeader.scrollIntoView();
+})
+saturdayButton.addEventListener("click", () => {
+    saturdayHeader.scrollIntoView();
+})
+
+sundayButton.addEventListener("click", () => {
+    sundayHeader.scrollIntoView();
+})
+
+
