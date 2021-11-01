@@ -451,6 +451,10 @@ body{
     width: 166px;
 }
 
+/* Kunne lagt til en klasse ved alle de følgende elementene, og deretter trukket ut "position: relative; som felles for alle disse
+Men veide dette opp mot ekstra HTML-kode, pluss felles css-element, og da er dette like god løsning (for alle har uansett 
+individuell "left: X; og krever derfor hver sine css-elementer */
+
 #firstName  {
     position: relative;
     left: 0;
