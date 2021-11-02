@@ -13,7 +13,7 @@ body{
 
 #navbar{
     width: 100%;
-    height: 180px;
+    height: 90px;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -728,7 +728,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 }
 
 
-/* MIDLERTIDIG: RESPONSIVENESS FOR NAVBAR, FOOTER OG ELEMENTER PÅ KONTAKTINFO.HTML NÅR SKJERM MINDRE ENN 560PX (EVT LEGG TIL RESPONSIVNESS FOR MOBIL OM TID) */
+/* MIDLERTIDIG: RESPONSIVENESS FOR NAVBAR, FOOTER OG ELEMENTER PÅ KONTAKTINFO.HTML NÅR SKJERM MINDRE ENN 560PX (EVT LEGG TIL RESPONSIVENESS FOR MOBIL OM TID) */
 
 @media screen and (max-width: 560px) {
 
