@@ -374,12 +374,10 @@ body{
     background-color: #6D7B48;
     font-size: 20px;
     color: white;
-    transition: all .2s ease-in-out;
 }
 
 #submit:hover   {
     background-color: #B7C68B;
-    transform: scale(1.03);
 }
 
 #formDiv    {
