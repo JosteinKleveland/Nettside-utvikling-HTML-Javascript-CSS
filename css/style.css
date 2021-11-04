@@ -190,7 +190,85 @@ body{
     }
 }
 
-/* PROGRAM */
+/* ------------------ Homepage -------------------------- */
+
+/*Video på forside*/
+video {
+    height: auto;
+    width: 100%;
+    z-index: -5;
+  }
+  /*Reservebilde på forside*/
+#reserve_img{
+	width: 100%;
+}
+
+    /*Viser ikke video om skjermen er for liten*/
+@media (max-width: 940px){
+    video {
+      display: none;
+    }
+  }
+  /*Viser ikke reservebilde om skjermen er stor nok*/
+ @media (min-width: 940px){
+    #reserve_img {
+      display: none;
+    }
+  }
+
+
+#wecomeScreenId{
+    /*Bakgrunn*/
+    background-color: #6D7A49;
+    border-bottom: #6D7A49 5px solid;
+
+    /*tekst*/
+    color: white;
+  
+
+}
+
+/* Countdown */
+
+#finishMessageId{
+
+}
+
+
+#countdownId{
+    display: flex;
+
+
+}
+
+#billettkjopHomePageId{
+    font-size: 15px;
+    margin: 10px 5px 10px 5px;
+    height: 50px;
+    width: 180px;
+    background-color: white;
+    color: #6D7A49;
+
+
+}
+
+.countdown{
+    
+
+}
+
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/*  --------------------------  PROGRAM ------------------------- */
 
 #programHeading {
     margin-top: 150px;

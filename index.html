@@ -22,6 +22,82 @@
     </div>
 </div>
 
+
+
+
+
+<div id="wecomeScreenId">
+
+
+    <video muted loop autoplay poster="img/bilde_placeholder.jpg">
+        <source src="video/MarkaForestDARK.mp4" type="video/mp4">       
+    </video>
+
+    <img id="reserve_img" src="img/bilde_placeholder.jpg" alt="Placeholder"/>
+
+    <p id="finishMessageId">Melding</p>
+
+    <div id="countdownId" class="countdown">
+    
+        <div class="time">
+            <p id="daysId">00</p>
+            <p>Dager</p>
+        </div>
+        
+        <div class="time">
+            <p id="hoursId">00</p>
+            <p>Timer</p>
+        </div>
+        
+        <div class="time">
+            <p id="minutesId">00</p>
+            <p>Minutter</p>
+        </div>
+        
+        <div class="time">
+            <p id="secondsId">00</p>
+            <p>Sekunder</p>
+        </div>
+    </div>
+    
+    <button id="billettkjopHomePageId" onclick="document.location='billettkjop.html'">Kjøp biletter</button>
+
+
+
+</div>
+
+   
+
+
+
+    
+
+<div class="flexContainerProgram">
+    <div class = "artistInfo">
+        <h2>Kygo</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <button class="programButtons" onclick="document.location='program.html'">Se program</button>
+    </div> 
+    <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+    <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+    <div class = "artistInfo">
+        <h2>Litt info</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="programButtons" onclick="document.location='omFestivalen.html'">Om festivalen</button>
+    </div> 
+
+    <div class = "artistInfo">
+        <h2>Billetter</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <button class="programButtons" onclick="document.location='billettkjop.html'">Kjøp billetter</button>
+    </div> 
+    <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+</div>
+
+
+
+<div id="mapPlaceholder"></div>
+
 <div id="footer">
     <div id="soMeButtons">
         <a href="https://www.facebook.com" target="_blank"><img src="img/facebookLogoIcon.svg" alt="Facebook"></a>
@@ -44,5 +120,6 @@
 </div>
 
 <script src="javaScript/modulation.js"></script>
+<script src="javaScript/countdown.js "></script>
 </body>
 </html>
