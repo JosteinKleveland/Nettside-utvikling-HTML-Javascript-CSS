@@ -297,17 +297,20 @@ video {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 /* Countdown */
 
 #finishMessageId{
-
+ color: white;
 }
 
 
 #countdownId{
     display: flex;
+    margin-top: -300px;
+    z-index: 5;
 
 
 }
@@ -324,7 +327,7 @@ video {
 }
 
 .countdown{
-    
+    color: white;
 
 }
 
@@ -734,7 +737,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     text-align: center;
 }
 
-.flexContainerFestivalInfo {
+.flexContainerFestivalInfo, .flexContainerSubSponsor {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -803,18 +806,18 @@ overflow: content;
 }
 
 #inngangIcon {
-  top: 72%;
+  top: 66%;
   right: 45%;
 }
 
 #barIcon {
-    top: 18%;
-    right: 74%;
+    top: 13%;
+    right: 73%;
 }
 
 #hovedsceneIcon {
     top: 50%;
-    right: 89%;
+    right: 90%;
 }
 
 #sceneAmfietIcon {
@@ -828,8 +831,18 @@ overflow: content;
 }
 
 #baalIcon {
-    top: 74%;
+    top: 73%;
     right: 25%;
+}
+
+#resturantIcon {
+    top: 60%;
+    right: 3%;
+}
+
+#teltIcon {
+    top: 23%;
+    right: 48%;
 }
 /* SPONSOR */
 .flexContainerSponsor {
@@ -851,13 +864,7 @@ overflow: content;
     width: 100%;
 }
 
-.flexContainerSubSponsor {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-}
+
 
 .omFestivalenSubSponsor {
     display: flex;
