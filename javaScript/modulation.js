@@ -8,7 +8,7 @@ function onLoadLogo() {
     const logo = document.createElement("img");
     
     logo.setAttribute("id", "navbarLogo");
-    logo.setAttribute("src", "img/logo_placeholder.png");
+    logo.setAttribute("src", "img/logo_marka.png");
     logo.setAttribute("alt", "Logo");
 
     logoBox.appendChild(logo);
