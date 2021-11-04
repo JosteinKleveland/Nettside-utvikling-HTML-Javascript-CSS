@@ -203,11 +203,28 @@ video {
 	width: 100%;
 }
 
-    /*Viser ikke video om skjermen er for liten*/
+    /*For visning på små skjermer*/
 @media (max-width: 520px){
     video {
       display: none;
     }
+    #logoWelcomeId{
+        display: none;
+    }
+
+    #counterWrapperId{
+        z-index: 10;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        position: absolute;
+        margin-top: 30%;
+        left: 50%;
+        width: 50%;
+    }
+
   }
   /*Viser ikke reservebilde om skjermen er stor nok*/
  @media (min-width: 520px){
@@ -219,6 +236,7 @@ video {
 
 #wecomeScreenId{
     /*Bakgrunn*/
+    padding-top: 85px;
     background-color: #6D7A49;
     border-bottom: #6D7A49 5px solid;
 
@@ -227,49 +245,43 @@ video {
   
     /*Plassering av counter*/
     justify-content: center;
-
-
 }
 
-#testId{
+#counterWrapperId{
+    z-index: 10;
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    position: absolute;
+    margin-top: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
     
 }
 
-/* Countdown */
-
-#finishMessageId{
- color: white;
+#logoWelcomeId{
+    width: 50%;
 }
 
 
 #countdownId{
     display: flex;
-    margin-top: -300px;
-    z-index: 5;
-
-
 }
 
 #billettkjopHomePageId{
     font-size: 15px;
-    margin: 10px 5px 10px 5px;
-    height: 50px;
-    width: 180px;
+    margin: 5px 5px 5px 5px;
+    height: 30px;
+    width: 150px;
     background-color: white;
     color: #6D7A49;
-
-
+    display: block;
+    border: none;
 }
-
-.countdown{
-    color: white;
-
-}
-
 
 .time{
     display: flex;
@@ -278,6 +290,21 @@ video {
     justify-content: center;
 }
 
+
+#finishMessageId{
+    display: none;
+}
+
+.counterText{
+    font-weight: bold;
+    margin-top: -50px;
+}
+
+.counterNumber{
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 0;
+}
 
 
 
