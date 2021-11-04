@@ -739,41 +739,43 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     font-size: 20px;
 }
 
+
 .flexContainerSponsor {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap:nowrap;
 }
 
 .omFestivalenMainSponsor {
     display: flex;
-    align-items:center;
-    flex-direction: row;
-    width: 40%;
-    height: 25%;
+    justify-content: center;
+    width: 25%;
     margin: 30px 30px 30px 30px;
-    border-style: dotted;
 }
 
 .omFestivalenMainSponsor img {
-    width: 10%
+    width: 100%;
+}
+
+.flexContainerSubSponsor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
 }
 
 .omFestivalenSubSponsor {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: row;
-    width: 40%;
-    height: 25%;
+    width: 25%;
     margin: 30px 30px 30px 30px;
-    border-style: dotted;
 }
 
 .omFestivalenSubSponsor img {
-    width: 20%;
+    width: 30%;
 }
 
 
