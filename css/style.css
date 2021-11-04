@@ -297,7 +297,7 @@ video {
     font-size: 40px;
     text-align: center;
 }
-
+/* ------------------------------------*/
 .flexContainerProgram {
     display: flex;
     flex-direction: row;
@@ -314,7 +314,7 @@ video {
     height: 25%;
     margin: 30px 30px 30px 30px;
 }
-
+/* --------------------------------------*/
 .artists {
     overflow: hidden;
 }
