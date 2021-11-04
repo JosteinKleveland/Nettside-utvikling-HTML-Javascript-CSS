@@ -7,7 +7,9 @@ body{
     margin-right: 0%;
     position: relative;
 }
-/* Felles heading */
+
+
+/*------------------ Felles headings ----------------*/
 
 #pageHeading {
     margin-top: 150px;
@@ -15,6 +17,37 @@ body{
     text-align: center;
     font-size: 60px;
 }
+
+.pageSubHeadings {
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+    margin-top: 90px;
+}
+
+@media screen and (max-width: 900px) {
+    #pageHeading {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .pageSubHeadings {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #pageHeading {
+        font-size: 30px;
+    }
+
+    .pageSubHeadings {
+        font-size: 25px;
+        margin-top: 60px;
+    }
+}
+
 /* Forslag til felles knapper */
 
 .pageButtons {
@@ -24,6 +57,7 @@ body{
     width: 200px;
     background-color: #6D7B48;
     color: white;
+    border: none;
 }
 .pageButtons:hover {
     background-color: #B7C68B;
@@ -71,7 +105,7 @@ body{
 }
 
 
-/* NAVBAR */
+/*------------------------ NAVBAR -------------------------*/
 
 #navbar{
     width: 100%;
@@ -145,7 +179,7 @@ body{
     background-color: #B7C68B;
 }
 
-#modalNavbarMobile {
+#clickCoverNavbarMobile {
     position: fixed;
     width: 100%;
     height: 120vh;
@@ -167,7 +201,7 @@ body{
     z-index: 102;
 }
 
-#navbarElementsMobile a {
+#navbarElementsMobile a, #navbarElementsForside a {
     text-decoration: none;
 }
 
@@ -205,7 +239,7 @@ body{
 }
 
 
-/* FOOTER */
+/*-------------------------- FOOTER ------------------*/
 
 #footer{
     width: 100%;
@@ -240,7 +274,6 @@ body{
     width: 80px;
     padding-left: 20px;
     float: right;
-    
 }
 
 #footerSponsorXXL, #footerSponsorRema1000 {
@@ -340,7 +373,66 @@ body{
     }
 }
 
-/* ------------------ Homepage -------------------------- */
+@media screen and (max-width: 560px) {
+    #footer  {
+        height: 350px;
+    }
+
+    #mainSponsorButtons {
+        width: 310px;
+        height: 50px;
+        padding: 40px 20px 0px 20px;
+        margin: auto;
+        float: none;
+    }
+
+    #soMeButtons {
+        width: 264px;
+        height: 50px;
+        padding: 20px 42px 0px 42px;
+        margin: auto;
+        float: none;
+    }
+
+    #soMeButtons img {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+    }
+
+    #mainSponsorButtons img{
+        width: 80px;
+        height: 80px;
+        float: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #toTopOfPageDefault, #toTopOfPageHover {
+        bottom: 25px;
+        width: 80px;
+    }
+
+    #toTopOfPageDefault img, #toTopOfPageHover img {
+        width: 80px;
+    }
+
+    #copyright {
+        font-size: 8pt;
+        width: 80px;
+        bottom: 7px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #footer {
+        width: 350px;
+    }
+}
+
+
+
+/* ------------------ FORSIDE -------------------------- */
 
 /*Video på forside*/
 video {
@@ -415,6 +507,7 @@ video {
 
 #logoWelcomeId{
     width: 50%;
+    margin-bottom: -10%;
 }
 
 
@@ -526,10 +619,6 @@ video {
 
 
 @media screen and (max-width: 900px) {
-    #pageHeading {
-        font-size: 40px;
-    }
-
     .programButtons {
         font-size: 20px;
         height: 55px;
@@ -816,22 +905,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     }
 }
 
-/* OM FESTIVALEN */
-
-.omFestivalenHeading {
-    font-size: 60px;
-    position: relative;
-    text-align: center;
-    margin-top: 150px;
-}
-
-.omFestivalenUnderHeading {
-    font-size: 60px;
-    position: relative;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+/*-------------------------- OM FESTIVALEN --------------------------*/
 
 .omFestivalenSubHeading {
     font-size: 35px;
@@ -864,7 +938,8 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     font-size: 20px;
 }
 
-/* FESTIVAL KART */
+
+/*-------------------------------- FESTIVALKART -----------------------*/
 
 .flexContainerFestivalKart {
     display: flex;
@@ -1042,21 +1117,9 @@ overflow: content;
 #sponsorCoop {
     width: 40%;
 }
-/* KONTAKTINFO */
 
-#kontaktinfoHeading  {
-    font-size: 60px;
-    position: relative;
-    text-align: center;
-    margin-top: 150px;
-}
 
-.kontaktinfohSubHeadings {
-    font-size: 35px;
-    position: relative;
-    text-align: center;
-    margin-top: 100px;
-}
+/*------------------------- KONTAKTINFO ------------------------*/
 
 #flexContainerFAQ {
     display: flex;
@@ -1125,7 +1188,6 @@ overflow: content;
 .kontaktperson {
     width: 250px;
     height: 250px;
-
 }
 
 .kontaktpersonInfoTop {
@@ -1163,65 +1225,11 @@ overflow: content;
     margin: auto;
 }
 
-
-/* MIDLERTIDIG: RESPONSIVENESS FOR NAVBAR, FOOTER OG ELEMENTER PÅ KONTAKTINFO.HTML NÅR SKJERM MINDRE ENN 560PX (EVT LEGG TIL RESPONSIVENESS FOR MOBIL OM TID) */
-
 @media screen and (max-width: 560px) {
 
     #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
         width: 350px;
         margin: auto;
-    }
-
-    #footer  {
-        height: 350px;
-    }
-
-    #mainSponsorButtons {
-        width: 310px;
-        height: 50px;
-        padding: 40px 20px 0px 20px;
-        margin: auto;
-        float: none;
-    }
-
-    #soMeButtons {
-        width: 264px;
-        height: 50px;
-        padding: 20px 42px 0px 42px;
-        margin: auto;
-        float: none;
-
-    }
-
-    #soMeButtons img {
-        width: 60px;
-        height: 60px;
-        margin-left: 10px;
-    }
-
-
-    #mainSponsorButtons img{
-        width: 80px;
-        height: 80px;
-        float: none;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    #toTopOfPageDefault, #toTopOfPageHover {
-        bottom: 25px;
-        width: 80px;
-    }
-
-    #toTopOfPageDefault img, #toTopOfPageHover img {
-        width: 80px;
-    }
-
-    #copyright {
-        font-size: 8pt;
-        width: 80px;
-        bottom: 7px;
     }
 
     .kontaktpersonWrapper {
@@ -1246,21 +1254,5 @@ overflow: content;
     .kontaktpersonInfo h3, p {
         font-size: 15px;
     }
-
-    #kontaktinfoHeading {
-        font-size: 30px;
-    }
-
-    .kontaktinfohSubHeadings {
-        font-size: 25px;
-        padding-bottom: 20px;
-    }
     
-}
-
-@media screen and (max-width: 350px) {
-    
-    #footer {
-        width: 350px;
-    }
 }

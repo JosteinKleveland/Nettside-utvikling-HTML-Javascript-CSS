@@ -7,9 +7,10 @@
     <title>Marka 2022 - Kontaktinfo</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body onresize="logoResize(), hideNavbarMobile()">
 
-<div id="modalNavbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
+<div id="clickCoverNavbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
 <div id="navbar">
     <a id="logoBox" href="index.html"></a>
     <div id="navbarElements">
@@ -20,9 +21,12 @@
             <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
             <li><a id="currentPage" href="kontaktinfo.html">Kontaktinfo</a></li>
         </ul>
-        <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"><div class="hamburgerLine"></div><div class="hamburgerLine"></div><div class="hamburgerLine"></div></div>
+        <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)">
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+        </div>
     </div>
-    
 </div>
 <div id="navbarElementsMobile">
     <a class="otherPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
@@ -32,9 +36,9 @@
     <a id="currentPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
 </div>
 
-<h1 id="kontaktinfoHeading"> Kontaktinformasjon </h1>
+<h1 id="pageHeading"> Kontaktinformasjon </h1>
 
-<h2 class="kontaktinfohSubHeadings"> Ofte stilte spørsmål: </h2>
+<h2 class="pageSubHeadings"> Ofte stilte spørsmål: </h2>
 
 <div id="flexContainerFAQ">
     <div class="FAQboxWrapper">
@@ -81,7 +85,7 @@
     </div>
 </div>
 
-<h2 class="kontaktinfohSubHeadings"> Kontakt oss: </h2>
+<h2 class="pageSubHeadings"> Kontakt oss: </h2>
 
 <div id="flexContainerKontaktpersoner">
     <div class="kontaktpersonWrapper">
@@ -145,7 +149,7 @@
     </div>
 </div>
 
-<h2 class="kontaktinfohSubHeadings"> Festivalkart: </h2>
+<h2 class="pageSubHeadings"> Festivalkart: </h2>
 
 <div id="mapPlaceholder"></div>
 

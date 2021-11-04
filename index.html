@@ -8,9 +8,10 @@
     <title>Marka 2022</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onresize="logoResize()">
+<body onresize="logoResize(), hideNavbarMobile()">
 
 <!--Navigasjonsbar-->    
+<div id="clickCoverNavbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
 <div id="navbar">
     <a id="logoBox" href="index.html"></a>
     <div id="navbarElements">
@@ -21,9 +22,20 @@
             <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
             <li><a class="otherPage" href="kontaktinfo.html">Kontaktinfo</a></li>
         </ul>
+        <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)">
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+        </div>
     </div>
 </div>
-
+<div id="navbarElementsMobile" style="margin-top: 82px;">
+    <a id="currentPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
+    <a class="otherPageMobile" href="program.html"><p class="navbarElementButtonMobile">Program</p></a>
+    <a class="otherPageMobile" href="billettkjop.html"><p class="navbarElementButtonMobile">Billettkjøp</p></a>
+    <a class="otherPageMobile" href="omFestivalen.html"><p class="navbarElementButtonMobile">Om festivalen</p></a>
+    <a class="otherPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
+</div>
 
 
 <!--Div som inneholder velkomstdelen av siden-->
@@ -76,29 +88,33 @@
    
 
 
-
+<h1 id="pageHeading"> Markas slagord! </h1>
     
 <!--Informasjonsbokser-->
-<div class="flexContainerProgram">
-    <div class = "artistInfo">
-        <h2>Kygo</h2>
+<div class="flexContainerMain">
+    <div class = "infoText">
+        <h2>DDE!</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <button class="programButtons" onclick="document.location='program.html'">Se program</button>
+        <button class="pageButtons" onclick="document.location='program.html'">Se program</button>
     </div> 
-    <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
-    <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
-    <div class = "artistInfo">
+    <div class = "infoBilde"><img  src="img/dde.jpeg" alt="DDE"></div>
+    <div class = "infoBilde"><img  src="img/people-festival.jpg" alt="People at festival"></div>
+
+
+
+
+    <div class = "infoText">
         <h2>Litt info</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button class="programButtons" onclick="document.location='omFestivalen.html'">Om festivalen</button>
+        <button class="pageButtons" onclick="document.location='omFestivalen.html'">Om festivalen</button>
     </div> 
 
-    <div class = "artistInfo">
+    <div class = "infoText">
         <h2>Billetter</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <button class="programButtons" onclick="document.location='billettkjop.html'">Kjøp billetter</button>
+        <button class="pageButtons" onclick="document.location='billettkjop.html'">Kjøp billetter</button>
     </div> 
-    <div class = "artists"><img  src="img/bilde_placeholder.jpg" alt="bilde_placeholder"></div>
+    <div class = "infoBilde"><img  src="img/tickets.jpg" alt="Girl with tickets"></div>
 </div>
 
 
@@ -113,11 +129,10 @@
         <a href="https://www.tiktok.com" target="_blank"><img src="img/tiktokLogoIcon.svg" alt="TikTok"></a>
     </div>
     <div id="mainSponsorButtons">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 1">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 2">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 3">
+        <a href="https://www.xxl.no" target="_blank"><img id="footerSponsorXXL" src="img/sponsorXXL.svg" alt="XXL logo"></a>
+        <a href="https://www.rema.no" target="_blank"><img id="footerSponsorRema1000" src="img/sponsorRema1000.svg" alt="Rema 1000 logo"></a>
+        <a href="https://www.dnb.no" target="_blank"><img id="footerSponsorDNB" src="img/sponsorDNB.svg" alt="DNB logo"></a>
     </div>
-    
     <div onclick="toTop()" id="toTopOfPageHover">
         <img src="img/tilToppsHover_placeholder.png" alt="Til toppen av siden">
     </div>

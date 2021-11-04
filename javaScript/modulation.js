@@ -87,7 +87,7 @@ function logoResize() {
 /* Funksjoner som toggler hamburger-navbar */
 
 const navbarElementsMobile = document.getElementById("navbarElementsMobile");
-const modalNavbarMobile = document.getElementById("modalNavbarMobile");
+const modalNavbarMobile = document.getElementById("clickCoverNavbarMobile");
 
 function hideNavbarMobile(){
     navbarElementsMobile.style.display = "none";
@@ -99,7 +99,7 @@ function navbarMobileOnClick(idClicked) {
         navbarElementsMobile.style.display = "block";
         modalNavbarMobile.style.display = "block";
     }
-    else if(idClicked === "modalNavbarMobile" || idClicked === "navbarMobile") {
+    else if(idClicked === "clickCoverNavbarMobile" || idClicked === "navbarMobile") {
         navbarElementsMobile.style.display = "none";
         modalNavbarMobile.style.display = "none";
     }
