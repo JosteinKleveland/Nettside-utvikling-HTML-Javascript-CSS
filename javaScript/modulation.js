@@ -83,3 +83,24 @@ function logoResize() {
 }
 
 
+
+/* Funksjoner som toggler hamburger-navbar */
+
+const navbarElementsMobile = document.getElementById("navbarElementsMobile");
+const modalNavbarMobile = document.getElementById("modalNavbarMobile");
+
+function hideNavbarMobile(){
+    navbarElementsMobile.style.display = "none";
+    modalNavbarMobile.style.display = "none";
+}
+
+function navbarMobileOnClick(idClicked) {
+    if(idClicked === "navbarMobile") {
+        navbarElementsMobile.style.display = "block";
+        modalNavbarMobile.style.display = "block";
+    }
+    else if(idClicked === "modalNavbarMobile" || idClicked === "navbarMobile") {
+        navbarElementsMobile.style.display = "none";
+        modalNavbarMobile.style.display = "none";
+    }
+}

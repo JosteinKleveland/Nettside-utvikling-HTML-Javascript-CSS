@@ -79,7 +79,7 @@ body{
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 999;
+    z-index: 100;
 }
 
 #navbarLogo{
@@ -124,10 +124,83 @@ body{
     border-bottom: solid #B7C68B 2px;
 }
 
+#navbarMobile {
+    height: 30px;
+    width: 40px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgerLine {
+    height: 5px;
+    width: 100%;
+    background-color: #6D7B48;
+    margin-top: 5px;
+}
+
+#navbarMobile:hover div {
+    background-color: #B7C68B;
+}
+
+#modalNavbarMobile {
+    position: fixed;
+    width: 100%;
+    height: 120vh;
+    margin-top: -200px;
+    display: none;
+    z-index: 101;
+}
+
+#navbarElementsMobile {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    float: right;
+    margin-top: -60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+    position: fixed;
+    z-index: 102;
+}
+
+#navbarElementsMobile a {
+    text-decoration: none;
+}
+
+.navbarElementButtonMobile {
+    height: 20px;
+    width: 95%;
+    margin: auto;
+    background-color: #E8E7E7;
+    margin-bottom: 5px;
+    text-align: left;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.otherPageMobile p:hover, #currentPageMobile p:hover {
+    background-color: #B7C68B;
+}
+
+#currentPageMobile p{
+    background-color: #6D7B48;
+    color: white;
+}
+
 @media screen and (max-width: 900px) {
-    #navbarElements a{
-        padding: 10px;
-        font-size: 8pt;
+    #navbarMobile {
+        display: block;
+    }
+
+    #navbarElements ul {
+        display: none;
     }
 }
 
@@ -153,6 +226,7 @@ body{
 #soMeButtons img{
     height: 60px;
     padding-right: 20px;
+    margin: auto;
 }
 
 #mainSponsorButtons{
@@ -166,6 +240,15 @@ body{
     width: 80px;
     padding-left: 20px;
     float: right;
+    
+}
+
+#footerSponsorXXL, #footerSponsorRema1000 {
+    padding-top: 20px;
+}
+
+#footerSponsorDNB {
+    padding-top: 5px;
 }
 
 #toTopOfPageDefault {
@@ -175,6 +258,7 @@ body{
     right: 0;
     margin: auto;
     bottom: 45px;
+    cursor: pointer;
 }
 
 #toTopOfPageDefault img {
@@ -220,6 +304,10 @@ body{
     #mainSponsorButtons img {
         width: 50px;
         padding-left: 15px;
+    }
+
+    #footerSponsorDNB {
+        padding-top: 10px;
     }
 
     #toTopOfPageDefault, #toTopOfPageHover {
@@ -792,7 +880,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 
 .festivalKart {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .mapIcon {
@@ -808,13 +896,53 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     opacity: 0.4;
 }
 
-.testwrapper {
-    display: flex;
-    position: relative;
-    top: 85%;
+.outerTextWrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    overflow: auto;
     justify-content: center;
-    margin-bottom: 10%;
+    align-items: center;
+    display: none;
 }
+
+.iconText {
+    position: absolute;
+    background-color: #fff;
+    opacity: 1;
+    width: 50%;
+    max-height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+.closeMap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0 0.75rem;
+    color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    user-select: none;
+}
+
+.closeMap:hover {
+    color: rgba(0,0,0,0.5);
+}
+
+
+
+/*
 .iconText {
 display: none;
 position: absolute;
@@ -824,7 +952,7 @@ z-index: 2;
 width: 40%;
 overflow: content;
 }
-
+*/
 #inngangIcon {
   bottom: 66%;
   right: 45%;
@@ -991,12 +1119,22 @@ overflow: content;
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .kontaktperson {
     width: 250px;
     height: 250px;
 
+}
+
+.kontaktpersonInfoTop {
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    background-color: #6D7B48;
+    top: 0;
+    right: 0;
 }
 
 .kontaktpersonInfo {
@@ -1030,8 +1168,99 @@ overflow: content;
 
 @media screen and (max-width: 560px) {
 
-    #navbar, #footer, #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
-        width: 560px;
+    #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
+        width: 350px;
+        margin: auto;
     }
 
+    #footer  {
+        height: 350px;
+    }
+
+    #mainSponsorButtons {
+        width: 310px;
+        height: 50px;
+        padding: 40px 20px 0px 20px;
+        margin: auto;
+        float: none;
+    }
+
+    #soMeButtons {
+        width: 264px;
+        height: 50px;
+        padding: 20px 42px 0px 42px;
+        margin: auto;
+        float: none;
+
+    }
+
+    #soMeButtons img {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+    }
+
+
+    #mainSponsorButtons img{
+        width: 80px;
+        height: 80px;
+        float: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #toTopOfPageDefault, #toTopOfPageHover {
+        bottom: 25px;
+        width: 80px;
+    }
+
+    #toTopOfPageDefault img, #toTopOfPageHover img {
+        width: 80px;
+    }
+
+    #copyright {
+        font-size: 8pt;
+        width: 80px;
+        bottom: 7px;
+    }
+
+    .kontaktpersonWrapper {
+        height: 400px;
+        width: 250px;
+        padding-bottom: 50px;
+    }
+
+    .kontaktpersonInfoTop {
+        margin-top: 235px;
+    }
+
+    .kontaktpersonInfo {
+        height: 150px;
+    }
+
+    .kontaktpersonInfo h2 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    
+    .kontaktpersonInfo h3, p {
+        font-size: 15px;
+    }
+
+    #kontaktinfoHeading {
+        font-size: 30px;
+    }
+
+    .kontaktinfohSubHeadings {
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    
+    #footer {
+        width: 350px;
+    }
 }
