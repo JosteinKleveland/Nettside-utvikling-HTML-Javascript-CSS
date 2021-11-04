@@ -615,6 +615,137 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     }
 }
 
+/* OM FESTIVALEN */
+
+.omFestivalenHeading {
+    font-size: 60px;
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.omFestivalenUnderHeading {
+    font-size: 60px;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.omFestivalenSubHeading {
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+}
+
+.flexContainerFestivalInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infoBilde, .infoText {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 25%;
+    margin: 30px 30px 30px 30px;
+}
+
+.infoBilde img {
+    width: 100%;
+    height: 100%;
+}
+.infoText p {
+    font-size: 20px;
+}
+
+.flexContainerSponsor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.omFestivalenMainSponsor {
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    width: 40%;
+    height: 25%;
+    margin: 30px 30px 30px 30px;
+    border-style: dotted;
+}
+
+.omFestivalenMainSponsor img {
+    width: 10%
+}
+
+.omFestivalenSubSponsor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 40%;
+    height: 25%;
+    margin: 30px 30px 30px 30px;
+    border-style: dotted;
+}
+
+.omFestivalenSubSponsor img {
+    width: 20%;
+}
+
+
+
+/* FESTIVAL KART */
+
+.flexContainerFestivalKart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.festivalKart {
+    width: 80%;
+    height: auto;
+    position: relative;
+}
+
+.mapIcon {
+    width: 60px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    left: 500px;
+    top: 400px;
+}
+
+.mapIcon:hover {
+    cursor: pointer;
+}
+
+.festivalKartIcons {
+    position: relative;
+    display: inline-block;
+
+}
+.iconText {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 2;
+width: 100%;
+overflow: content;
+}
+
+.show {display:block;}
 
 /* KONTAKTINFO */
 
