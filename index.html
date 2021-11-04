@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+    <meta author="Endre M">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 </head>
 <body onresize="logoResize()">
 
+<!--Navigasjonsbar-->    
 <div id="navbar">
     <a id="logoBox" href="index.html"></a>
     <div id="navbarElements">
@@ -24,49 +26,51 @@
 
 
 
-
-
+<!--Div som inneholder velkomstdelen av siden-->
 <div id="wecomeScreenId">
 
     <video muted loop autoplay poster="img/bilde_placeholder.jpg">
         <source src="video/MarkaForestDARK.mp4" type="video/mp4">       
     </video>
 
-    <img id="reserve_img" src="img/bilde_placeholder.jpg" alt="Placeholder"/>
+    <img id="reserve_img" src="img/forestStill.jpg" alt="Dark forest"/>
 
-    <div id="testId">
+    <!--Logo, counter, melding og kjøp billettknapp-->
+    <div id="counterWrapperId">
 
+        <!--Logo-->
+        <img id="logoWelcomeId" src="img/marka_logo_white.svg" alt="Logo Marka"/>
+        
+        <!--Melding-->
+        <p id="finishMessageId">Melding</p>
+
+        <!--counter-->
+        <div id="countdownId" class="countdown">
     
+            <div class="time">
+                <p id="daysId" class="counterNumber">00</p>
+                <p class="counterText">Dager</p>
+            </div>
+            
+            <div class="time">
+                <p id="hoursId" class="counterNumber">00</p>
+                <p class="counterText">Timer</p>
+            </div>
+            
+            <div class="time">
+                <p id="minutesId" class="counterNumber">00</p>
+                <p class="counterText">Minutter</p>
+            </div>
+            
+            <div class="time">
+                <p id="secondsId" class="counterNumber">00</p>
+                <p class="counterText">Sekunder</p>
+            </div>
+        </div>
 
-    <p id="finishMessageId">Melding</p>
-
-    <div id="countdownId" class="countdown">
-    
-        <div class="time">
-            <p id="daysId">00</p>
-            <p>Dager</p>
-        </div>
-        
-        <div class="time">
-            <p id="hoursId">00</p>
-            <p>Timer</p>
-        </div>
-        
-        <div class="time">
-            <p id="minutesId">00</p>
-            <p>Minutter</p>
-        </div>
-        
-        <div class="time">
-            <p id="secondsId">00</p>
-            <p>Sekunder</p>
-        </div>
+    <!--Knapp for billettkjøp-->
+    <button id="billettkjopHomePageId" onclick="document.location='billettkjop.html'">Kjøp billetter</button>
     </div>
-    
-    <button id="billettkjopHomePageId" onclick="document.location='billettkjop.html'">Kjøp biletter</button>
-
-    </div>
-
 </div>
 
    
@@ -74,7 +78,7 @@
 
 
     
-
+<!--Informasjonsbokser-->
 <div class="flexContainerProgram">
     <div class = "artistInfo">
         <h2>Kygo</h2>
@@ -98,9 +102,10 @@
 </div>
 
 
-
+<!--interaktivt kart-->
 <div id="mapPlaceholder"></div>
 
+<!--Footer-->
 <div id="footer">
     <div id="soMeButtons">
         <a href="https://www.facebook.com" target="_blank"><img src="img/facebookLogoIcon.svg" alt="Facebook"></a>

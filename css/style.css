@@ -27,6 +27,7 @@ body{
 }
 .pageButtons:hover {
     background-color: #B7C68B;
+    cursor: pointer;
 }
 
 /* Felles flexbox */
@@ -78,7 +79,7 @@ body{
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 999;
+    z-index: 100;
 }
 
 #navbarLogo{
@@ -123,10 +124,83 @@ body{
     border-bottom: solid #B7C68B 2px;
 }
 
+#navbarMobile {
+    height: 30px;
+    width: 40px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgerLine {
+    height: 5px;
+    width: 100%;
+    background-color: #6D7B48;
+    margin-top: 5px;
+}
+
+#navbarMobile:hover div {
+    background-color: #B7C68B;
+}
+
+#modalNavbarMobile {
+    position: fixed;
+    width: 100%;
+    height: 120vh;
+    margin-top: -200px;
+    display: none;
+    z-index: 101;
+}
+
+#navbarElementsMobile {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    float: right;
+    margin-top: -60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+    position: fixed;
+    z-index: 102;
+}
+
+#navbarElementsMobile a {
+    text-decoration: none;
+}
+
+.navbarElementButtonMobile {
+    height: 20px;
+    width: 95%;
+    margin: auto;
+    background-color: #E8E7E7;
+    margin-bottom: 5px;
+    text-align: left;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.otherPageMobile p:hover, #currentPageMobile p:hover {
+    background-color: #B7C68B;
+}
+
+#currentPageMobile p{
+    background-color: #6D7B48;
+    color: white;
+}
+
 @media screen and (max-width: 900px) {
-    #navbarElements a{
-        padding: 10px;
-        font-size: 8pt;
+    #navbarMobile {
+        display: block;
+    }
+
+    #navbarElements ul {
+        display: none;
     }
 }
 
@@ -152,6 +226,7 @@ body{
 #soMeButtons img{
     height: 60px;
     padding-right: 20px;
+    margin: auto;
 }
 
 #mainSponsorButtons{
@@ -165,6 +240,15 @@ body{
     width: 80px;
     padding-left: 20px;
     float: right;
+    
+}
+
+#footerSponsorXXL, #footerSponsorRema1000 {
+    padding-top: 20px;
+}
+
+#footerSponsorDNB {
+    padding-top: 5px;
 }
 
 #toTopOfPageDefault {
@@ -174,6 +258,7 @@ body{
     right: 0;
     margin: auto;
     bottom: 45px;
+    cursor: pointer;
 }
 
 #toTopOfPageDefault img {
@@ -221,6 +306,10 @@ body{
         padding-left: 15px;
     }
 
+    #footerSponsorDNB {
+        padding-top: 10px;
+    }
+
     #toTopOfPageDefault, #toTopOfPageHover {
         width: 60px;
     }
@@ -264,11 +353,28 @@ video {
 	width: 100%;
 }
 
-    /*Viser ikke video om skjermen er for liten*/
+    /*For visning på små skjermer*/
 @media (max-width: 520px){
     video {
       display: none;
     }
+    #logoWelcomeId{
+        display: none;
+    }
+
+    #counterWrapperId{
+        z-index: 10;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        position: absolute;
+        margin-top: 30%;
+        left: 50%;
+        width: 50%;
+    }
+
   }
   /*Viser ikke reservebilde om skjermen er stor nok*/
  @media (min-width: 520px){
@@ -280,6 +386,7 @@ video {
 
 #wecomeScreenId{
     /*Bakgrunn*/
+    padding-top: 85px;
     background-color: #6D7A49;
     border-bottom: #6D7A49 5px solid;
 
@@ -288,49 +395,43 @@ video {
   
     /*Plassering av counter*/
     justify-content: center;
-
-
 }
 
-#testId{
+#counterWrapperId{
+    z-index: 10;
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    position: absolute;
+    margin-top: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
     
 }
 
-/* Countdown */
-
-#finishMessageId{
- color: white;
+#logoWelcomeId{
+    width: 50%;
 }
 
 
 #countdownId{
     display: flex;
-    margin-top: -300px;
-    z-index: 5;
-
-
 }
 
 #billettkjopHomePageId{
     font-size: 15px;
-    margin: 10px 5px 10px 5px;
-    height: 50px;
-    width: 180px;
+    margin: 5px 5px 5px 5px;
+    height: 30px;
+    width: 150px;
     background-color: white;
     color: #6D7A49;
-
-
+    display: block;
+    border: none;
 }
-
-.countdown{
-    color: white;
-
-}
-
 
 .time{
     display: flex;
@@ -339,6 +440,21 @@ video {
     justify-content: center;
 }
 
+
+#finishMessageId{
+    display: none;
+}
+
+.counterText{
+    font-weight: bold;
+    margin-top: -50px;
+}
+
+.counterNumber{
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 0;
+}
 
 
 /*  --------------------------  PROGRAM ------------------------- */
@@ -440,14 +556,7 @@ video {
 }
 
 
-/* BILLETTKJØP: */
-
-#billettkjopHeading  {
-    font-size: 60px;
-    position: relative;
-    text-align: center;
-    margin-top: 150px;
-}
+/*  --------------------------  BILLETTKJØP ------------------------- */
 
 #imgDiv {
     position: absolute;
@@ -467,18 +576,11 @@ video {
     font-size: 15px;
 }
 
+/* Unik bredde på knappen i billettkjøp */
 #submit {
     margin-left: 10px;
     margin-top: 10px;
     width: 359px;
-    height: 35px;
-    background-color: #6D7B48;
-    font-size: 20px;
-    color: white;
-}
-
-#submit:hover   {
-    background-color: #B7C68B;
 }
 
 #formDiv    {
@@ -489,7 +591,6 @@ video {
     flex-direction: column;
     width: 40%;
     font-size: 20px;
-    /* border: 2px solid black; */
 }
 
 .collectionDiv  {
@@ -602,6 +703,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     border: 1px solid #ccc;
 }
 
+/* @media laget slik at innholdet på billettkjøp ser best mulig ut uansett bredde */
 @media screen and (min-width: 955px)    {
     .collectionDiv  {
         width: 300px;
@@ -1017,12 +1119,22 @@ overflow: content;
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .kontaktperson {
     width: 250px;
     height: 250px;
 
+}
+
+.kontaktpersonInfoTop {
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    background-color: #6D7B48;
+    top: 0;
+    right: 0;
 }
 
 .kontaktpersonInfo {
@@ -1056,8 +1168,99 @@ overflow: content;
 
 @media screen and (max-width: 560px) {
 
-    #navbar, #footer, #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
-        width: 560px;
+    #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
+        width: 350px;
+        margin: auto;
     }
 
+    #footer  {
+        height: 350px;
+    }
+
+    #mainSponsorButtons {
+        width: 310px;
+        height: 50px;
+        padding: 40px 20px 0px 20px;
+        margin: auto;
+        float: none;
+    }
+
+    #soMeButtons {
+        width: 264px;
+        height: 50px;
+        padding: 20px 42px 0px 42px;
+        margin: auto;
+        float: none;
+
+    }
+
+    #soMeButtons img {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+    }
+
+
+    #mainSponsorButtons img{
+        width: 80px;
+        height: 80px;
+        float: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #toTopOfPageDefault, #toTopOfPageHover {
+        bottom: 25px;
+        width: 80px;
+    }
+
+    #toTopOfPageDefault img, #toTopOfPageHover img {
+        width: 80px;
+    }
+
+    #copyright {
+        font-size: 8pt;
+        width: 80px;
+        bottom: 7px;
+    }
+
+    .kontaktpersonWrapper {
+        height: 400px;
+        width: 250px;
+        padding-bottom: 50px;
+    }
+
+    .kontaktpersonInfoTop {
+        margin-top: 235px;
+    }
+
+    .kontaktpersonInfo {
+        height: 150px;
+    }
+
+    .kontaktpersonInfo h2 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    
+    .kontaktpersonInfo h3, p {
+        font-size: 15px;
+    }
+
+    #kontaktinfoHeading {
+        font-size: 30px;
+    }
+
+    .kontaktinfohSubHeadings {
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    
+    #footer {
+        width: 350px;
+    }
 }
