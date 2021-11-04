@@ -57,6 +57,7 @@ body{
     width: 200px;
     background-color: #6D7B48;
     color: white;
+    border: none;
 }
 .pageButtons:hover {
     background-color: #B7C68B;
@@ -506,6 +507,7 @@ video {
 
 #logoWelcomeId{
     width: 50%;
+    margin-bottom: -10%;
 }
 
 
