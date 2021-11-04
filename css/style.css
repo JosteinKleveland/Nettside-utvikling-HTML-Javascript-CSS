@@ -749,7 +749,79 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     font-size: 20px;
 }
 
-/* Sponsor */
+/* FESTIVAL KART */
+
+.flexContainerFestivalKart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.festivalKartWrapper {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+
+.festivalKart {
+    width: 100%;
+    height: auto;
+}
+
+.mapIcon {
+    width: 10%;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.mapIcon:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.iconText {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 2;
+width: 100%;
+overflow: content;
+}
+
+#inngangIcon {
+  top: 72%;
+  right: 45%;
+}
+
+#barIcon {
+    top: 18%;
+    right: 74%;
+}
+
+#hovedsceneIcon {
+    top: 50%;
+    right: 89%;
+}
+
+#sceneAmfietIcon {
+    top: 27%;
+    right: 85%;
+}
+
+#parkeringIcon {
+    top: 80%;
+    right: 77%;
+}
+
+#baalIcon {
+    top: 74%;
+    right: 25%;
+}
+/* SPONSOR */
 .flexContainerSponsor {
     display: flex;
     flex-direction: row;
@@ -807,52 +879,6 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 #sponsorCoop {
     width: 40%;
 }
-
-/* FESTIVAL KART */
-
-.flexContainerFestivalKart {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.festivalKart {
-    width: 80%;
-    height: auto;
-    position: relative;
-}
-
-.mapIcon {
-    width: 60px;
-    height: auto;
-    position: relative;
-    z-index: 1;
-    left: 500px;
-    top: 400px;
-}
-
-.mapIcon:hover {
-    cursor: pointer;
-}
-
-.festivalKartIcons {
-    position: relative;
-    display: inline-block;
-
-}
-.iconText {
-display: none;
-position: absolute;
-background-color: #f1f1f1;
-min-width: 300px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 2;
-width: 100%;
-overflow: content;
-}
-
-.show {display:block;}
-
 /* KONTAKTINFO */
 
 #kontaktinfoHeading  {
