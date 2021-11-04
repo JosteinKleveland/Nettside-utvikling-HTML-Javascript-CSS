@@ -204,13 +204,13 @@ video {
 }
 
     /*Viser ikke video om skjermen er for liten*/
-@media (max-width: 940px){
+@media (max-width: 520px){
     video {
       display: none;
     }
   }
   /*Viser ikke reservebilde om skjermen er stor nok*/
- @media (min-width: 940px){
+ @media (min-width: 520px){
     #reserve_img {
       display: none;
     }
@@ -225,7 +225,17 @@ video {
     /*tekst*/
     color: white;
   
+    /*Plassering av counter*/
+    justify-content: center;
 
+
+}
+
+#testId{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* Countdown */
