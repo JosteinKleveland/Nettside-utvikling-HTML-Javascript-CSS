@@ -7,6 +7,68 @@ body{
     margin-right: 0%;
     position: relative;
 }
+/* Felles heading */
+
+#pageHeading {
+    margin-top: 150px;
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+}
+/* Forslag til felles knapper */
+
+.pageButtons {
+    font-size: 20px;
+    margin: 20px 10px 20px 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #6D7B48;
+    color: white;
+}
+.pageButtons:hover {
+    background-color: #B7C68B;
+    cursor: pointer;
+}
+
+/* Felles flexbox */
+
+.flexContainerMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infoBilde, .infoText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 25%;
+    margin: 30px 30px 30px 30px;
+}
+
+.infoText {
+    flex-direction: column;
+    overflow: auto;
+}
+
+.infoText p {
+    margin: 1px; /* Gjelder for programsiden som har flere p-elementer i samme div-en */
+    font-size: 20px;
+}
+
+.infoBilde {
+    overflow: hidden;
+}
+
+.infoBilde img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
 /* NAVBAR */
@@ -291,11 +353,28 @@ video {
 	width: 100%;
 }
 
-    /*Viser ikke video om skjermen er for liten*/
+    /*For visning på små skjermer*/
 @media (max-width: 520px){
     video {
       display: none;
     }
+    #logoWelcomeId{
+        display: none;
+    }
+
+    #counterWrapperId{
+        z-index: 10;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        position: absolute;
+        margin-top: 30%;
+        left: 50%;
+        width: 50%;
+    }
+
   }
   /*Viser ikke reservebilde om skjermen er stor nok*/
  @media (min-width: 520px){
@@ -307,6 +386,7 @@ video {
 
 #wecomeScreenId{
     /*Bakgrunn*/
+    padding-top: 85px;
     background-color: #6D7A49;
     border-bottom: #6D7A49 5px solid;
 
@@ -315,46 +395,43 @@ video {
   
     /*Plassering av counter*/
     justify-content: center;
-
-
 }
 
-#testId{
+#counterWrapperId{
+    z-index: 10;
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    position: absolute;
+    margin-top: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50%;
+    
 }
 
-/* Countdown */
-
-#finishMessageId{
-
+#logoWelcomeId{
+    width: 50%;
 }
 
 
 #countdownId{
     display: flex;
-
-
 }
 
 #billettkjopHomePageId{
     font-size: 15px;
-    margin: 10px 5px 10px 5px;
-    height: 50px;
-    width: 180px;
+    margin: 5px 5px 5px 5px;
+    height: 30px;
+    width: 150px;
     background-color: white;
     color: #6D7A49;
-
-
+    display: block;
+    border: none;
 }
-
-.countdown{
-    
-
-}
-
 
 .time{
     display: flex;
@@ -364,15 +441,23 @@ video {
 }
 
 
+#finishMessageId{
+    display: none;
+}
+
+.counterText{
+    font-weight: bold;
+    margin-top: -50px;
+}
+
+.counterNumber{
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 0;
+}
 
 
 /*  --------------------------  PROGRAM ------------------------- */
-
-#programHeading {
-    margin-top: 150px;
-    text-align: center;
-    font-size: 60px;
-}
 
 #flexContainerButtons {
     display: flex;
@@ -380,57 +465,14 @@ video {
     justify-content: center;
     margin-bottom: 20px;
 }
-.programButtons {
-    font-size: 25px;
-    margin: 20px 10px 20px 10px;
-    height: 75px;
-    width: 245px;
-    background-color: #6D7B48;
-    color: white;
-}
-.programButtons:hover {
-    background-color: #B7C68B;
-}
+
 .consertDay {
     font-size: 40px;
     text-align: center;
 }
-/* ------------------------------------*/
-.flexContainerProgram {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.artists, .artistInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 25%;
-    margin: 30px 30px 30px 30px;
-}
-/* --------------------------------------*/
-.artists {
-    overflow: hidden;
-}
-.artists img {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-}
-.artistInfo {
-    flex-direction: column;
-    overflow: auto;
-}
-.artistInfo p {
-    margin: 1px;
-    font-size: 20px;
-}
 
 /* CSS for popup/modal (expansions - JavaScript) */
+/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som inspirasjon and eksempel */
 
 .modal {
     position: fixed;
@@ -484,7 +526,7 @@ video {
 
 
 @media screen and (max-width: 900px) {
-    #programHeading {
+    #pageHeading {
         font-size: 40px;
     }
 
@@ -493,36 +535,28 @@ video {
         height: 55px;
         width: 200px;
     }
-    .artistInfo p {
+    .infoText p {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .artists, #flexContainerButtons {
+    #flexContainerButtons { /* .infoBilde fjerner også bildene ved nedskalering */
         display: none;
     }
-    .flexContainerProgram {
+    .flexContainerMain {
         flex-direction: column;
     }
     .consertDay {
         font-size: 30px;
     }
-    .artistInfo {
+    .infoText {
         margin: 0;
     }
 }
 
 
-
-/* BILLETTKJØP: */
-
-#billettkjopHeading  {
-    font-size: 60px;
-    position: relative;
-    text-align: center;
-    margin-top: 150px;
-}
+/*  --------------------------  BILLETTKJØP ------------------------- */
 
 #imgDiv {
     position: absolute;
@@ -542,18 +576,11 @@ video {
     font-size: 15px;
 }
 
+/* Unik bredde på knappen i billettkjøp */
 #submit {
     margin-left: 10px;
     margin-top: 10px;
     width: 359px;
-    height: 35px;
-    background-color: #6D7B48;
-    font-size: 20px;
-    color: white;
-}
-
-#submit:hover   {
-    background-color: #B7C68B;
 }
 
 #formDiv    {
@@ -564,7 +591,6 @@ video {
     flex-direction: column;
     width: 40%;
     font-size: 20px;
-    /* border: 2px solid black; */
 }
 
 .collectionDiv  {
@@ -677,6 +703,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     border: 1px solid #ccc;
 }
 
+/* @media laget slik at innholdet på billettkjøp ser best mulig ut uansett bredde */
 @media screen and (min-width: 955px)    {
     .collectionDiv  {
         width: 300px;
@@ -812,7 +839,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     text-align: center;
 }
 
-.flexContainerFestivalInfo {
+.flexContainerFestivalInfo, .flexContainerSubSponsor {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -837,7 +864,95 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     font-size: 20px;
 }
 
+/* FESTIVAL KART */
 
+.flexContainerFestivalKart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.festivalKartWrapper {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+
+.festivalKart {
+    width: 100%;
+    height: auto;
+}
+
+.mapIcon {
+    width: 10%;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.mapIcon:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.testwrapper {
+    display: flex;
+    position: relative;
+    top: 85%;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+.iconText {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 2;
+width: 40%;
+overflow: content;
+}
+
+#inngangIcon {
+  bottom: 66%;
+  right: 45%;
+}
+
+#barIcon {
+    top: 13%;
+    right: 73%;
+}
+
+#hovedsceneIcon {
+    top: 50%;
+    right: 90%;
+}
+
+#sceneAmfietIcon {
+    top: 27%;
+    right: 85%;
+}
+
+#parkeringIcon {
+    top: 80%;
+    right: 77%;
+}
+
+#baalIcon {
+    top: 73%;
+    right: 25%;
+}
+
+#resturantIcon {
+    top: 60%;
+    right: 3%;
+}
+
+#teltIcon {
+    top: 23%;
+    right: 48%;
+}
+/* SPONSOR */
 .flexContainerSponsor {
     display: flex;
     flex-direction: row;
@@ -857,14 +972,6 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     width: 100%;
 }
 
-.flexContainerSubSponsor {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-}
-
 .omFestivalenSubSponsor {
     display: flex;
     justify-content: center;
@@ -876,53 +983,25 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     width: 30%;
 }
 
-
-
-/* FESTIVAL KART */
-
-.flexContainerFestivalKart {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+#sponsorTrondelagFylkeskommune {
+    width: 25%;
 }
 
-.festivalKart {
-    width: 80%;
-    height: auto;
-    position: relative;
+#sponsorCocaCola {
+    width: 50%;
 }
 
-.mapIcon {
-    width: 60px;
-    height: auto;
-    position: relative;
-    z-index: 1;
-    left: 500px;
-    top: 400px;
+#sponsorNorrona {
+    width: 60%;
 }
 
-.mapIcon:hover {
-    cursor: pointer;
+#sponsorTine {
+    width: 40%;
 }
 
-.festivalKartIcons {
-    position: relative;
-    display: inline-block;
-
+#sponsorCoop {
+    width: 40%;
 }
-.iconText {
-display: none;
-position: absolute;
-background-color: #f1f1f1;
-min-width: 300px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 2;
-width: 100%;
-overflow: content;
-}
-
-.show {display:block;}
-
 /* KONTAKTINFO */
 
 #kontaktinfoHeading  {
