@@ -242,7 +242,7 @@ video {
 /* Countdown */
 
 #finishMessageId{
-
+ color: white;
 }
 
 
@@ -266,7 +266,7 @@ video {
 }
 
 .countdown{
-    
+    color: white;
 
 }
 
