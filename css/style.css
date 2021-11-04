@@ -27,6 +27,7 @@ body{
 }
 .pageButtons:hover {
     background-color: #B7C68B;
+    cursor: pointer;
 }
 
 /* Felles flexbox */
@@ -440,14 +441,7 @@ video {
 }
 
 
-/* BILLETTKJØP: */
-
-#billettkjopHeading  {
-    font-size: 60px;
-    position: relative;
-    text-align: center;
-    margin-top: 150px;
-}
+/*  --------------------------  BILLETTKJØP ------------------------- */
 
 #imgDiv {
     position: absolute;
@@ -467,18 +461,11 @@ video {
     font-size: 15px;
 }
 
+/* Unik bredde på knappen i billettkjøp */
 #submit {
     margin-left: 10px;
     margin-top: 10px;
     width: 359px;
-    height: 35px;
-    background-color: #6D7B48;
-    font-size: 20px;
-    color: white;
-}
-
-#submit:hover   {
-    background-color: #B7C68B;
 }
 
 #formDiv    {
@@ -489,7 +476,6 @@ video {
     flex-direction: column;
     width: 40%;
     font-size: 20px;
-    /* border: 2px solid black; */
 }
 
 .collectionDiv  {
@@ -602,6 +588,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     border: 1px solid #ccc;
 }
 
+/* @media laget slik at innholdet på billettkjøp ser best mulig ut uansett bredde */
 @media screen and (min-width: 955px)    {
     .collectionDiv  {
         width: 300px;
