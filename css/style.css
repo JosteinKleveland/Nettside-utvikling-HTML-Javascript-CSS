@@ -7,6 +7,67 @@ body{
     margin-right: 0%;
     position: relative;
 }
+/* Felles heading */
+
+#pageHeading {
+    margin-top: 150px;
+    position: relative;
+    text-align: center;
+    font-size: 60px;
+}
+/* Forslag til felles knapper */
+
+.pageButtons {
+    font-size: 20px;
+    margin: 20px 10px 20px 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #6D7B48;
+    color: white;
+}
+.pageButtons:hover {
+    background-color: #B7C68B;
+}
+
+/* Felles flexbox */
+
+.flexContainerMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infoBilde, .infoText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 25%;
+    margin: 30px 30px 30px 30px;
+}
+
+.infoText {
+    flex-direction: column;
+    overflow: auto;
+}
+
+.infoText p {
+    margin: 1px; /* Gjelder for programsiden som har flere p-elementer i samme div-en */
+    font-size: 20px;
+}
+
+.infoBilde {
+    overflow: hidden;
+}
+
+.infoBilde img {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
 
 
 /* NAVBAR */
@@ -280,14 +341,7 @@ video {
 
 
 
-
 /*  --------------------------  PROGRAM ------------------------- */
-
-#programHeading {
-    margin-top: 150px;
-    text-align: center;
-    font-size: 60px;
-}
 
 #flexContainerButtons {
     display: flex;
@@ -295,57 +349,14 @@ video {
     justify-content: center;
     margin-bottom: 20px;
 }
-.programButtons {
-    font-size: 25px;
-    margin: 20px 10px 20px 10px;
-    height: 75px;
-    width: 245px;
-    background-color: #6D7B48;
-    color: white;
-}
-.programButtons:hover {
-    background-color: #B7C68B;
-}
+
 .consertDay {
     font-size: 40px;
     text-align: center;
 }
-/* ------------------------------------*/
-.flexContainerProgram {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.artists, .artistInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40%;
-    height: 25%;
-    margin: 30px 30px 30px 30px;
-}
-/* --------------------------------------*/
-.artists {
-    overflow: hidden;
-}
-.artists img {
-    flex-shrink: 0;
-    width: 100%;
-    height: 100%;
-}
-.artistInfo {
-    flex-direction: column;
-    overflow: auto;
-}
-.artistInfo p {
-    margin: 1px;
-    font-size: 20px;
-}
 
 /* CSS for popup/modal (expansions - JavaScript) */
+/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som inspirasjon and eksempel */
 
 .modal {
     position: fixed;
@@ -399,7 +410,7 @@ video {
 
 
 @media screen and (max-width: 900px) {
-    #programHeading {
+    #pageHeading {
         font-size: 40px;
     }
 
@@ -408,26 +419,25 @@ video {
         height: 55px;
         width: 200px;
     }
-    .artistInfo p {
+    .infoText p {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .artists, #flexContainerButtons {
+    #flexContainerButtons { /* .infoBilde fjerner også bildene ved nedskalering */
         display: none;
     }
-    .flexContainerProgram {
+    .flexContainerMain {
         flex-direction: column;
     }
     .consertDay {
         font-size: 30px;
     }
-    .artistInfo {
+    .infoText {
         margin: 0;
     }
 }
-
 
 
 /* BILLETTKJØP: */
