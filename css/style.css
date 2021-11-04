@@ -784,19 +784,25 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     opacity: 0.4;
 }
 
+.testwrapper {
+    display: flex;
+    position: relative;
+    top: 85%;
+    justify-content: center;
+    margin-bottom: 10%;
+}
 .iconText {
 display: none;
 position: absolute;
 background-color: #f1f1f1;
-min-width: 300px;
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 z-index: 2;
-width: 100%;
+width: 40%;
 overflow: content;
 }
 
 #inngangIcon {
-  top: 66%;
+  bottom: 66%;
   right: 45%;
 }
 
@@ -853,8 +859,6 @@ overflow: content;
 .omFestivalenMainSponsor img {
     width: 100%;
 }
-
-
 
 .omFestivalenSubSponsor {
     display: flex;
