@@ -236,17 +236,20 @@ video {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 /* Countdown */
 
 #finishMessageId{
-
+ color: white;
 }
 
 
 #countdownId{
     display: flex;
+    margin-top: -300px;
+    z-index: 5;
 
 
 }
@@ -263,7 +266,7 @@ video {
 }
 
 .countdown{
-    
+    color: white;
 
 }
 
