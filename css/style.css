@@ -246,7 +246,95 @@ body{
     }
 }
 
-/* PROGRAM */
+/* ------------------ Homepage -------------------------- */
+
+/*Video på forside*/
+video {
+    height: auto;
+    width: 100%;
+    z-index: -5;
+  }
+  /*Reservebilde på forside*/
+#reserve_img{
+	width: 100%;
+}
+
+    /*Viser ikke video om skjermen er for liten*/
+@media (max-width: 520px){
+    video {
+      display: none;
+    }
+  }
+  /*Viser ikke reservebilde om skjermen er stor nok*/
+ @media (min-width: 520px){
+    #reserve_img {
+      display: none;
+    }
+  }
+
+
+#wecomeScreenId{
+    /*Bakgrunn*/
+    background-color: #6D7A49;
+    border-bottom: #6D7A49 5px solid;
+
+    /*tekst*/
+    color: white;
+  
+    /*Plassering av counter*/
+    justify-content: center;
+
+
+}
+
+#testId{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Countdown */
+
+#finishMessageId{
+
+}
+
+
+#countdownId{
+    display: flex;
+
+
+}
+
+#billettkjopHomePageId{
+    font-size: 15px;
+    margin: 10px 5px 10px 5px;
+    height: 50px;
+    width: 180px;
+    background-color: white;
+    color: #6D7A49;
+
+
+}
+
+.countdown{
+    
+
+}
+
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/*  --------------------------  PROGRAM ------------------------- */
 
 #programHeading {
     margin-top: 150px;
@@ -275,7 +363,7 @@ body{
     font-size: 40px;
     text-align: center;
 }
-
+/* ------------------------------------*/
 .flexContainerProgram {
     display: flex;
     flex-direction: row;
@@ -292,7 +380,7 @@ body{
     height: 25%;
     margin: 30px 30px 30px 30px;
 }
-
+/* --------------------------------------*/
 .artists {
     overflow: hidden;
 }
@@ -430,12 +518,10 @@ body{
     background-color: #6D7B48;
     font-size: 20px;
     color: white;
-    transition: all .2s ease-in-out;
 }
 
 #submit:hover   {
     background-color: #B7C68B;
-    transform: scale(1.03);
 }
 
 #formDiv    {
@@ -671,6 +757,139 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     }
 }
 
+/* OM FESTIVALEN */
+
+.omFestivalenHeading {
+    font-size: 60px;
+    position: relative;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.omFestivalenUnderHeading {
+    font-size: 60px;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.omFestivalenSubHeading {
+    font-size: 35px;
+    position: relative;
+    text-align: center;
+}
+
+.flexContainerFestivalInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infoBilde, .infoText {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 25%;
+    margin: 30px 30px 30px 30px;
+}
+
+.infoBilde img {
+    width: 100%;
+    height: 100%;
+}
+.infoText p {
+    font-size: 20px;
+}
+
+
+.flexContainerSponsor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:nowrap;
+}
+
+.omFestivalenMainSponsor {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin: 30px 30px 30px 30px;
+}
+
+.omFestivalenMainSponsor img {
+    width: 100%;
+}
+
+.flexContainerSubSponsor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+.omFestivalenSubSponsor {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin: 30px 30px 30px 30px;
+}
+
+.omFestivalenSubSponsor img {
+    width: 30%;
+}
+
+
+
+/* FESTIVAL KART */
+
+.flexContainerFestivalKart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.festivalKart {
+    width: 80%;
+    height: auto;
+    position: relative;
+}
+
+.mapIcon {
+    width: 60px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    left: 500px;
+    top: 400px;
+}
+
+.mapIcon:hover {
+    cursor: pointer;
+}
+
+.festivalKartIcons {
+    position: relative;
+    display: inline-block;
+
+}
+.iconText {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 2;
+width: 100%;
+overflow: content;
+}
+
+.show {display:block;}
 
 /* KONTAKTINFO */
 
