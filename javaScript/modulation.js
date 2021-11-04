@@ -84,22 +84,23 @@ function logoResize() {
 
 
 
-/* Funksjon som toggler hamburger-navbar */
+/* Funksjoner som toggler hamburger-navbar */
 
-let navbarMobileDisplay = 0;
-
-function navbarMobileClick(){
-    navbarElementsMobile = document.getElementById("navbarElementsMobile")
-    if (navbarMobileDisplay == 0) {
-        navbarElementsMobile.style.display = "block";
-        navbarMobileDisplay = 1;
-    }
-    else {
-        navbarElementsMobile.style.display = "none";
-        navbarMobileDisplay = 0;
-    }
-}
+const navbarElementsMobile = document.getElementById("navbarElementsMobile");
+const modalNavbarMobile = document.getElementById("modalNavbarMobile");
 
 function hideNavbarMobile(){
-    document.getElementById("navbarElementsMobile").style.display = "none";
+    navbarElementsMobile.style.display = "none";
+    modalNavbarMobile.style.display = "none";
+}
+
+function navbarMobileOnClick(idClicked) {
+    if(idClicked === "navbarMobile") {
+        navbarElementsMobile.style.display = "block";
+        modalNavbarMobile.style.display = "block";
+    }
+    else if(idClicked === "modalNavbarMobile" || idClicked === "navbarMobile") {
+        navbarElementsMobile.style.display = "none";
+        modalNavbarMobile.style.display = "none";
+    }
 }

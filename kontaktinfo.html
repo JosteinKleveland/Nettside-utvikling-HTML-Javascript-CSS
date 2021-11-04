@@ -9,6 +9,7 @@
 </head>
 <body onresize="logoResize(), hideNavbarMobile()">
 
+<div id="modalNavbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
 <div id="navbar">
     <a id="logoBox" href="index.html"></a>
     <div id="navbarElements">
@@ -19,16 +20,16 @@
             <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
             <li><a id="currentPage" href="kontaktinfo.html">Kontaktinfo</a></li>
         </ul>
-        <div id="navbarMobile" onclick="navbarMobileClick()" ><div class="hamburgerLine"></div><div class="hamburgerLine"></div><div class="hamburgerLine"></div></div>
+        <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"><div class="hamburgerLine"></div><div class="hamburgerLine"></div><div class="hamburgerLine"></div></div>
     </div>
-    <div id="navbarElementsMobile">
-        <a class="otherPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
-        <a class="otherPageMobile" href="program.html"><p class="navbarElementButtonMobile">Program</p></a>
-        <a class="otherPageMobile" href="billettkjop.html"><p class="navbarElementButtonMobile">Billettkjøp</p></a>
-        <a class="otherPageMobile" href="omFestivalen.html"><p class="navbarElementButtonMobile">Om festivalen</p></a>
-        <a id="currentPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
-        </ul>
-    </div>
+    
+</div>
+<div id="navbarElementsMobile">
+    <a class="otherPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
+    <a class="otherPageMobile" href="program.html"><p class="navbarElementButtonMobile">Program</p></a>
+    <a class="otherPageMobile" href="billettkjop.html"><p class="navbarElementButtonMobile">Billettkjøp</p></a>
+    <a class="otherPageMobile" href="omFestivalen.html"><p class="navbarElementButtonMobile">Om festivalen</p></a>
+    <a id="currentPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
 </div>
 
 <h1 id="kontaktinfoHeading"> Kontaktinformasjon </h1>
@@ -80,61 +81,66 @@
     </div>
 </div>
 
-<h2 class="kontaktinfohSubHeadings"> Kontaktpersoner: </h2>
+<h2 class="kontaktinfohSubHeadings"> Kontakt oss: </h2>
 
 <div id="flexContainerKontaktpersoner">
     <div class="kontaktpersonWrapper">
-        <img class="kontaktperson" src="img/kontaktperson1.jpg" alt="Kontaktperson">
+        <img class="kontaktperson" src="img/logo_marka.png" alt="Kontaktperson">
+        <div class="kontaktpersonInfoTop"></div>
         <div class ="kontaktpersonInfo">
-            <h2>Ola Nordmann</h2>
+            <h2>Generelle henvendelser:</h2>
+            <p>+47 777 88 999</p>
+            <p>kontakt@marka.no</p>
+        </div>
+    </div>
+    <div class="kontaktpersonWrapper">
+        <img class="kontaktperson" src="img/kontaktperson1.jpg" alt="Kontaktperson">
+        <div class="kontaktpersonInfoTop"></div>
+        <div class ="kontaktpersonInfo">
+            <h2>Ola Gressheim</h2>
             <h3>Festivalsjef</h3>
             <p>+47 777 88 999</p>
-            <p>ola.nordmann@marka.no</p>
+            <p>ola.gressheim@marka.no</p>
         </div>
     </div>
     <div class="kontaktpersonWrapper">
         <img class="kontaktperson" src="img/kontaktperson2.jpg" alt="Kontaktperson">
+        <div class="kontaktpersonInfoTop"></div>
         <div class ="kontaktpersonInfo">
-            <h2>Ola Nordmann</h2>
-            <h3>Festivalsjef</h3>
+            <h2>Pernille Fjellstad</h2>
+            <h3>Artistansvarlig</h3>
             <p>+47 777 88 999</p>
-            <p>ola.nordmann@marka.no</p>
+            <p>pernille.fjellstad@marka.no</p>
         </div>
     </div>
     <div class="kontaktpersonWrapper">
         <img class="kontaktperson" src="img/kontaktperson3.jpg" alt="Kontaktperson">
+        <div class="kontaktpersonInfoTop"></div>
         <div class ="kontaktpersonInfo">
-            <h2>Ola Nordmann</h2>
-            <h3>Festivalsjef</h3>
+            <h2>Sara Skoglund</h2>
+            <h3>Campingansvarlig</h3>
             <p>+47 777 88 999</p>
-            <p>ola.nordmann@marka.no</p>
-        </div>
-    </div>
-    <div class="kontaktpersonWrapper">
-        <img class="kontaktperson" src="img/kontaktperson4.jpg" alt="Kontaktperson">
-        <div class ="kontaktpersonInfo">
-            <h2>Ola Nordmann</h2>
-            <h3>Festivalsjef</h3>
-            <p>+47 777 88 999</p>
-            <p>ola.nordmann@marka.no</p>
-        </div>
-    </div>
-    <div class="kontaktpersonWrapper">
-        <img class="kontaktperson" src="img/kontaktperson5.jpg" alt="Kontaktperson">
-        <div class ="kontaktpersonInfo">
-            <h2>Ola Nordmann</h2>
-            <h3>Festivalsjef</h3>
-            <p>+47 777 88 999</p>
-            <p>ola.nordmann@marka.no</p>
+            <p>sara.skoglund@marka.no</p>
         </div>
     </div>
     <div class="kontaktpersonWrapper">
         <img class="kontaktperson" src="img/kontaktperson6.jpg" alt="Kontaktperson">
+        <div class="kontaktpersonInfoTop"></div> 
         <div class ="kontaktpersonInfo">
-            <h2>Ola Nordmann</h2>
-            <h3>Festivalsjef</h3>
+            <h2>Trine Ås</h2>
+            <h3>Mat- og drikkeansvarlig</h3>
             <p>+47 777 88 999</p>
-            <p>ola.nordmann@marka.no</p>
+            <p>trine.aas@marka.no</p>
+        </div>
+    </div>
+    <div class="kontaktpersonWrapper">
+        <img class="kontaktperson" src="img/kontaktperson5.jpg" alt="Kontaktperson">
+        <div class="kontaktpersonInfoTop"></div>
+        <div class ="kontaktpersonInfo">
+            <h2>Markus Markahei</h2>
+            <h3>PR-ansvarlig</h3>
+            <p>+47 777 88 999</p>
+            <p>markus.markahei@marka.no</p>
         </div>
     </div>
 </div>
@@ -150,9 +156,9 @@
         <a href="https://www.tiktok.com" target="_blank"><img src="img/tiktokLogoIcon.svg" alt="TikTok"></a>
     </div>
     <div id="mainSponsorButtons">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 1">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 2">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 3">
+        <a href="https://www.xxl.no" target="_blank"><img id="footerSponsorXXL" src="img/sponsorXXL.svg" alt="XXL logo"></a>
+        <a href="https://www.rema.no" target="_blank"><img id="footerSponsorRema1000" src="img/sponsorRema1000.svg" alt="Rema 1000 logo"></a>
+        <a href="https://www.dnb.no" target="_blank"><img id="footerSponsorDNB" src="img/sponsorDNB.svg" alt="DNB logo"></a>
     </div>
     <div onclick="toTop()" id="toTopOfPageHover">
         <img src="img/tilToppsHover_placeholder.png" alt="Til toppen av siden">
