@@ -8,22 +8,34 @@
     <title>Marka 2022</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onresize="logoResize()">
+<body onresize="logoResize(), hideNavbarMobile()">
 
 <!--Navigasjonsbar-->    
+<div id="clickCoverNavbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
 <div id="navbar">
     <a id="logoBox" href="index.html"></a>
     <div id="navbarElements">
         <ul>
-            <li><a id="currentPage" href="index.html">Forside</a></li>
+            <li><a class="otherPage" href="index.html">Forside</a></li>
             <li><a class="otherPage" href="program.html">Program</a></li>
             <li><a class="otherPage" href="billettkjop.html">Billettkjøp</a></li>
             <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
-            <li><a class="otherPage" href="kontaktinfo.html">Kontaktinfo</a></li>
+            <li><a id="currentPage" href="kontaktinfo.html">Kontaktinfo</a></li>
         </ul>
+        <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)">
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+        </div>
     </div>
 </div>
-
+<div id="navbarElementsMobile">
+    <a class="otherPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
+    <a class="otherPageMobile" href="program.html"><p class="navbarElementButtonMobile">Program</p></a>
+    <a class="otherPageMobile" href="billettkjop.html"><p class="navbarElementButtonMobile">Billettkjøp</p></a>
+    <a class="otherPageMobile" href="omFestivalen.html"><p class="navbarElementButtonMobile">Om festivalen</p></a>
+    <a id="currentPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
+</div>
 
 
 <!--Div som inneholder velkomstdelen av siden-->

@@ -7,8 +7,9 @@
     <title>Marka 2022 - Om festivalen</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onresize="logoResize()">
+<body onresize="logoResize(), hideNavbarMobile()">
 
+<div id="clickCoverNavbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
 <div id="navbar">
     <a id="logoBox" href="index.html"></a>
     <div id="navbarElements">
@@ -16,14 +17,26 @@
             <li><a class="otherPage" href="index.html">Forside</a></li>
             <li><a class="otherPage" href="program.html">Program</a></li>
             <li><a class="otherPage" href="billettkjop.html">Billettkjøp</a></li>
-            <li><a id="currentPage" href="omFestivalen.html">Om festivalen</a></li>
-            <li><a class="otherPage" href="kontaktinfo.html">Kontaktinfo</a></li>
+            <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
+            <li><a id="currentPage" href="kontaktinfo.html">Kontaktinfo</a></li>
         </ul>
+        <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)">
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+            <div class="hamburgerLine"></div>
+        </div>
     </div>
+</div>
+<div id="navbarElementsMobile">
+    <a class="otherPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
+    <a class="otherPageMobile" href="program.html"><p class="navbarElementButtonMobile">Program</p></a>
+    <a class="otherPageMobile" href="billettkjop.html"><p class="navbarElementButtonMobile">Billettkjøp</p></a>
+    <a class="otherPageMobile" href="omFestivalen.html"><p class="navbarElementButtonMobile">Om festivalen</p></a>
+    <a id="currentPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
 </div>
 
 
-<h2 class="omFestivalenHeading">Om Festivalen</h2>
+<h2 id="pageHeading">Om Festivalen</h2>
 
 <div class="flexContainerFestivalInfo">
     
@@ -48,7 +61,7 @@
 
 </div>
 
-<h2 class="omFestivalenUnderHeading">Festivalkart</h2>
+<h2 class="pageSubHeadings">Festivalkart</h2>
 
 <div class="flexContainerFestivalKart">
      
@@ -123,7 +136,7 @@
 
 </div>
 
-<h2 class="omFestivalenUnderHeading">Sponsorer</h2>
+<h2 class="pageSubHeadings">Sponsorer</h2>
 
 <div class="flexContainerSponsor">
 
