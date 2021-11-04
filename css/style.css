@@ -749,7 +749,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     font-size: 20px;
 }
 
-
+/* Sponsor */
 .flexContainerSponsor {
     display: flex;
     flex-direction: row;
@@ -788,7 +788,25 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     width: 30%;
 }
 
+#sponsorTrondelagFylkeskommune {
+    width: 25%;
+}
 
+#sponsorCocaCola {
+    width: 50%;
+}
+
+#sponsorNorrona {
+    width: 60%;
+}
+
+#sponsorTine {
+    width: 40%;
+}
+
+#sponsorCoop {
+    width: 40%;
+}
 
 /* FESTIVAL KART */
 
