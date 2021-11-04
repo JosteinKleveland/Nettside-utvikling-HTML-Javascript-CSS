@@ -7,7 +7,7 @@
     <title>Marka 2022 - Kontaktinfo</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onresize="logoResize()">
+<body onresize="logoResize(), hideNavbarMobile()">
 
 <div id="navbar">
     <a id="logoBox" href="index.html"></a>
@@ -18,6 +18,15 @@
             <li><a class="otherPage" href="billettkjop.html">Billettkjøp</a></li>
             <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
             <li><a id="currentPage" href="kontaktinfo.html">Kontaktinfo</a></li>
+        </ul>
+        <div id="navbarMobile" onclick="navbarMobileClick()" ><div class="hamburgerLine"></div><div class="hamburgerLine"></div><div class="hamburgerLine"></div></div>
+    </div>
+    <div id="navbarElementsMobile">
+        <a class="otherPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
+        <a class="otherPageMobile" href="program.html"><p class="navbarElementButtonMobile">Program</p></a>
+        <a class="otherPageMobile" href="billettkjop.html"><p class="navbarElementButtonMobile">Billettkjøp</p></a>
+        <a class="otherPageMobile" href="omFestivalen.html"><p class="navbarElementButtonMobile">Om festivalen</p></a>
+        <a id="currentPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
         </ul>
     </div>
 </div>

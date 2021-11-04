@@ -83,3 +83,23 @@ function logoResize() {
 }
 
 
+
+/* Funksjon som toggler hamburger-navbar */
+
+let navbarMobileDisplay = 0;
+
+function navbarMobileClick(){
+    navbarElementsMobile = document.getElementById("navbarElementsMobile")
+    if (navbarMobileDisplay == 0) {
+        navbarElementsMobile.style.display = "block";
+        navbarMobileDisplay = 1;
+    }
+    else {
+        navbarElementsMobile.style.display = "none";
+        navbarMobileDisplay = 0;
+    }
+}
+
+function hideNavbarMobile(){
+    document.getElementById("navbarElementsMobile").style.display = "none";
+}

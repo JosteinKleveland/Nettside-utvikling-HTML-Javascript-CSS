@@ -69,6 +69,61 @@ body{
     }
 }
 
+#navbarMobile {
+    height: 30px;
+    width: 40px;
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+    display: none;
+}
+
+.hamburgerLine {
+    height: 5px;
+    width: 100%;
+    background-color: #6D7B48;
+    margin-top: 5px;
+}
+
+#navbarMobile:hover div {
+    background-color: #B7C68B;
+}
+
+#navbarElementsMobile {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    float: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+}
+
+#navbarElementsMobile a {
+    text-decoration: none;
+}
+
+.navbarElementButtonMobile {
+    height: 20px;
+    width: 80%;
+    margin: auto;
+    background-color: #E8E7E7;
+    margin-bottom: 5px;
+    text-align: center;
+    color: black;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.otherPageMobile p:hover, #currentPageMobile p:hover {
+    background-color: #B7C68B;
+}
+
+#currentPageMobile p{
+    background-color: #6D7B48;
+    color: white;
+}
+
 
 /* FOOTER */
 
@@ -91,6 +146,7 @@ body{
 #soMeButtons img{
     height: 60px;
     padding-right: 20px;
+    margin: auto;
 }
 
 #mainSponsorButtons{
@@ -732,8 +788,103 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 
 @media screen and (max-width: 560px) {
 
-    #navbar, #footer, #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
-        width: 560px;
+    #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
+        width: 350px;
+        margin: auto;
     }
 
+    #footer  {
+        height: 350px;
+    }
+
+    #mainSponsorButtons {
+        width: 310px;
+        height: 50px;
+        padding: 40px 20px 0px 20px;
+        margin: auto;
+        float: none;
+    }
+
+    #soMeButtons {
+        width: 264px;
+        height: 50px;
+        padding: 20px 42px 0px 42px;
+        margin: auto;
+        float: none;
+
+    }
+
+    #soMeButtons img {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+    }
+
+
+    #mainSponsorButtons img{
+        width: 80px;
+        height: 80px;
+        float: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #toTopOfPageDefault, #toTopOfPageHover {
+        bottom: 25px;
+        width: 80px;
+    }
+
+    #toTopOfPageDefault img, #toTopOfPageHover img {
+        width: 80px;
+    }
+
+    #copyright {
+        font-size: 8pt;
+        width: 80px;
+        bottom: 7px;
+    }
+
+    .kontaktpersonWrapper {
+        height: 400px;
+        width: 250px;
+        padding-bottom: 50px;
+    }
+
+    .kontaktpersonInfo {
+        height: 150px;
+    }
+
+    .kontaktpersonInfo h2 {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    
+    .kontaktpersonInfo h3, p {
+        font-size: 15px;
+    }
+
+    #kontaktinfoHeading {
+        font-size: 30px;
+    }
+
+    .kontaktinfohSubHeadings {
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    #navbarMobile {
+        display: block;
+    }
+
+    #navbarElements ul {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    
+    #footer {
+        width: 350px;
+    }
 }
