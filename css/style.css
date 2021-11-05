@@ -1046,8 +1046,14 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     margin: 30px 30px 30px 30px;
 }
 
-.omFestivalenMainSponsor img {
+.omFestivalenMainSponsor a {
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#sponsorRema img {
+    width: 80%;
 }
 
 .omFestivalenSubSponsor {
@@ -1057,28 +1063,34 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     margin: 30px 30px 30px 30px;
 }
 
+.omFestivalenSubSponsor a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .omFestivalenSubSponsor img {
     width: 30%;
+}
+
+#sponsorCocaCola img {
+    width: 60%;
 }
 
 #sponsorTrondelagFylkeskommune {
     width: 25%;
 }
 
-#sponsorCocaCola {
-    width: 50%;
-}
-
 #sponsorNorrona {
-    width: 60%;
+    width: 75%;
 }
 
 #sponsorTine {
-    width: 40%;
+    width: 60%;
 }
 
 #sponsorCoop {
-    width: 40%;
+    width: 60%;
 }
 
 
