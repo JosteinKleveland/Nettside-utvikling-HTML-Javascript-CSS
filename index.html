@@ -16,11 +16,11 @@
     <a id="logoBox" href="index.html"></a>
     <div id="navbarElements">
         <ul>
-            <li><a class="otherPage" href="index.html">Forside</a></li>
+            <li><a id="currentPage" href="index.html">Forside</a></li>
             <li><a class="otherPage" href="program.html">Program</a></li>
             <li><a class="otherPage" href="billettkjop.html">Billettkjøp</a></li>
             <li><a class="otherPage" href="omFestivalen.html">Om festivalen</a></li>
-            <li><a id="currentPage" href="kontaktinfo.html">Kontaktinfo</a></li>
+            <li><a class="otherPage" href="kontaktinfo.html">Kontaktinfo</a></li>
         </ul>
         <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)">
             <div class="hamburgerLine"></div>
@@ -29,12 +29,12 @@
         </div>
     </div>
 </div>
-<div id="navbarElementsMobile">
-    <a class="otherPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
+<div id="navbarElementsMobile" style="margin-top: 82px;">
+    <a id="currentPageMobile" href="index.html"><p class="navbarElementButtonMobile">Forside</p></a>
     <a class="otherPageMobile" href="program.html"><p class="navbarElementButtonMobile">Program</p></a>
     <a class="otherPageMobile" href="billettkjop.html"><p class="navbarElementButtonMobile">Billettkjøp</p></a>
     <a class="otherPageMobile" href="omFestivalen.html"><p class="navbarElementButtonMobile">Om festivalen</p></a>
-    <a id="currentPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
+    <a class="otherPageMobile" href="kontaktinfo.html"><p class="navbarElementButtonMobile">Kontaktinfo</p></a>
 </div>
 
 
@@ -119,7 +119,114 @@
 
 
 <!--interaktivt kart-->
-<div id="mapPlaceholder"></div>
+<!-- Festival Kart -->
+
+<h2 class="pageSubHeadings">Festivalkart</h2>
+
+<div class="flexContainerFestivalKart">
+     
+    <div class="festivalKartWrapper">
+                
+        <img class="festivalKart" src="img/kart.png" alt="Festivalkart">
+
+        <div id="inngangText" class="outerTextWrapper">
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Inngang</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>       
+        
+            <img id="inngangIcon" class="mapIcon" iconTarget="inngangText" src="img/mapMarker.png" alt="inngang">
+
+        <div id="barText" class="outerTextWrapper">    
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Baren "Til Skogs"</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>
+
+            <img id="barIcon" class="mapIcon" iconTarget="barText" src="img/mapMarker.png" alt="bar">
+        
+        <div id="hovedsceneText" class="outerTextWrapper">    
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Hovedscenen</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>
+
+            <img id="hovedsceneIcon" class="mapIcon" iconTarget="hovedsceneText" src="img/mapMarker.png" alt="inngang">
+
+        <div id="sceneAmfietText" class="outerTextWrapper">    
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Scene Amfiet</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>
+
+            <img id="sceneAmfietIcon" class="mapIcon" iconTarget="sceneAmfietText" src="img/mapMarker.png" alt="inngang">
+
+        <div id="parkeringText" class="outerTextWrapper">    
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Parkering</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>
+
+            <img id="parkeringIcon" class="mapIcon" iconTarget="parkeringText" src="img/mapMarker.png" alt="inngang">
+
+        <div id="baalText" class="outerTextWrapper">    
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Bålplassen</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>
+
+            <img id="baalIcon" class="mapIcon" iconTarget="baalText" src="img/mapMarker.png" alt="inngang">
+
+        <div id="resturantText" class="outerTextWrapper">    
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Resturanten "Til Marks"</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>
+
+            <img id="resturantIcon" class="mapIcon" iconTarget="resturantText" src="img/mapMarker.png" alt="inngang">
+            
+        <div id="teltText" class="outerTextWrapper">    
+            <div class="iconText">
+                <span class="closeMap">&times;</span>
+                <h1>Teltplassen</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
+            </div>
+        </div>
+
+        <img id="teltIcon" class="mapIcon" iconTarget="teltText" src="img/mapMarker.png" alt="inngang">
+
+    </div>
+</div>
 
 <!--Footer-->
 <div id="footer">
@@ -129,11 +236,10 @@
         <a href="https://www.tiktok.com" target="_blank"><img src="img/tiktokLogoIcon.svg" alt="TikTok"></a>
     </div>
     <div id="mainSponsorButtons">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 1">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 2">
-        <img src="img/logo_placeholder.png" alt="Hovedsponsor 3">
+        <a href="https://www.xxl.no" target="_blank"><img id="footerSponsorXXL" src="img/sponsorXXL.svg" alt="XXL logo"></a>
+        <a href="https://www.rema.no" target="_blank"><img id="footerSponsorRema1000" src="img/sponsorRema1000.svg" alt="Rema 1000 logo"></a>
+        <a href="https://www.dnb.no" target="_blank"><img id="footerSponsorDNB" src="img/sponsorDNB.svg" alt="DNB logo"></a>
     </div>
-    
     <div onclick="toTop()" id="toTopOfPageHover">
         <img src="img/tilToppsHover_placeholder.png" alt="Til toppen av siden">
     </div>
@@ -145,5 +251,6 @@
 
 <script src="javaScript/modulation.js"></script>
 <script src="javaScript/countdown.js "></script>
+<script src="javaScript/hotspots.js"></script>
 </body>
 </html>

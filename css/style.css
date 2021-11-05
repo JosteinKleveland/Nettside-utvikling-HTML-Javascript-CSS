@@ -907,38 +907,6 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 
 /*-------------------------- OM FESTIVALEN --------------------------*/
 
-.omFestivalenSubHeading {
-    font-size: 35px;
-    position: relative;
-    text-align: center;
-}
-
-.flexContainerFestivalInfo, .flexContainerSubSponsor {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.infoBilde, .infoText {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 40%;
-    height: 25%;
-    margin: 30px 30px 30px 30px;
-}
-
-.infoBilde img {
-    width: 100%;
-    height: 100%;
-}
-.infoText p {
-    font-size: 20px;
-}
-
-
 /*-------------------------------- FESTIVALKART -----------------------*/
 
 .flexContainerFestivalKart {
@@ -991,12 +959,20 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     opacity: 1;
     width: 50%;
     max-height: 75%;
-    margin-left: auto;
-    margin-right: auto;
     padding: 2rem;
     border-radius: 0.25rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     overflow: auto;
+}
+
+.iconText h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.iconText p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
 }
 
 .closeMap {
@@ -1015,22 +991,9 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     color: rgba(0,0,0,0.5);
 }
 
-
-
-/*
-.iconText {
-display: none;
-position: absolute;
-background-color: #f1f1f1;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 2;
-width: 40%;
-overflow: content;
-}
-*/
 #inngangIcon {
-  bottom: 66%;
-  right: 45%;
+  top: 68%;
+  right: 44%;
 }
 
 #barIcon {
@@ -1059,13 +1022,13 @@ overflow: content;
 }
 
 #resturantIcon {
-    top: 60%;
-    right: 3%;
+    top: 23%;
+    right: 48%;
 }
 
 #teltIcon {
-    top: 23%;
-    right: 48%;
+    top: 60%;
+    right: 3%;
 }
 /* SPONSOR */
 .flexContainerSponsor {
@@ -1083,8 +1046,14 @@ overflow: content;
     margin: 30px 30px 30px 30px;
 }
 
-.omFestivalenMainSponsor img {
+.omFestivalenMainSponsor a {
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#sponsorRema img {
+    width: 80%;
 }
 
 .omFestivalenSubSponsor {
@@ -1094,28 +1063,34 @@ overflow: content;
     margin: 30px 30px 30px 30px;
 }
 
+.omFestivalenSubSponsor a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .omFestivalenSubSponsor img {
     width: 30%;
+}
+
+#sponsorCocaCola img {
+    width: 60%;
 }
 
 #sponsorTrondelagFylkeskommune {
     width: 25%;
 }
 
-#sponsorCocaCola {
-    width: 50%;
-}
-
 #sponsorNorrona {
-    width: 60%;
+    width: 75%;
 }
 
 #sponsorTine {
-    width: 40%;
+    width: 60%;
 }
 
 #sponsorCoop {
-    width: 40%;
+    width: 60%;
 }
 
 

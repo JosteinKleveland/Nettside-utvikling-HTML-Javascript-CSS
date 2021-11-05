@@ -1,7 +1,5 @@
 
 const icons = document.querySelectorAll(".mapIcon");
-const inngang = document.getElementById("inngangIcon");
-const box = document.getElementsByClassName("iconText");
 const closeButton = document.querySelectorAll(".closeMap");
 const outerWrapper = document.querySelectorAll(".outerTextWrapper")
 
