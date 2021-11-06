@@ -74,7 +74,7 @@ body{
     flex-wrap: wrap;
 }
 
-.infoBilde, .infoText {
+.infoBilde, .infoBilde2, .infoText {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,17 +94,29 @@ body{
     font-size: 20px;
 }
 
-.infoBilde {
+.infoBilde, .infoBilde2 {
     overflow: hidden;
 }
 
-.infoBilde img {
+.infoBilde2 {
+    display: none;
+}
+
+.infoBilde img, .infoBilde2 img {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
 }
 
 
+@media screen and (max-width: 650px) {
+    .infoBilde2 {
+        display: contents;
+    }
+    .infoBilde {
+        display: none;
+    }
+}
 /*------------------------ NAVBAR -------------------------*/
 
 #navbar{
