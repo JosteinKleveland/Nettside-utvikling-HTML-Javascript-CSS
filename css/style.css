@@ -116,6 +116,9 @@ body{
     .infoBilde {
         display: none;
     }
+    .infoText {
+        width: 100%;
+    }
 }
 /*------------------------ NAVBAR -------------------------*/
 
@@ -1042,6 +1045,15 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     top: 60%;
     right: 3%;
 }
+
+@media screen and (max-width: 650px) {
+
+    .festivalKartWrapper {
+        width: 100%;
+    }
+
+}
+
 /* SPONSOR */
 .flexContainerSponsor {
     display: flex;
@@ -1064,8 +1076,18 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     justify-content: center;
 }
 
-#sponsorRema img {
+.omFestivalenMainSponsor img {
     width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.flexContainerSubSponsor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .omFestivalenSubSponsor {
@@ -1077,32 +1099,33 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 
 .omFestivalenSubSponsor a {
     width: 100%;
+    min-width: 200px;
     display: flex;
     justify-content: center;
 }
 
-.omFestivalenSubSponsor img {
-    width: 30%;
+#sponsorTrondheimKommune {
+    width: 20%;
 }
 
 #sponsorCocaCola img {
-    width: 60%;
+    width: 40%;
 }
 
 #sponsorTrondelagFylkeskommune {
-    width: 25%;
+    width: 15%;
 }
 
 #sponsorNorrona {
-    width: 75%;
+    width: 65%;
 }
 
 #sponsorTine {
-    width: 60%;
+    width: 50%;
 }
 
 #sponsorCoop {
-    width: 60%;
+    width: 50%;
 }
 
 
