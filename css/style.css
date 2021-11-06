@@ -1145,7 +1145,6 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     justify-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    
     max-width: 1100px;
     margin: auto;
     margin-top: 60px;
@@ -1203,7 +1202,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 @media screen and (max-width: 560px) {
 
     #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
-        width: 350px;
+        width: 295px;
         margin: auto;
     }
 
