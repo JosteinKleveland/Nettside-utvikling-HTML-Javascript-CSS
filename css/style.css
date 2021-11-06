@@ -1196,7 +1196,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     margin-top: 50px;
 }
 
-.kontaktpersonInfo h2, h3, p {
+.kontaktpersonInfo h2, .kontaktpersonInfo h3, .kontaktpersonInfo p {
     margin-left: 20px;
 }
 
@@ -1211,25 +1211,61 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     margin: auto;
 }
 
+@media screen and (max-width: 799px)  {
+    #flexContainerFAQ {
+        width: 500px;
+    }
+
+    .FAQboxWrapper {
+        width: 500px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .FAQbox p {
+        text-align: center;
+    }
+        
+}
+
 @media screen and (max-width: 560px) {
 
-    #flexContainerFAQ, #flexContainerKontaktpersoner, h1, h2 {
-        width: 295px;
-        margin: auto;
+    #flexContainerFAQ, #flexContainerKontaktpersoner {
+        width: 100%;
+    }
+
+    .FAQboxWrapper {
+        width: 100%;
+        margin: 20px;
     }
 
     .kontaktpersonWrapper {
         height: 400px;
-        width: 250px;
-        padding-bottom: 50px;
+        width: 100%;
+        padding-bottom: 30px;
+        height: auto;
+        margin: 20px;
+    }
+
+    .kontaktpersonWrapper img {
+        width: 100%;
+        height: auto;
     }
 
     .kontaktpersonInfoTop {
-        margin-top: 235px;
+        margin-top: -10px;
+        position: relative;
+        width: 100%;
     }
 
     .kontaktpersonInfo {
         height: 150px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .kontaktpersonInfo h2, .kontaktpersonInfo h3, .kontaktpersonInfo p {
+        margin-left: 0px;
     }
 
     .kontaktpersonInfo h2 {
@@ -1241,4 +1277,10 @@ individuell "left: X; og krever derfor hver sine css-elementer */
         font-size: 15px;
     }
     
+}
+
+@media screen and (max-width: 350px) {
+    #flexContainerFAQ, #flexContainerKontaktpersoner {
+        width: 345px;
+    }
 }
