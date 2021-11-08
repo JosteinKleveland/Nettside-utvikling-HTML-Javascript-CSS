@@ -125,7 +125,6 @@ body{
 #navbar{
     width: 100%;
     height: 90px;
-    position: fixed;
     top: 0px;
     left: 0px;
     z-index: 100;
@@ -158,6 +157,7 @@ body{
     color: black;
     text-decoration: none;
     font-size: 13pt;
+    margin-left: 5px;
 }
 
 #currentPage {
@@ -166,6 +166,7 @@ body{
     text-decoration: none;
     font-size: 13pt;
     padding: 18px;
+    margin-left: 5px;
 }
 
 #navbarElements a:hover{
