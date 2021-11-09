@@ -51,12 +51,14 @@
                     <div id="firstColumn2">
                         <!-- Input for fornavn -->
                         <label for="firstName">Fornavn: </label>
-                        <input class="input1" required id="firstName" type="text" name="firstName" pattern="[a-zA-zæøåÆØÅ'-'\s]*" title="Kun bokstaver">
+                        <input class="input1" required id="firstName" type="text" name="firstName" pattern="[a-zA-zæøåÆØÅ'-'\s|-]*" title="Kun bokstaver">
+                        <!-- Ønsker å tillate alle bokstaver i tillegg til mellomrom og bindestrek ved dobbeltnavn -->
                     </div>
                     <div id="secondColumn2">
                         <!-- Og input for etternavn -->
                         <label for="surName">Etternavn: </label>
-                        <input class="input1" required id="surName" type="text" name="name" pattern="[a-zA-zæøåÆØÅ'-'\s]*" title="Kun bokstaver"> 
+                        <input class="input1" required id="surName" type="text" name="name" pattern="[a-zA-zæøåÆØÅ'-'\s|-]*" title="Kun bokstaver"> 
+                        <!-- Ønsker å tillate alle bokstaver i tillegg til mellomrom og bindestrek ved dobbeltnavn -->
                     </div>
                 </div>
                 <div class="mainColumn">

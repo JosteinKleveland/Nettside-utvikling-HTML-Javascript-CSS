@@ -19,7 +19,7 @@ for(let i=1; i < 11; i++){
 }
 
 var date = new Date();
-date.setMonth(date.getMonth() + 4) 
+date.setMonth(date.getMonth() + 3) 
 // Ønsker å ha et buffer på utgangsdato, slik at betaling er sikret
 
 var binding = "-";
@@ -88,8 +88,9 @@ function formattAlpha(value)   {
     // Trenger ikke validere hvis mengden er tom
     if(!value) return value;
 
-    // Fjerner så alt som ikke er bokstaver
-    var alpha = value.replace(/\W/g, "");
+    // Fjerner så alt som ikke er tillatt
+    // Ønsker å tillate alle bokstaver i tillegg til mellomrom og bindestrek ved dobbeltnavn
+    var alpha = value.replace(/[.,!=*+/&%#"?^${}()|[\]\\]/g, "");
     alpha = alpha.replace(/[0-9]/g, "");
 
     // Returnerer verdien som kun alfabetiske-tegn
