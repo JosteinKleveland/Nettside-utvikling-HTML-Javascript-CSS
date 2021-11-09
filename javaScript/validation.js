@@ -19,7 +19,7 @@ for(let i=1; i < 11; i++){
 }
 
 var date = new Date();
-date.setMonth(date.getMonth() + 3) 
+date.setMonth(date.getMonth() + 3);
 // Ønsker å ha et buffer på utgangsdato, slik at betaling er sikret
 
 var binding = "-";
@@ -64,10 +64,10 @@ form.addEventListener("submit", ticketBought);
 // Og placeholdere...
 firstName.placeholder = "Ola";
 surName.placeholder = "Nordman";
-tlf.placeholder = "123 - 45 - 678"
-eMail.placeholder = "olanordman@hotmail.no"
+tlf.placeholder = "123 - 45 - 678";
+eMail.placeholder = "olanordman@hotmail.no";
 postNr.placeholder = "1234";
-cardNr.placeholder = "1234-5678-1234-5678"
+cardNr.placeholder = "1234-5678-1234-5678";
 cvc.placeholder = "123";
 
 // Og setter betingelsene til required
