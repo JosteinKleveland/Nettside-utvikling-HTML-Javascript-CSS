@@ -23,27 +23,28 @@
     <div id="navbar"></div>
     <div id="navbarElementsMobile"></div>
 
-    <div id="programBody"> 
-        <h1 id="pageHeading">Program</h1>
-        <div id="flexContainerButtons">
+    <div id="programBody"> <!--Definerer en hoved-div som fungerer som innholdskropp-->
+        <h1 id="pageHeading">Program</h1> <!--Hovedoverskrift-->
+        <div id="flexContainerButtons"> <!--Div som inneholder knapper til dager-->
             <button class="pageButtons" id="friday">Fredag</button>
             <button class="pageButtons" id="saturday">Lørdag</button>
             <button class="pageButtons" id="sunday">Søndag</button>
         </div>
 
-        <h1 class="consertDay" id="fridayHeader">Fredag</h1>
-        <div class="flexContainerMain">
+        <h1 class="consertDay" id="fridayHeader">Fredag</h1> <!--Underoverskrift-->
+        <div class="flexContainerMain"> <!--En av tre flexcontainere, som inneholder artister og tilhørende informasjon-->
             
-            <div class = "infoBilde"><img  src="img/postgirobygget.jpg" alt="bilde_placeholder"></div>
-            <div class = "infoBilde2"><img  src="img/postgirobygget.jpg" alt="bilde_placeholder"></div>
-            <div class = "infoText">
+            <!--Bilder av artister og tilhørende div-er med informasjon og "les mer"-knapp-->
+            <div class = "infoBilde"><img  src="img/postgirobygget.jpg" alt="bilde_postgirobygget"></div> <!--Bilde-->
+            <div class = "infoBilde2"><img  src="img/postgirobygget.jpg" alt="bilde_postgirobygget"></div> <!--Bilder med klassenr. 2 er til når rekkefølgen skal være riktig når siden skaleres-->
+            <div class = "infoText"><!--En av mange div-er med informasjon og "les mer"-knapp-->
                 <h2>Postgirobygget</h2>
                 <p>Fredag - kl.20.00</p>
                 <p>Sted: Hovedscenen</p>
-                <button class="pageButtons" data-modal-target="modal1">Les mer</button>
+                <button class="pageButtons" data-modal-target="modal1">Les mer</button> <!--Knapp med fokus (target) med tanke på modal/popup-->
                 <div class="modal" id="modal1">
                     <div class="modal-content">
-                        <span class="modal-close">&times;</span>
+                        <span class="modal-close">&times;</span> <!--Lukke knapp for hver popup-->
                         <h1>Postgirobygget</h1>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
@@ -90,7 +91,7 @@
 
         <h1 class="consertDay" id="saturdayHeader">Lørdag</h1>
     
-        <div class="flexContainerMain">
+        <div class="flexContainerMain"> <!--Tilsvarende som forklart over med artister og informasjon, nå kun til lørdag-->
             <div class = "infoBilde2"><img  src="img/henningkvitnes.jpg" alt="bilde_henningkvitnes"></div>
             <div class = "infoText">
                 <h2>Henning Kvitnes</h2>
@@ -167,7 +168,7 @@
     </div>
 
     <div id="footer"></div>
-
+    <!--Referanser til javascript-->
     <script type="text/javascript" src="javaScript/modulation.js"></script>
     <script type="text/javascript" src="javaScript/expansion.js"></script>
 </body>

@@ -48,7 +48,7 @@ body{
     }
 }
 
-/* Forslag til felles knapper */
+/* Felles knapper */
 
 .pageButtons {
     font-size: 20px;
@@ -568,21 +568,23 @@ video {
 
 /*  --------------------------  PROGRAM ------------------------- */
 
+/* Knapper øverst på programsiden*/
 #flexContainerButtons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
 }
-
+/* Overskrift til hvilken dag artistene spiller */
 .consertDay {
     font-size: 40px;
     text-align: center;
 }
 
-/* CSS for popup/modal (expansions - JavaScript) */
-/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som inspirasjon and eksempel */
+/* CSS for popup/modal. Koblet til expansions - JavaScript */
+/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som kilde */
 
+/* Div som popup-en lages inni */
 .modal {
     position: fixed;
     top: 0;
@@ -596,6 +598,7 @@ video {
     justify-content: center;
     align-items: flex-start;
 }
+/* Definerer en div med alt innholdet som skal være inne i popup-en */
 .modal-content {
     position: relative;
     background-color: #fff;
@@ -607,16 +610,17 @@ video {
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     overflow: auto;
 }
+/* Overskriften til popup-en */
 .modal-content h1 {
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
+/* Tekst-elementene til popup-en */
 .modal-content p {
     margin: 1rem 0;
     line-height: 1.5rem;
 }
-
+/* x-en til å lukke popup-vinduet */
 .modal-close { 
     position: absolute;
     top: 0;
@@ -628,12 +632,12 @@ video {
     cursor: pointer;
     user-select: none;
 }
-
+/* Endrer farge når man hovrer lukke-knappen */
 .modal-close:hover, .modal-close:focus {
     color: rgba(0,0,0,0.5);
 }
 
-
+/* Tilpasninger for mindre skjerm */
 @media screen and (max-width: 900px) {
     .programButtons {
         font-size: 20px;
@@ -644,9 +648,9 @@ video {
         font-size: 15px;
     }
 }
-
+/* Setter elementene til å være i kolonne nedover, fjerner knappene øverst og endrer skriftstørrelser på underoverskriftene */
 @media screen and (max-width: 600px) {
-    #flexContainerButtons { /* .infoBilde fjerner også bildene ved nedskalering */
+    #flexContainerButtons { /* ".infoBilde" kan også fjerne bildene ved nedskalering */
         display: none;
     }
     .flexContainerMain {
