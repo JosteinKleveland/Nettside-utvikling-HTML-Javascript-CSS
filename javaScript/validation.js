@@ -1,5 +1,5 @@
 
-// Ønsker å fylle lista med antall billetter fra 1 - 10
+// Ønsker å fylle lista (antall billetter) med antall billetter fra 1 - 10
 var select = document.getElementById("quantity");
 
 for(let i=1; i < 11; i++){
@@ -34,7 +34,6 @@ document.getElementById("expiryDate").min = date.getFullYear() + binding + date.
 
 // deklarerer konstanter med sti til elementer i HTMLen
 const type = document.getElementById("type");
-// const quantity = document.getElementById("quantity")
 const firstName = document.getElementById("firstName");
 const surName = document.getElementById("surName");
 const tlf = document.getElementById("tlf");
@@ -71,6 +70,7 @@ postNr.placeholder = "1234";
 cardNr.placeholder = "1234-5678-1234-5678"
 cvc.placeholder = "123";
 
+// Og setter betingelsene til required
 conditions.required = true;
 
 // Funksjon som validerer at det kun er bokstaver
@@ -93,7 +93,7 @@ function formattAlpha(value)   {
     var alpha = value.replace(/[.,!=*+/&%#"?^${}()|[\]\\]/g, "");
     alpha = alpha.replace(/[0-9]/g, "");
 
-    // Returnerer verdien som kun alfabetiske-tegn
+    // Returnerer verdien som kun alfabetiske-tegn (pluss bindestrek osv.)
     return alpha;
 }
 

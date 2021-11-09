@@ -65,6 +65,7 @@
                     <!-- Input for telefonnummer -->
                     <label for="tlf">Telefon: </label>
                     <input class="input2" required id="tlf" type="tel" name="tlf" pattern="[0-9]{3} - [0-9]{2} - [0-9]{3}" title="123 - 45 - 678">
+                    <!-- Dobbeltsjekker at det kun er tall og at det er riktig format. Dette ordner i utgangspunktet validation.js -->
                 </div>
                 <div class="mainColumn">
                     <!-- Input for email -->
@@ -80,11 +81,13 @@
                     <!-- Input for postnummer -->
                     <label for="postNr">Postnr.: </label>
                     <input class="input2" required id="postNr" type="tel" name="postNr" pattern="[0-9]{4}" title="1234">
+                    <!-- Dobbeltsjekker at det kun er tall og at det er riktig format. Dette ordner i utgangspunktet validation.js -->
                 </div>
                 <div class="mainColumn">
                     <!-- Input for kortnummer -->
                     <label for="cardNr">Kortnr.: </label>
                     <input class="input2" required id="cardNr" type="tel" name="cardNr" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" title="1234-5678-1234-5678">
+                    <!-- Dobbeltsjekker at det kun er tall og at det er riktig format. Dette ordner i utgangspunktet validation.js -->
                 </div>
                 <div class="collectionDiv">
                     <!-- Igjen en div for elementer som ligger ved siden av hverandre -->
@@ -92,6 +95,7 @@
                         <!-- Input for CVC -->
                         <label for="cvc">CVC: </label>
                         <input class="input1" required id="cvc" type="tel" name="tax" pattern="[0-9]{3}" title="123">
+                        <!-- Dobbeltsjekker at det kun er tall og at det er riktig format. Dette ordner i utgangspunktet validation.js -->
                     </div>
                     <div id="secondColumn3">
                         <!-- Input for utgangsdato -->
@@ -104,6 +108,7 @@
                 <!-- Linken er midlertidig ikke koblet til noe, dette vil koordineres med klienten når betingelser er ferdigstilt -->
                 <input type="checkbox" id="conditions" name="conditions">
                 <label id="conditionsLabel" for="conditions">Jeg aksepterer Markas <a href="#">salgsbetingelser</a></label>
+                <!-- Dette vil være et nødvendig felt, og settes til dette gjennom javaScript -->
                 <br>
                 <input type="checkbox" id="updates" name="updates">
                 <label id="updatesLabel" for="updates">Jeg ønsker jevnlige oppdateringer om festivalen</label>
