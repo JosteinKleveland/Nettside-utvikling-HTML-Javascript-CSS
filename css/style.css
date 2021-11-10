@@ -501,6 +501,7 @@ video {
     padding-top: 85px;
     background-color: #6D7A49;
     border-bottom: #6D7A49 5px solid;
+    height: 90%;
 
     /*tekst*/
     color: white;
@@ -521,13 +522,13 @@ video {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 50%;
+    width: 70%;
     
 }
 
 #logoWelcomeId{
     width: 50%;
-    margin-bottom: -10%;
+    margin-bottom: 10%;
 }
 
 
@@ -551,7 +552,7 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 5%;
 }
 
 
