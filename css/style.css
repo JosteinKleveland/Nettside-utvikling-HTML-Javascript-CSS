@@ -120,6 +120,71 @@ body{
         width: 100%;
     }
 }
+
+
+/* CSS for popup/modal. Koblet til expansions - JavaScript */
+/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som kilde */
+
+/* Div som popup-en lages inni */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1000;
+    overflow: auto;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* Definerer en div med alt innholdet som skal være inne i popup-en */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    width: 50%;
+    max-height: 75%;
+    margin: 5rem;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    overflow: auto;
+}
+/* Overskriften til popup-en */
+.modal-content h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+/* Tekst-elementene til popup-en */
+.modal-content p {
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+/* x-en til å lukke popup-vinduet */
+.modal-close { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0 0.75rem;
+    color: rgba(0,0,0,0.2);
+    cursor: pointer;
+    user-select: none;
+}
+/* Endrer farge når man hovrer lukke-knappen */
+.modal-close:hover, .modal-close:focus {
+    color: rgba(0,0,0,0.5);
+}
+
+/* Gjør kartinfo-boksen større */
+@media screen and (max-width: 650px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
 /*------------------------ NAVBAR -------------------------*/
 
 #navbar{
@@ -139,6 +204,7 @@ body{
     height: 90px;
     width: 100%;
     top: 0px;
+    font-size: 13pt;
 }
 
 #navbarElements ul{
@@ -156,7 +222,6 @@ body{
     padding: 18px;
     color: black;
     text-decoration: none;
-    font-size: 13pt;
     margin-left: 5px;
 }
 
@@ -164,7 +229,6 @@ body{
     color: #6D7B48;
     border-bottom: solid #6D7B48 2px;
     text-decoration: none;
-    font-size: 13pt;
     padding: 18px;
     margin-left: 5px;
 }
@@ -219,6 +283,7 @@ body{
     display: none;
     position: fixed;
     z-index: 102;
+    font-size: 13pt;
 }
 
 #navbarElementsMobile a, #navbarElementsForside a {
@@ -392,7 +457,7 @@ body{
         float: left;
     }
 }
-
+/* Nødvendig justering på 560px for fot at footer elementer ikke skal kollidere */
 @media screen and (max-width: 560px) {
     #footer  {
         height: 350px;
@@ -443,7 +508,7 @@ body{
         bottom: 7px;
     }
 }
-
+/* Konstant width på liten skjermbredde */
 @media screen and (max-width: 350px) {
     #footer {
         width: 350px;
@@ -587,62 +652,6 @@ video {
     text-align: center;
 }
 
-/* CSS for popup/modal. Koblet til expansions - JavaScript */
-/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som kilde */
-
-/* Div som popup-en lages inni */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
-    z-index: 1000;
-    overflow: auto;
-    display: none;
-    justify-content: center;
-    align-items: flex-start;
-}
-/* Definerer en div med alt innholdet som skal være inne i popup-en */
-.modal-content {
-    position: relative;
-    background-color: #fff;
-    width: 50%;
-    max-height: 75%;
-    margin: 5rem;
-    padding: 2rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    overflow: auto;
-}
-/* Overskriften til popup-en */
-.modal-content h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-/* Tekst-elementene til popup-en */
-.modal-content p {
-    margin: 1rem 0;
-    line-height: 1.5rem;
-}
-/* x-en til å lukke popup-vinduet */
-.modal-close { 
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.75rem;
-    font-weight: bold;
-    padding: 0 0.75rem;
-    color: rgba(0,0,0,0.2);
-    cursor: pointer;
-    user-select: none;
-}
-/* Endrer farge når man hovrer lukke-knappen */
-.modal-close:hover, .modal-close:focus {
-    color: rgba(0,0,0,0.5);
-}
-
 /* Tilpasninger for mindre skjerm */
 @media screen and (max-width: 900px) {
     .programButtons {
@@ -655,10 +664,8 @@ video {
     }
 }
 /* Setter elementene til å være i kolonne nedover, fjerner knappene øverst og endrer skriftstørrelser på underoverskriftene */
-@media screen and (max-width: 600px) {
-    #flexContainerButtons { /* ".infoBilde" kan også fjerne bildene ved nedskalering */
-        display: none;
-    }
+@media screen and (max-width: 650px) {
+
     .flexContainerMain {
         flex-direction: column;
     }
@@ -670,7 +677,6 @@ video {
         width: 100%;
     }
 }
-
 
 /*  --------------------------  BILLETTKJØP ------------------------- */
 
@@ -965,57 +971,14 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     cursor: pointer;
     opacity: 0.4;
 }
-
+/* Spesifikk endring for kart med tanke på hotspot popup */
 .outerTextWrapper {
-    width: 100%;
-    height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
-    display: none;
+    z-index: 3;
 }
 
 .iconText {
     position: absolute;
-    background-color: #fff;
-    opacity: 1;
-    width: 50%;
-    max-height: 75%;
-    padding: 2rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    overflow: auto;
-}
-
-.iconText h1 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.iconText p {
-    margin: 1rem 0;
-    line-height: 1.5rem;
-}
-
-.closeMap {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.75rem;
-    font-weight: bold;
-    padding: 0 0.75rem;
-    color: rgba(0,0,0,0.2);
-    cursor: pointer;
-    user-select: none;
-}
-
-.closeMap:hover {
-    color: rgba(0,0,0,0.5);
 }
 
 #inngangIcon {
@@ -1252,7 +1215,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     width: 80%;
     margin: auto;
 }
-
+/* Spesifikk endring akkurat her for å få det til å se bra ut på mindre skjermer*/
 @media screen and (max-width: 799px)  {
     #flexContainerFAQ {
         width: 500px;
