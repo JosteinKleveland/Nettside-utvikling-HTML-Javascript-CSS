@@ -30,8 +30,7 @@ function toggleModal(modalId) {
     }
     else {
         modal.style.display = "flex";
-        document.body.style.overflow = "hidden";
-    }
+        }
 }
 
 /* Javascript til å scrolle nettsiden ned til den aktuelle dagen det refereres til i knappene */

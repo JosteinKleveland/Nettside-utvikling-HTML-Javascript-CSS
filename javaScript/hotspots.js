@@ -1,16 +1,16 @@
 
 const icons = document.querySelectorAll(".mapIcon");
 const closeButton = document.querySelectorAll(".closeMap");
-const outerWrapper = document.querySelectorAll(".outerTextWrapper")
+const outerWrapper = document.querySelectorAll(".modal")
 
 icons.forEach(el => el.addEventListener('click', event => {
- openMapInfo(event.currentTarget.getAttribute("iconTarget"))}));
+ openMapInfo(event.currentTarget.getAttribute("data-modal-target"))}));
 
 closeButton.forEach(el => el.addEventListener('click', event => {
-    closeMapInfo(event.currentTarget.closest(".outerTextWrapper").id)}));
+    closeMapInfo(event.currentTarget.closest(".modal").id)}));
 
 outerWrapper.forEach(el => el.addEventListener('click', event => {
-    closeMapInfoOutside(event.currentTarget.closest(".outerTextWrapper").id)}));
+    closeMapInfoOutside(event.currentTarget.closest(".modal").id)}));
 
 function openMapInfo(infoID) {
     document.getElementById(infoID).style.display = "flex";
