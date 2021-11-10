@@ -599,6 +599,7 @@ video {
 
 #countdownId{
     display: flex;
+    justify-content: center;
 }
 
 #billettkjopHomePageId{
@@ -612,6 +613,18 @@ video {
     border: none;
 }
 
+
+#billettkjopHomePageId:hover{
+    background-color: #6D7A49;
+    color: white;
+    cursor: pointer;
+
+}
+
+
+
+
+
 .time{
     display: flex;
     flex-direction: column;
@@ -623,6 +636,9 @@ video {
 
 #finishMessageId{
     display: none;
+    color: white;
+    font-size: 30px;
+    font-style: bold;
 }
 
 .counterText{
