@@ -971,7 +971,8 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     cursor: pointer;
     opacity: 0.4;
 }
-/* Spesifikk endring for kart med tanke på hotspot popup */
+
+/* Spesifikk endring fra felles modal-popup med tanke på hotspot popup */
 .outerTextWrapper {
     position: absolute;
     z-index: 3;
@@ -981,6 +982,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     position: absolute;
 }
 
+/* Nøyaktig og responsiv plassering av klikkbare ikoner i forhold til kart. */
 #inngangIcon {
   top: 68%;
   right: 44%;
@@ -1021,12 +1023,12 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     right: 3%;
 }
 
+/*Responsive kart, forstørres ved liten skjermstørrelse for bedre utnyttelse av skjermen for kart */
 @media screen and (max-width: 650px) {
 
     .festivalKartWrapper {
         width: 100%;
     }
-
 }
 
 /* SPONSOR */
@@ -1069,47 +1071,17 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     display: flex;
     justify-content: center;
     width: 25%;
-
     margin: 30px 30px 30px 30px;
 }
 
 .omFestivalenSubSponsor a {
-    width: 80%;
-    min-width: 200px;
-    
     display: flex;
     justify-content: center;
 }
 
-
-/* Justering av størrelse for hver enkelt, pga ulik bildestørrelse */
-
-/*
-#sponsorTrondheimKommune {
-    width: 20%;
+.omFestivalenSubSponsor img {
+   width: 70%;
 }
-
-#sponsorCocaCola {
-    width: 40%;
-}
-
-#sponsorTrondelagFylkeskommune {
-    width: 15%;
-}
-
-#sponsorNorrona {
-    width: 45%;
-}
-
-#sponsorTine {
-    width: 30%;
-}
-
-#sponsorCoop {
-    width: 30%;
-}
-
-*/
 
 /*------------------------- KONTAKTINFO ------------------------*/
 
