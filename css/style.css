@@ -457,7 +457,8 @@ body{
         float: left;
     }
 }
-/* Nødvendig justering på 560px for fot at footer elementer ikke skal kollidere */
+
+/* Nødvendig justering på 560px for at footerelementer ikke skal kollidere */
 @media screen and (max-width: 560px) {
     #footer  {
         height: 350px;
