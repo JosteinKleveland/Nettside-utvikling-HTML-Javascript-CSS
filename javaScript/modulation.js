@@ -1,58 +1,65 @@
 
 /* Funksjon som lager navbar og footer */
 
+let logoCreated = false;                                                            /* Forhindrer en error ved funksjonen "logoScroll", slik at den ikke kjører før logoen er laget */
+
+
 window.onload = function() {onLoadNavbarFooter()};
+
 
 function onLoadNavbarFooter() {
 
-    /* NAVBAR: -------------------*/
+    /* NAVBAR: --------------------------*/
 
     const backupNavbar = document.getElementById("backupNavbar");
     backupNavbar.style.display = "none";
 
-    const clickCoverNavbarMobile = document.getElementById("clickCoverNavbarMobile");
-    clickCoverNavbarMobile.setAttribute("onclick", "navbarMobileOnClick(event.currentTarget.id)");
-
     const navbar = document.getElementById("navbar");
-    navbar.style.position = "fixed";
+
+
+    /* LOGO */
 
     const logoBox = document.createElement("a");
     logoBox.id = "logoBox";
     logoBox.setAttribute("href", "index.html");
 
     const logo = document.createElement("img");
-
     logo.setAttribute("id", "navbarLogo");
     logo.setAttribute("src", "img/logo_marka.png");
     logo.setAttribute("alt", "Logo");
 
-    logoBox.appendChild(logo);
 
-    navbar.appendChild(logoBox);
-
-    if(document.documentElement.scrollTop > 50) {
-        document.getElementById("navbarLogo").style.height = "90px";
-        document.getElementById("navbarLogo").style.width = "90px";
-        document.getElementById("navbarLogo").style.transition = "0.6s";
+    if(document.documentElement.scrollTop > 50) {                                   /*  Sørger for at logoen får riktig størrelse. https://www.w3schools.com/howto/howto_js_shrink_header_scroll.asp */
+        logo.style.height = "90px";
+        logo.style.width = "90px";
+        
     }
     else {
-        if (window.innerWidth > 900) {
-            document.getElementById("navbarLogo").style.width = "180px";
-            document.getElementById("navbarLogo").style.height = "180px";
-            
+        if (window.innerWidth > 900) {                                              /* https://www.w3schools.com/jsref/prop_win_innerheight.asp */
+            logo.style.width = "180px";            
+            logo.style.height = "180px";
         }
         else {
-            document.getElementById("navbarLogo").style.height = "90px";
-            document.getElementById("navbarLogo").style.width = "90px";
-            document.getElementById("navbarLogo").style.transition = "0.6s";
+            logo.style.height = "90px";
+            logo.style.width = "90px";
+            logo.style.transition = "0.6s";
         }
     };
 
+
+    logoBox.appendChild(logo);
+    navbar.appendChild(logoBox);
+
+    logoCreated = true;
+
+
+    /* NAVBAR-LINKER / MOBILNAVBAR-LINKER */
 
     const navbarElements = document.createElement("div");
     navbarElements.id = "navbarElements";
 
     const navbarList = document.createElement("ul");
+
 
     const webPageObjects = [
         {
@@ -77,14 +84,15 @@ function onLoadNavbarFooter() {
         }
     ];
 
+
     const currentPageFileName = String(location.href.split("/").slice(-1));             /* https://stackoverflow.com/questions/16611497/how-can-i-get-the-name-of-an-html-page-in-javascript */
 
     const navbarElementsMobile = document.getElementById("navbarElementsMobile");
 
+
     for(let i = 0; i < 5; i++){
         let navbarListElement = document.createElement("li");
         let navbarListElementLink = document.createElement("a");
-
         let navbarMobileElement = document.createElement("a");
 
         if (webPageObjects[i].pageDocName == currentPageFileName) {
@@ -97,7 +105,6 @@ function onLoadNavbarFooter() {
         };
 
         navbarListElementLink.setAttribute("href", webPageObjects[i].pageDocName);
-
         navbarMobileElement.setAttribute("href", webPageObjects[i].pageDocName);
 
         let navbarListElementText = document.createTextNode(webPageObjects[i].pageName); 
@@ -107,33 +114,40 @@ function onLoadNavbarFooter() {
         navbarMobileElementParagraph.setAttribute("class", "navbarElementButtonMobile");
 
         let navbarMobileElementParagraphText = document.createTextNode(webPageObjects[i].pageName);
+
         navbarMobileElementParagraph.appendChild(navbarMobileElementParagraphText);
         navbarMobileElement.appendChild(navbarMobileElementParagraph);
         navbarElementsMobile.appendChild(navbarMobileElement);
-
         navbarListElement.appendChild(navbarListElementLink);
         navbarList.appendChild(navbarListElement);
     };
 
-    navbarElements.appendChild(navbarList);
 
-    const navbarMobile = document.createElement("div");
-    navbarMobile.setAttribute("id", "navbarMobile");
-    navbarMobile.setAttribute("onclick", "navbarMobileOnClick(event.currentTarget.id)");
+    navbarElements.appendChild(navbarList);
+    navbar.appendChild(navbarElements);
+
+
+    /* MOBILNAVBAR-KNAPP */
+
+    const navbarMobile = document.getElementById("navbarMobile");
     
+
     for(let i = 0; i < 3; i++){
         let hamburgerLine = document.createElement("div");
         hamburgerLine.setAttribute("class", "hamburgerLine");
         navbarMobile.appendChild(hamburgerLine);
     };
 
-    navbarElements.appendChild(navbarMobile);
 
-    navbar.appendChild(navbarElements);
+    navbar.style.position = "fixed";
 
 
-    /* FOOTER: -------------------*/
+    /* FOOTER: ---------------------------------------*/
 
+    const footer = document.getElementById("footer");
+
+
+    /* INFO OM SOME-LINKER OG HOVEDSPONSORER */
 
     const soMeObjects = [
         {
@@ -174,7 +188,8 @@ function onLoadNavbarFooter() {
         },
     ];
 
-    const footer = document.getElementById("footer");
+
+    /* SOME-LINKER */
 
     const soMeButtons = document.createElement("div");
     soMeButtons.id = "soMeButtons";
@@ -189,12 +204,13 @@ function onLoadNavbarFooter() {
         soMeButtonImage.setAttribute("alt", soMeObjects[i].soMeAlt);
 
         soMeButton.appendChild(soMeButtonImage);
-
         soMeButtons.appendChild(soMeButton);
     };
 
     footer.appendChild(soMeButtons);
     
+
+    /* HOVEDSPONSOR-LINKER */
 
     const mainSponsorButtons = document.createElement("div");
     mainSponsorButtons.id = "mainSponsorButtons";
@@ -210,12 +226,13 @@ function onLoadNavbarFooter() {
         mainSponsorButtonImage.setAttribute("alt", mainSponsorObjects[i].sponsorAlt);
 
         mainSponsorButton.appendChild(mainSponsorButtonImage);
-
         mainSponsorButtons.appendChild(mainSponsorButton);
     };
 
     footer.appendChild(mainSponsorButtons);
 
+
+    /* KNAPP SOM TAR BRUKER TIL TOPPEN AV SIDEN */
 
     const toTopOfPageHover = document.createElement("div");
     toTopOfPageHover.id = "toTopOfPageHover";
@@ -226,7 +243,6 @@ function onLoadNavbarFooter() {
     toTopOfPageHoverImage.setAttribute("alt", "Til toppen av siden");
 
     toTopOfPageHover.appendChild(toTopOfPageHoverImage);
-
     footer.appendChild(toTopOfPageHover);
 
 
@@ -239,9 +255,10 @@ function onLoadNavbarFooter() {
     toTopOfPageDefaultImage.setAttribute("alt", "Til toppen av siden");
 
     toTopOfPageDefault.appendChild(toTopOfPageDefaultImage);
-
     footer.appendChild(toTopOfPageDefault);
 
+
+    /* COPYRIGHT */
 
     const copyrightParagraph = document.createElement("p");
     copyrightParagraph.id = "copyright";
@@ -249,42 +266,46 @@ function onLoadNavbarFooter() {
     const copyrightParagraphText = document.createTextNode("© Marka 2021");
 
     copyrightParagraph.appendChild(copyrightParagraphText);
-
     footer.appendChild(copyrightParagraph);
 };
 
 
-/*  Funksjon som sender brukeren til toppen av skjermen */
 
-function toTop() {
-    window.scroll(0,0);
+/* FUNKSJON SOM SENDER BRUKER TIL TOPPEN AV SKJERMEN */
+
+function toTop() {                                          /* https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript */
+    window.scrollTo(0,0);
 };
 
 
-/* Funksjon som krymper logoen i navbar når bruker scroller ned på siden */
+
+/* FUNKSJON SOM ENDRER STØRRELSE PÅ LOGO I NAVBAR NÅR BRUKER SCROLLER */
 
 window.onscroll = function() {logoScroll()};
 
 function logoScroll() {
-    if(document.documentElement.scrollTop > 50) {
-        document.getElementById("navbarLogo").style.height = "90px";
-        document.getElementById("navbarLogo").style.width = "90px";
-    }
-    else {
-        if (window.innerWidth > 900) {
-            document.getElementById("navbarLogo").style.width = "180px";
-            document.getElementById("navbarLogo").style.height = "180px";
+    if(logoCreated == true) {
+        if(document.documentElement.scrollTop > 50) {
+            document.getElementById("navbarLogo").style.height = "90px";
+            document.getElementById("navbarLogo").style.width = "90px";
             document.getElementById("navbarLogo").style.transition = "0.6s";
         }
         else {
-            document.getElementById("navbarLogo").style.height = "90px";
-            document.getElementById("navbarLogo").style.width = "90px";
+            if (window.innerWidth > 900) {
+                document.getElementById("navbarLogo").style.width = "180px";
+                document.getElementById("navbarLogo").style.height = "180px";
+                
+            }
+            else {
+                document.getElementById("navbarLogo").style.height = "90px";
+                document.getElementById("navbarLogo").style.width = "90px";
+            };
         };
     };
 };
 
 
-/* Funksjon som krymper logoen i navbar når vinduet er under 900px */
+/* FUNKSJON SOM ENDRER STØRRELSE PÅ LOGO I NAVBAR NÅR BREDDEN PÅ VINDUET ENDRES */
 
 function logoResize() {
     if (window.innerWidth < 900) {
@@ -305,23 +326,29 @@ function logoResize() {
 };
 
 
-/* Funksjoner som toggler hamburger-navbar */
+/* FUNKSJONER SOM VISER/SKJULER MOBILNAVBAR */
 
 const navbarElementsMobile = document.getElementById("navbarElementsMobile");
-const modalNavbarMobile = document.getElementById("clickCoverNavbarMobile");
+const clickCoverNavbarMobile = document.getElementById("clickCoverNavbarMobile");
+let navbarElementsMobileDisplayed = false
+
 
 function hideNavbarMobile(){
     navbarElementsMobile.style.display = "none";
-    modalNavbarMobile.style.display = "none";
-}
+    clickCoverNavbarMobile.style.display = "none";
+};
+
 
 function navbarMobileOnClick(idClicked) {
-    if(idClicked === "navbarMobile") {
+    if(idClicked === "navbarMobile" && navbarElementsMobileDisplayed === false) {
         navbarElementsMobile.style.display = "block";
-        modalNavbarMobile.style.display = "block";
+        clickCoverNavbarMobile.style.display = "block";
+        navbarElementsMobileDisplayed = true;
     }
-    else if(idClicked === "clickCoverNavbarMobile" || idClicked === "navbarMobile") {
+    else if(idClicked === "clickCoverNavbarMobile" || (idClicked === "navbarMobile" && navbarElementsMobileDisplayed === true)) {
         navbarElementsMobile.style.display = "none";
-        modalNavbarMobile.style.display = "none";
+        clickCoverNavbarMobile.style.display = "none";
+        navbarElementsMobileDisplayed =  false;
     };
 };
+

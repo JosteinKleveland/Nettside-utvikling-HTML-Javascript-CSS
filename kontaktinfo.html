@@ -19,8 +19,9 @@
         <li><a href="kontaktinfo.html">Kontaktinfo</a></li>
     </ul>
 
-    <div id="clickCoverNavbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
+    <div id="clickCoverNavbarMobile" onclick="navbarMobileOnClick(this.id)"></div>              <!-- https://stackoverflow.com/questions/20868907/javascript-get-element-id-from-event -->
     <div id="navbar"></div>
+    <div id="navbarMobile" onclick="navbarMobileOnClick(event.currentTarget.id)"></div>
     <div id="navbarElementsMobile"></div>
 
     <h1 id="pageHeading"> Kontaktinformasjon </h1>
