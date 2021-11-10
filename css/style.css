@@ -48,7 +48,7 @@ body{
     }
 }
 
-/* Forslag til felles knapper */
+/* Felles knapper */
 
 .pageButtons {
     font-size: 20px;
@@ -125,7 +125,6 @@ body{
 #navbar{
     width: 100%;
     height: 90px;
-    position: fixed;
     top: 0px;
     left: 0px;
     z-index: 100;
@@ -158,6 +157,7 @@ body{
     color: black;
     text-decoration: none;
     font-size: 13pt;
+    margin-left: 5px;
 }
 
 #currentPage {
@@ -166,6 +166,7 @@ body{
     text-decoration: none;
     font-size: 13pt;
     padding: 18px;
+    margin-left: 5px;
 }
 
 #navbarElements a:hover{
@@ -181,6 +182,10 @@ body{
     margin-right: 20px;
     display: none;
     cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 102;
 }
 
 .hamburgerLine {
@@ -496,6 +501,7 @@ video {
     padding-top: 85px;
     background-color: #6D7A49;
     border-bottom: #6D7A49 5px solid;
+    height: 90%;
 
     /*tekst*/
     color: white;
@@ -516,13 +522,13 @@ video {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 50%;
+    width: 70%;
     
 }
 
 #logoWelcomeId{
     width: 50%;
-    margin-bottom: -10%;
+    margin-bottom: 10%;
 }
 
 
@@ -546,6 +552,7 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 5%;
 }
 
 
@@ -567,21 +574,23 @@ video {
 
 /*  --------------------------  PROGRAM ------------------------- */
 
+/* Knapper øverst på programsiden*/
 #flexContainerButtons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
 }
-
+/* Overskrift til hvilken dag artistene spiller */
 .consertDay {
     font-size: 40px;
     text-align: center;
 }
 
-/* CSS for popup/modal (expansions - JavaScript) */
-/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som inspirasjon and eksempel */
+/* CSS for popup/modal. Koblet til expansions - JavaScript */
+/* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som kilde */
 
+/* Div som popup-en lages inni */
 .modal {
     position: fixed;
     top: 0;
@@ -595,6 +604,7 @@ video {
     justify-content: center;
     align-items: flex-start;
 }
+/* Definerer en div med alt innholdet som skal være inne i popup-en */
 .modal-content {
     position: relative;
     background-color: #fff;
@@ -606,16 +616,17 @@ video {
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     overflow: auto;
 }
+/* Overskriften til popup-en */
 .modal-content h1 {
     text-align: center;
     margin-bottom: 1.5rem;
 }
-
+/* Tekst-elementene til popup-en */
 .modal-content p {
     margin: 1rem 0;
     line-height: 1.5rem;
 }
-
+/* x-en til å lukke popup-vinduet */
 .modal-close { 
     position: absolute;
     top: 0;
@@ -627,12 +638,12 @@ video {
     cursor: pointer;
     user-select: none;
 }
-
+/* Endrer farge når man hovrer lukke-knappen */
 .modal-close:hover, .modal-close:focus {
     color: rgba(0,0,0,0.5);
 }
 
-
+/* Tilpasninger for mindre skjerm */
 @media screen and (max-width: 900px) {
     .programButtons {
         font-size: 20px;
@@ -643,9 +654,9 @@ video {
         font-size: 15px;
     }
 }
-
+/* Setter elementene til å være i kolonne nedover, fjerner knappene øverst og endrer skriftstørrelser på underoverskriftene */
 @media screen and (max-width: 600px) {
-    #flexContainerButtons { /* .infoBilde fjerner også bildene ved nedskalering */
+    #flexContainerButtons { /* ".infoBilde" kan også fjerne bildene ved nedskalering */
         display: none;
     }
     .flexContainerMain {

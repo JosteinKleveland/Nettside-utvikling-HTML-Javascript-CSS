@@ -1,5 +1,5 @@
 
-// Ønsker å fylle lista med antall billetter fra 1 - 10
+// Ønsker å fylle lista (antall billetter) med antall billetter fra 1 - 10
 var select = document.getElementById("quantity");
 
 for(let i=1; i < 11; i++){
@@ -19,7 +19,7 @@ for(let i=1; i < 11; i++){
 }
 
 var date = new Date();
-date.setMonth(date.getMonth() + 4) 
+date.setMonth(date.getMonth() + 3);
 // Ønsker å ha et buffer på utgangsdato, slik at betaling er sikret
 
 var binding = "-";
@@ -34,7 +34,6 @@ document.getElementById("expiryDate").min = date.getFullYear() + binding + date.
 
 // deklarerer konstanter med sti til elementer i HTMLen
 const type = document.getElementById("type");
-// const quantity = document.getElementById("quantity")
 const firstName = document.getElementById("firstName");
 const surName = document.getElementById("surName");
 const tlf = document.getElementById("tlf");
@@ -65,12 +64,13 @@ form.addEventListener("submit", ticketBought);
 // Og placeholdere...
 firstName.placeholder = "Ola";
 surName.placeholder = "Nordman";
-tlf.placeholder = "123 - 45 - 678"
-eMail.placeholder = "olanordman@hotmail.no"
+tlf.placeholder = "123 - 45 - 678";
+eMail.placeholder = "olanordman@hotmail.no";
 postNr.placeholder = "1234";
-cardNr.placeholder = "1234-5678-1234-5678"
+cardNr.placeholder = "1234-5678-1234-5678";
 cvc.placeholder = "123";
 
+// Og setter betingelsene til required
 conditions.required = true;
 
 // Funksjon som validerer at det kun er bokstaver
@@ -88,11 +88,12 @@ function formattAlpha(value)   {
     // Trenger ikke validere hvis mengden er tom
     if(!value) return value;
 
-    // Fjerner så alt som ikke er bokstaver
-    var alpha = value.replace(/\W/g, "");
+    // Fjerner så alt som ikke er tillatt
+    // Ønsker å tillate alle bokstaver i tillegg til mellomrom og bindestrek ved dobbeltnavn
+    var alpha = value.replace(/[.,!=*+/&%#"?^${}()|[\]\\]/g, "");
     alpha = alpha.replace(/[0-9]/g, "");
 
-    // Returnerer verdien som kun alfabetiske-tegn
+    // Returnerer verdien som kun alfabetiske-tegn (pluss bindestrek osv.)
     return alpha;
 }
 
