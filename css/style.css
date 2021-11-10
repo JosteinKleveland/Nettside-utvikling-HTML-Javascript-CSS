@@ -122,7 +122,7 @@ body{
 }
 
 
-/* CSS for popup/modal. Koblet til expansions - JavaScript */
+/* CSS for popup/modal. Koblet til modal_popup - JavaScript */
 /* Brukte https://www.youtube.com/watch?v=YARYSKySwhg som kilde */
 
 /* Div som popup-en lages inni */
@@ -145,30 +145,30 @@ body{
     background-color: #fff;
     width: 50%;
     max-height: 75%;
-    margin: 5rem;
-    padding: 2rem;
-    border-radius: 0.25rem;
+    margin: 80px;
+    padding: 32px;
+    border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     overflow: auto;
 }
 /* Overskriften til popup-en */
 .modal-content h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 }
 /* Tekst-elementene til popup-en */
 .modal-content p {
-    margin: 1rem 0;
-    line-height: 1.5rem;
+    margin: 16px 0;
+    line-height: 24px;
 }
 /* x-en til å lukke popup-vinduet */
 .modal-close { 
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 1.75rem;
+    font-size: 28px;
     font-weight: bold;
-    padding: 0 0.75rem;
+    padding: 0 7px;
     color: rgba(0,0,0,0.2);
     cursor: pointer;
     user-select: none;
@@ -340,34 +340,34 @@ body{
     padding-left: 25px;
     padding-top: 55px;
     float: left;
-}
+    }
 
-#soMeButtons img{
-    height: 60px;
-    padding-right: 20px;
-    margin: auto;
-}
+    #soMeButtons img{
+        height: 60px;
+        padding-right: 20px;
+        margin: auto;
+    }
 
-#mainSponsorButtons{
-    width: 300px;
-    padding-top: 35px;
-    float: right;
-    padding-right: 25px;
-}
+    #mainSponsorButtons{
+        width: 300px;
+        padding-top: 35px;
+        float: right;
+        padding-right: 25px;
+    }
 
-#mainSponsorButtons img{
-    width: 80px;
-    padding-left: 20px;
-    float: right;
-}
+    #mainSponsorButtons img{
+        width: 80px;
+        padding-left: 20px;
+        float: right;
+    }
 
-#footerSponsorXXL, #footerSponsorRema1000 {
-    padding-top: 20px;
-}
+    #footerSponsorXXL, #footerSponsorRema1000 {
+        padding-top: 20px;
+    }
 
-#footerSponsorDNB {
-    padding-top: 5px;
-}
+    #footerSponsorDNB {
+        padding-top: 5px;
+    }
 
 #toTopOfPageDefault {
     position: absolute;
