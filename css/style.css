@@ -168,7 +168,7 @@ body{
     right: 0;
     font-size: 28px;
     font-weight: bold;
-    padding: 0 12;
+    padding: 0 7px;
     color: rgba(0,0,0,0.2);
     cursor: pointer;
     user-select: none;
