@@ -239,7 +239,7 @@ function onLoadNavbarFooter() {
     toTopOfPageHover.setAttribute("onclick", "toTop()");
 
     const toTopOfPageHoverImage = document.createElement("img");
-    toTopOfPageHoverImage.setAttribute("src", "img/tilToppsHover_placeholder.png");
+    toTopOfPageHoverImage.setAttribute("src", "img/tilToppsHover.png");
     toTopOfPageHoverImage.setAttribute("alt", "Til toppen av siden");
 
     toTopOfPageHover.appendChild(toTopOfPageHoverImage);
@@ -251,7 +251,7 @@ function onLoadNavbarFooter() {
     toTopOfPageDefault.setAttribute("onclick", "toTop()");
 
     const toTopOfPageDefaultImage = document.createElement("img");
-    toTopOfPageDefaultImage.setAttribute("src", "img/tilToppsDefault_placeholder.png");
+    toTopOfPageDefaultImage.setAttribute("src", "img/tilToppsDefault.png");
     toTopOfPageDefaultImage.setAttribute("alt", "Til toppen av siden");
 
     toTopOfPageDefault.appendChild(toTopOfPageDefaultImage);
@@ -351,4 +351,3 @@ function navbarMobileOnClick(idClicked) {
         navbarElementsMobileDisplayed =  false;
     };
 };
-

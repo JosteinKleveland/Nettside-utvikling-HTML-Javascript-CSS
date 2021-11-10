@@ -219,7 +219,6 @@ body{
     display: none;
     position: fixed;
     z-index: 102;
-    box-shadow: 0px 10px 30px -5px black;
 }
 
 #navbarElementsMobile a, #navbarElementsForside a {
@@ -1116,12 +1115,12 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     display: flex;
     justify-content: center;
 }
-
+/* Justering av størrelse for hver enkelt, pga ulik bildestørrelse */
 #sponsorTrondheimKommune {
     width: 20%;
 }
 
-#sponsorCocaCola img {
+#sponsorCocaCola {
     width: 40%;
 }
 
@@ -1130,15 +1129,15 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 }
 
 #sponsorNorrona {
-    width: 65%;
+    width: 45%;
 }
 
 #sponsorTine {
-    width: 50%;
+    width: 30%;
 }
 
 #sponsorCoop {
-    width: 50%;
+    width: 30%;
 }
 
 
