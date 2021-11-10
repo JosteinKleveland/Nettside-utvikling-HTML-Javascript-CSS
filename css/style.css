@@ -1078,7 +1078,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 .omFestivalenMainSponsor {
     display: flex;
     justify-content: center;
-    width: 25%;
+    max-width: 25%;
     margin: 30px 30px 30px 30px;
 }
 
@@ -1106,16 +1106,22 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     display: flex;
     justify-content: center;
     width: 25%;
+
     margin: 30px 30px 30px 30px;
 }
 
 .omFestivalenSubSponsor a {
-    width: 100%;
+    width: 80%;
     min-width: 200px;
+    
     display: flex;
     justify-content: center;
 }
+
+
 /* Justering av størrelse for hver enkelt, pga ulik bildestørrelse */
+
+/*
 #sponsorTrondheimKommune {
     width: 20%;
 }
@@ -1140,6 +1146,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     width: 30%;
 }
 
+*/
 
 /*------------------------- KONTAKTINFO ------------------------*/
 
