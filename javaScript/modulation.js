@@ -351,4 +351,3 @@ function navbarMobileOnClick(idClicked) {
         navbarElementsMobileDisplayed =  false;
     };
 };
-
