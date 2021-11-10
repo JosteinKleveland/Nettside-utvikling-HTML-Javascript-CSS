@@ -566,7 +566,7 @@ video {
     padding-top: 85px;
     background-color: #6D7A49;
     border-bottom: #6D7A49 5px solid;
-    height: 90%;
+    width: 100%;
 
     /*tekst*/
     color: white;
@@ -593,7 +593,8 @@ video {
 
 #logoWelcomeId{
     width: 50%;
-    margin-bottom: 10%;
+    /*margin-bottom: 10%;*/
+
 }
 
 
