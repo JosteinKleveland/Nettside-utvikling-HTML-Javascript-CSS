@@ -152,17 +152,17 @@ function onLoadNavbarFooter() {
     const soMeObjects = [
         {
             soMeLink: "https://www.facebook.com",
-            soMeSource: "img/facebook.svg",
+            soMeSource: "img/facebook.png",
             soMeAlt: "Facebook",
         },
         {
             soMeLink: "https://www.instagram.com",
-            soMeSource: "img/instagram.svg",
+            soMeSource: "img/instagram.png",
             soMeAlt: "Instagram",
         },
         {
             soMeLink: "https://www.tiktok.com",
-            soMeSource: "img/tiktok.svg",
+            soMeSource: "img/tiktok.png",
             soMeAlt: "TikTok",
         }
     ];
@@ -171,19 +171,19 @@ function onLoadNavbarFooter() {
         {
             sponsorLink: "https://www.xxl.no",
             sponsorId: "footerSponsorXXL",
-            sponsorSource: "img/sponsorXXL.svg",
+            sponsorSource: "img/sponsorXXLFooter.png",
             sponsorAlt: "XXL logo",
         },
         {
             sponsorLink: "https://www.rema.no",
             sponsorId: "footerSponsorRema1000",
-            sponsorSource: "img/sponsorRema1000.svg",
+            sponsorSource: "img/sponsorRema1000Footer.png",
             sponsorAlt: "Rema 1000 logo",
         },
         {
             sponsorLink: "https://www.dnb.no",
             sponsorId: "footerSponsorDNB",
-            sponsorSource: "img/sponsorDNB.svg",
+            sponsorSource: "img/sponsorDNBFooter.png",
             sponsorAlt: "DNB logo",
         },
     ];
