@@ -956,7 +956,13 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 }
 
 /*-------------------------- OM FESTIVALEN --------------------------*/
-
+/* Nødvendige endringer for å opprettholde lesbarhet på mindre skjermer. Her er det likevel ønskelig å utnytte hele bredden på mobilen, grunnet mye tekst */
+@media screen and (max-width: 650px) {
+    .omFestivalenResponsive{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
 /*-------------------------------- FESTIVALKART -----------------------*/
 /* Endringer fra felles flexcontainer som er nødvendige for å få festivalkartet til å fungere riktig */
 .flexContainerFestivalKart {
