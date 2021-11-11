@@ -942,7 +942,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 /*-------------------------- OM FESTIVALEN --------------------------*/
 
 /*-------------------------------- FESTIVALKART -----------------------*/
-
+/* Endringer fra felles flexcontainer som er nødvendige for å få festivalkartet til å fungere riktig */
 .flexContainerFestivalKart {
     display: flex;
     flex-direction: row;
@@ -959,7 +959,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     width: 100%;
     height: 100%;
 }
-
+/* Responsiv tilpasning av kartikonene, i tillegg for å legge de over kartet */
 .mapIcon {
     width: 10%;
     height: auto;
@@ -983,7 +983,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     position: absolute;
 }
 
-/* Nøyaktig og responsiv plassering av klikkbare ikoner i forhold til kart. */
+/* Undeliggende er nøyaktig og responsiv plassering av klikkbare ikoner i forhold til kart. Ikonene ligger tilpasset til kartet som wrapper */
 #inngangIcon {
   top: 68%;
   right: 44%;
@@ -1040,7 +1040,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     align-items: center;
     flex-wrap:nowrap;
 }
-
+/* Endringer fra felles flexcontainer som er nødvendgi for å få sponsorelementene til å fungere riktig */
 .omFestivalenMainSponsor {
     display: flex;
     justify-content: center;
@@ -1059,7 +1059,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     display: flex;
     justify-content: center;
 }
-
+/* Også en endring fra felles flexcontainer, for å få subsponsorene til å legge seg riktig. Under kommer også spesifikk endring for å gjøre undersponsorene mindre framtydene. */
 .flexContainerSubSponsor {
     display: flex;
     flex-direction: row;
@@ -1067,7 +1067,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     align-items: center;
     flex-wrap: wrap;
 }
-
+/* Ved mobilstørrelse legger undersponsorene seg i 2 kolonner, i stedet for standard i 3 på større skjermer */
 .omFestivalenSubSponsor {
     display: flex;
     justify-content: center;
