@@ -459,7 +459,6 @@ body{
         width: 60px;
         height: 60px;
         padding-left: 10px;
-        padding-right: 10;
     }
 
     #mainSponsorButtons img{
@@ -599,10 +598,6 @@ video {
 
 }
 
-
-
-
-
 .time{
     display: flex;
     flex-direction: column;
@@ -611,12 +606,11 @@ video {
     margin: 5%;
 }
 
-
 #finishMessageId{
     display: none;
     color: white;
     font-size: 30px;
-    font-style: bold;
+    font-weight: bold;
 }
 
 .counterText{
@@ -672,6 +666,7 @@ video {
         width: 100%;
     }
 }
+
 
 /*  --------------------------  BILLETTKJØP ------------------------- */
 
