@@ -9,7 +9,7 @@ window.onload = function() {onLoadNavbarFooter()};
 
 function onLoadNavbarFooter() {
 
-    /* NAVBAR: --------------------------*/
+    /* LAGER NAVBAR: --------------------------*/
 
     const backupNavbar = document.getElementById("backupNavbar");
     backupNavbar.style.display = "none";
@@ -17,7 +17,7 @@ function onLoadNavbarFooter() {
     const navbar = document.getElementById("navbar");
 
 
-    /* LOGO */
+    /* LAGER LOGO */
 
     const logoBox = document.createElement("a");
     logoBox.id = "logoBox";
@@ -53,7 +53,7 @@ function onLoadNavbarFooter() {
     logoCreated = true;
 
 
-    /* NAVBAR-LINKER / MOBILNAVBAR-LINKER */
+    /* LAGER NAVBAR-LINKER / MOBILNAVBAR-LINKER */
 
     const navbarElements = document.createElement("div");
     navbarElements.id = "navbarElements";
@@ -127,7 +127,7 @@ function onLoadNavbarFooter() {
     navbar.appendChild(navbarElements);
 
 
-    /* MOBILNAVBAR-KNAPP */
+    /* LAGER MOBILNAVBAR-KNAPP */
 
     const navbarMobile = document.getElementById("navbarMobile");
     
@@ -142,7 +142,7 @@ function onLoadNavbarFooter() {
     navbar.style.position = "fixed";
 
 
-    /* FOOTER: ---------------------------------------*/
+    /* LAGER FOOTER: ---------------------------------------*/
 
     const footer = document.getElementById("footer");
 
@@ -186,7 +186,7 @@ function onLoadNavbarFooter() {
     ];
 
 
-    /* SOME-LINKER */
+    /* LAGER SOME-LINKER */
 
     const soMeButtons = document.createElement("div");
     soMeButtons.id = "soMeButtons";
@@ -207,7 +207,7 @@ function onLoadNavbarFooter() {
     footer.appendChild(soMeButtons);
     
 
-    /* HOVEDSPONSOR-LINKER */
+    /* LAGER HOVEDSPONSOR-LINKER */
 
     const mainSponsorButtons = document.createElement("div");
     mainSponsorButtons.id = "mainSponsorButtons";
@@ -228,7 +228,7 @@ function onLoadNavbarFooter() {
     footer.appendChild(mainSponsorButtons);
 
 
-    /* KNAPP SOM TAR BRUKER TIL TOPPEN AV SIDEN */
+    /* LAGER KNAPP SOM TAR BRUKER TIL TOPPEN AV SIDEN */
 
     const toTopOfPageHover = document.createElement("div");
     toTopOfPageHover.id = "toTopOfPageHover";
@@ -254,7 +254,7 @@ function onLoadNavbarFooter() {
     footer.appendChild(toTopOfPageDefault);
 
 
-    /* COPYRIGHT */
+    /* LAGER COPYRIGHT */
 
     const copyrightParagraph = document.createElement("p");
     copyrightParagraph.id = "copyright";
