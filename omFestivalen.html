@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+    <meta name="author" content="Endre M, Simen E, Jarl v S, Jon P H, Jostein K">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +27,9 @@
     <!-- Om festivalen -->
 
     <h1 id="pageHeading">Om Festivalen</h1>
-
+        <!-- Overordnet info om festivalen, slik som visjon, ildsjeler og tanken bak. -->
     <div class="flexContainerMain">
-        
+        <!-- Sortert i samme system som program og index, for å opprettholde stilen til nettstedet -->
             <div class = "infoBilde"><img  src="img/visjon.jpg" alt="bilde_placeholder"></div>
             <div class = "infoBilde2"><img  src="img/visjon.jpg" alt="bilde_placeholder"></div>
         <div class = "infoText">
@@ -60,10 +61,13 @@
     <div class="flexContainerFestivalKart">
         
         <div class="festivalKartWrapper">
-                    
-            <img class="festivalKart" src="img/kart.png" alt="Festivalkart">
+                    <!-- Kartet i grunnen av festivalkartet -->
+                    <!-- Her var det originalt brukt hotspots.js, men etter en del arbeid klarte vi å forenkle javascriptet for program og festivalkartet til 1 felles javascript som fungerte for begge. Dette også for å skape tydelig design og samme stil på alle nettsidene, men også for å redusere mengden kode. -->
 
+            <img class="festivalKart" src="img/kart.png" alt="Festivalkart">
+                    <!-- Flere div som utgjør innholdet for de ulike viktige lokasjonene på kartet -->
             <div id="inngangText" class="modal outerTextWrapper">
+                <!-- Selve innholdet for popupen-->
                 <div class="modal-content">
                     <span class="modal-close">&times;</span>
                     <h1>Inngang</h1>
@@ -72,7 +76,8 @@
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?</p>
                 </div>
             </div>       
-            
+                    <!-- Selve kartmarkøren på kartet. Tydelig og stor, for å poppe på kartet -->
+                    <!-- Her blir det brukt en egenlaget "data modal target" attributt for å velge target for modal_popup.js.-->
                 <img id="inngangIcon" class="mapIcon" data-modal-target="inngangText" src="img/mapMarker.png" alt="inngang">
 
             <div id="barText" class="modal outerTextWrapper">    
@@ -86,8 +91,8 @@
             </div>
 
                 <img id="barIcon" class="mapIcon" data-modal-target="barText" src="img/mapMarker.png" alt="bar">
-            
-            <div id="hovedsceneText" class="modal outerTextWrapper">    
+
+                <div id="hovedsceneText" class="modal outerTextWrapper">    
                 <div class="modal-content">
                     <span class="modal-close">&times;</span>
                     <h1>Hovedscenen</h1>
@@ -97,7 +102,7 @@
                 </div>
             </div>
 
-                <img id="hovedsceneIcon" class="mapIcon" data-modal-target="hovedsceneText" src="img/mapMarker.png" alt="inngang">
+                <img id="hovedsceneIcon" class="mapIcon" data-modal-target="hovedsceneText" src="img/mapMarker.png" alt="Hovedscenen">
 
             <div id="sceneAmfietText" class="modal outerTextWrapper">    
                 <div class="modal-content">
@@ -109,7 +114,7 @@
                 </div>
             </div>
 
-                <img id="sceneAmfietIcon" class="mapIcon" data-modal-target="sceneAmfietText" src="img/mapMarker.png" alt="inngang">
+                <img id="sceneAmfietIcon" class="mapIcon" data-modal-target="sceneAmfietText" src="img/mapMarker.png" alt="Scene: Amfiet">
 
             <div id="parkeringText" class="modal outerTextWrapper">    
                 <div class="modal-content">
@@ -121,7 +126,7 @@
                 </div>
             </div>
 
-                <img id="parkeringIcon" class="mapIcon" data-modal-target="parkeringText" src="img/mapMarker.png" alt="inngang">
+                <img id="parkeringIcon" class="mapIcon" data-modal-target="parkeringText" src="img/mapMarker.png" alt="Parkeringsplassen">
 
             <div id="baalText" class="modal outerTextWrapper">    
                 <div class="modal-content">
@@ -133,7 +138,7 @@
                 </div>
             </div>
 
-                <img id="baalIcon" class="mapIcon" data-modal-target="baalText" src="img/mapMarker.png" alt="inngang">
+                <img id="baalIcon" class="mapIcon" data-modal-target="baalText" src="img/mapMarker.png" alt="Bålplassen">
 
             <div id="resturantText" class="modal outerTextWrapper">    
                 <div class="modal-content">
@@ -145,7 +150,7 @@
                 </div>
             </div>
 
-                <img id="resturantIcon" class="mapIcon" data-modal-target="resturantText" src="img/mapMarker.png" alt="inngang">
+                <img id="resturantIcon" class="mapIcon" data-modal-target="resturantText" src="img/mapMarker.png" alt="Resturanten">
                 
             <div id="teltText" class="modal outerTextWrapper">    
                 <div class="modal-content">
@@ -157,7 +162,7 @@
                 </div>
             </div>
 
-            <img id="teltIcon" class="mapIcon" data-modal-target="teltText" src="img/mapMarker.png" alt="inngang">
+            <img id="teltIcon" class="mapIcon" data-modal-target="teltText" src="img/mapMarker.png" alt="Teltplassen">
 
         </div>
     </div>
@@ -166,7 +171,7 @@
 <!-- Sponsorer -->
 
 <h2 class="pageSubHeadings">Sponsorer</h2>
-
+<!-- Sortert etter hovedsponsorer som er mest framtydende, lik en realistisk situasjon med de som betaler mest for sponsorplass-->
 <div class="flexContainerSponsor">
 
     <div class="omFestivalenMainSponsor"><a href="https://www.dnb.no" target="_blank"><img class="sponsorBilde" src="img/sponsorDNB.png" alt="DNB"></a></div>
@@ -176,7 +181,7 @@
 </div>
 
 <div class="flexContainerSubSponsor">
-
+<!-- Undersponsorer etter hovedsponsorer, som er mindre fremtydende -->
     <div class="omFestivalenSubSponsor"><a href="https://www.trondheim.kommune.no" target="_blank"><img id="sponsorTrondheimKommune" class="sponsorBilde" src="img/sponsorTrondheimKommune.png" alt="Trondheim Kommune"></a></div>
     <div class="omFestivalenSubSponsor"><a href="https://www.trondelagfylke.no" target="_blank"><img id="sponsorTrondelagFylkeskommune" class="sponsorBilde" src="img/sponsorTrondelagFylkeskommune.png" alt="Trøndelag Fylkeskommune"></a></div>
     <div class="omFestivalenSubSponsor"><a href="https://www.cocacola.no" target="_blank"><img  id="sponsorCocaCola"  class="sponsorBilde" src="img/sponsorCocacola.png" alt="Coca Cola"></a></div>
