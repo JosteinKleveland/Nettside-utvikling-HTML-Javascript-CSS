@@ -520,6 +520,14 @@ body{
 
 /* ------------------ FORSIDE -------------------------- */
 
+
+/*Spesifikt for slagordet på forsiden*/
+
+#wecomeScreenId + #pageHeading {
+    margin-top: 60px;
+}
+
+
 /*Video på forside*/
 video {
     height: auto;
