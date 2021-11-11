@@ -170,19 +170,16 @@ function onLoadNavbarFooter() {
     const mainSponsorObjects = [
         {
             sponsorLink: "https://www.xxl.no",
-            sponsorId: "footerSponsorXXL",
             sponsorSource: "img/sponsorXXLFooter.png",
             sponsorAlt: "XXL logo",
         },
         {
             sponsorLink: "https://www.rema.no",
-            sponsorId: "footerSponsorRema1000",
             sponsorSource: "img/sponsorRema1000Footer.png",
             sponsorAlt: "Rema 1000 logo",
         },
         {
             sponsorLink: "https://www.dnb.no",
-            sponsorId: "footerSponsorDNB",
             sponsorSource: "img/sponsorDNBFooter.png",
             sponsorAlt: "DNB logo",
         },
@@ -221,7 +218,6 @@ function onLoadNavbarFooter() {
         mainSponsorButton.setAttribute("target", "_blank");
 
         let mainSponsorButtonImage = document.createElement("img");
-        mainSponsorButtonImage.id = mainSponsorObjects[i].sponsorId;
         mainSponsorButtonImage.setAttribute("src", mainSponsorObjects[i].sponsorSource);
         mainSponsorButtonImage.setAttribute("alt", mainSponsorObjects[i].sponsorAlt);
 
