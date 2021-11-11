@@ -64,7 +64,7 @@ body{
     cursor: pointer;
 }
 
-/* Felles flexbox */
+/* Felles flexbox, brukes på forside, program og om festivalen */
 
 .flexContainerMain {
     display: flex;
@@ -767,6 +767,8 @@ video {
     margin-left: 10px;
 }
 
+
+/*Inputfeltene som ligger ved siden av hverandre, og ikke trenger full bredde f.eks navn og etternavn*/
 .input1 {
     width: 150px;
     padding: 7px;
@@ -774,6 +776,7 @@ video {
     resize: vertical;
 }
 
+/*Feltene som trenger eksta lengde f.eks epostadresse og kortnr.*/
 .input2 {
     width: 250px;
     padding: 7px;
@@ -957,7 +960,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 
 /*-------------------------- OM FESTIVALEN --------------------------*/
 
-/*-------------------------------- FESTIVALKART -----------------------*/
+/*-------------- FESTIVALKART ------------------*/
 
 .flexContainerFestivalKart {
     display: flex;

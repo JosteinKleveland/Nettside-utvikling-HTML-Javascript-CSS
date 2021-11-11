@@ -1,5 +1,4 @@
-    
-    //Inspirert av https://www.w3schools.com/howto/howto_js_countdown.asp
+//Inspirert av https://www.w3schools.com/howto/howto_js_countdown.asp
     
     // Setter dagen og tidspunkt det telles ned mot
 const countDownDate = new Date("Jul 01, 2022 20:00:00").getTime();
@@ -46,7 +45,6 @@ else{
     return numberToCheck
     }
 }
-
 
 //Funksjon for å skjule countdown
 function hideCountdown(){
