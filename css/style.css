@@ -90,6 +90,7 @@ body{
     flex-direction: column;
     overflow: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 .infoText p {
