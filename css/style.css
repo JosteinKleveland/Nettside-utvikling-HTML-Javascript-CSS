@@ -327,7 +327,6 @@ body{
     }
 }
 
-
 /*-------------------------- FOOTER ------------------*/
 
 #footer{
@@ -485,9 +484,7 @@ body{
 }
 
 
-
 /* ------------------ FORSIDE -------------------------- */
-
 
 /*Spesifikt for slagordet på forsiden*/
 
@@ -537,7 +534,6 @@ video {
     }
   }
 
-
 #wecomeScreenId{
     /*Bakgrunn*/
     padding-top: 85px;
@@ -573,7 +569,6 @@ video {
     margin-top: -20%;
 }
 
-
 #countdownId{
     display: flex;
     justify-content: center;
@@ -589,7 +584,6 @@ video {
     display: block;
     border: none;
 }
-
 
 #billettkjopHomePageId:hover{
     background-color: #6D7A49;
@@ -677,7 +671,7 @@ video {
     top: 210px;
 }
 
-#ticketImg  {
+#ticketImg {
     position: relative;
     width: 100%;
     top: 0;
@@ -931,6 +925,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     }
 }
 
+
 /*-------------------------- OM FESTIVALEN --------------------------*/
 /* Nødvendige endringer for å opprettholde lesbarhet på mindre skjermer. Her er det likevel ønskelig å utnytte hele bredden på mobilen, grunnet mye tekst */
 @media screen and (max-width: 650px) {
@@ -1097,6 +1092,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
    width: 70%;
 }
 
+
 /*------------------------- KONTAKTINFO ------------------------*/
 
 #flexContainerFAQ {
@@ -1201,6 +1197,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     width: 80%;
     margin: auto;
 }
+
 /* Spesifikk endring akkurat her for å få det til å se bra ut på mindre skjermer*/
 @media screen and (max-width: 799px)  {
     #flexContainerFAQ {
@@ -1215,8 +1212,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 
     .FAQbox p {
         text-align: center;
-    }
-        
+    }    
 }
 
 @media screen and (max-width: 560px) {
@@ -1266,10 +1262,10 @@ individuell "left: X; og krever derfor hver sine css-elementer */
     
     .kontaktpersonInfo h3, p {
         font-size: 15px;
-    }
-    
+    } 
 }
 
+/* Statisk bredde når under 350px */
 @media screen and (max-width: 350px) {
     #flexContainerFAQ, #flexContainerKontaktpersoner {
         width: 345px;
