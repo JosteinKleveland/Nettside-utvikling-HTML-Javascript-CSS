@@ -456,6 +456,7 @@ for(let i = 0; i < 8; i++){
     let icon = document.createElement("img");
     icon.id = mapMarkerObjects[i].mapMarkerIconId;
     icon.className = "mapIcon";
+    /* Her blir det brukt en egenlaget "data modal target" attributt for å velge target for modal_popup.js. */
     icon.setAttribute("data-modal-target", mapMarkerObjects[i].dataModalTarget);
     icon.setAttribute("src", "img/mapMarker.png");
     icon.setAttribute("alt", mapMarkerObjects[i].iconAlt);
