@@ -932,7 +932,6 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 }
 
 /*-------------------------- OM FESTIVALEN --------------------------*/
-<<<<<<< HEAD
 /* Nødvendige endringer for å opprettholde lesbarhet på mindre skjermer. Her er det likevel ønskelig å utnytte hele bredden på mobilen, grunnet mye tekst */
 @media screen and (max-width: 650px) {
     .omFestivalenResponsive{
@@ -940,16 +939,8 @@ individuell "left: X; og krever derfor hver sine css-elementer */
         margin-bottom: 50px;
     }
 }
-=======
-
-<<<<<<< HEAD
-/*-------------- FESTIVALKART ------------------*/
-
-=======
->>>>>>> 2ad9db45177d656a112576f9c0827d9e4c1c9661
 /*-------------------------------- FESTIVALKART -----------------------*/
 /* Endringer fra felles flexcontainer som er nødvendige for å få festivalkartet til å fungere riktig */
->>>>>>> aa8c8c43d439752807e16c3bc2ee20a17a092b5e
 .flexContainerFestivalKart {
     display: flex;
     flex-direction: row;
