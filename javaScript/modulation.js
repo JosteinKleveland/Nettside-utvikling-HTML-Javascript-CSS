@@ -349,119 +349,127 @@ function navbarMobileOnClick(idClicked) {
 };
 
 /* ------------------FESTIVALKART----------------------- */
+
 /*Dette skrev Jon */
-const mapContainer = document.getElementById("flexContainerFestivalKart");
 
-/* Etablerer elementer som er spesifikke for hvert kartelement */
-const mapMarkerObjects = [
-    {
-        mapMarkerId: "inngangText",
-        mapMarkerHeadline: "Inngang",
-        mapMarkerIconId: "inngangIcon",
-        dataModalTarget: "inngangText",
-        iconAlt: "Inngang"
-    },
-    {
-        mapMarkerId: "barText",
-        mapMarkerHeadline: "Baren 'Til Skogs'",
-        mapMarkerIconId: "barIcon",
-        dataModalTarget: "barText",
-        iconAlt: "Bar"
-    },
-    {
-        mapMarkerId: "hovedsceneText",
-        mapMarkerHeadline: "Hovedscenen",
-        mapMarkerIconId: "hovedsceneIcon",
-        dataModalTarget: "hovedsceneText",
-        iconAlt: "Hovedscenen"
-    },
-    {
-        mapMarkerId: "sceneAmfietText",
-        mapMarkerHeadline: "Scene Amfiet",
-        mapMarkerIconId: "sceneAmfietIcon",
-        dataModalTarget: "sceneAmfietText",
-        iconAlt: "Scene: Amfiet"
-    },
-    {
-        mapMarkerId: "parkeringText",
-        mapMarkerHeadline: "Parkering",
-        mapMarkerIconId: "parkeringIcon",
-        dataModalTarget: "parkeringText",
-        iconAlt: "Parkeringsplassen"
-    },
-    {
-        mapMarkerId: "baalText",
-        mapMarkerHeadline: "Bålplassen",
-        mapMarkerIconId: "baalIcon",
-        dataModalTarget: "baalText",
-        iconAlt: "Bålplassen"
-    },
-    {
-        mapMarkerId: "restaurantText",
-        mapMarkerHeadline: "Restauranten 'Til Marks'",
-        mapMarkerIconId: "restaurantIcon",
-        dataModalTarget: "restaurantText",
-        iconAlt: "Restauranten"
-    },
-    {
-        mapMarkerId: "teltText",
-        mapMarkerHeadline: "Teltplassen",
-        mapMarkerIconId: "teltIcon",
-        dataModalTarget: "teltText",
-        iconAlt: "Teltplassen"
-    },
-];
+const currentPageFileName = String(location.href.split("/").slice(-1));             /* https://stackoverflow.com/questions/16611497/how-can-i-get-the-name-of-an-html-page-in-javascript */
 
-/* Lager flexcontainer */
-const mapWrapper = document.createElement("div");
-mapWrapper.className = "festivalKartWrapper";
+if(currentPageFileName === "index.html" || currentPageFileName === "omFestivalen.html" || currentPageFileName === "kontaktinfo.html")  {
 
-/* Lager kartbildet */
-const mapImage = document.createElement("img");
-mapImage.className = "festivalKart"
-mapImage.setAttribute("src", "img/kart.jpg");
-mapImage.setAttribute("alt", "Festivalkart");
-mapWrapper.appendChild(mapImage);
+    const mapContainer = document.getElementById("flexContainerFestivalKart");
 
-/* Loop for å lage repeterende kartelementer med innhenting fra objektliste */
-for(let i = 0; i < 8; i++){
-    let modal = document.createElement("div");
-    modal.className = "modal outerTextWrapper";
-    modal.id = mapMarkerObjects[i].mapMarkerId;
+    /* Etablerer elementer som er spesifikke for hvert kartelement */
+    const mapMarkerObjects = [
+        {
+            mapMarkerId: "inngangText",
+            mapMarkerHeadline: "Inngang",
+            mapMarkerIconId: "inngangIcon",
+            dataModalTarget: "inngangText",
+            iconAlt: "Inngang"
+        },
+        {
+            mapMarkerId: "barText",
+            mapMarkerHeadline: "Baren 'Til Skogs'",
+            mapMarkerIconId: "barIcon",
+            dataModalTarget: "barText",
+            iconAlt: "Bar"
+        },
+        {
+            mapMarkerId: "hovedsceneText",
+            mapMarkerHeadline: "Hovedscenen",
+            mapMarkerIconId: "hovedsceneIcon",
+            dataModalTarget: "hovedsceneText",
+            iconAlt: "Hovedscenen"
+        },
+        {
+            mapMarkerId: "sceneAmfietText",
+            mapMarkerHeadline: "Scene Amfiet",
+            mapMarkerIconId: "sceneAmfietIcon",
+            dataModalTarget: "sceneAmfietText",
+            iconAlt: "Scene: Amfiet"
+        },
+        {
+            mapMarkerId: "parkeringText",
+            mapMarkerHeadline: "Parkering",
+            mapMarkerIconId: "parkeringIcon",
+            dataModalTarget: "parkeringText",
+            iconAlt: "Parkeringsplassen"
+        },
+        {
+            mapMarkerId: "baalText",
+            mapMarkerHeadline: "Bålplassen",
+            mapMarkerIconId: "baalIcon",
+            dataModalTarget: "baalText",
+            iconAlt: "Bålplassen"
+        },
+        {
+            mapMarkerId: "restaurantText",
+            mapMarkerHeadline: "Restauranten 'Til Marks'",
+            mapMarkerIconId: "restaurantIcon",
+            dataModalTarget: "restaurantText",
+            iconAlt: "Restauranten"
+        },
+        {
+            mapMarkerId: "teltText",
+            mapMarkerHeadline: "Teltplassen",
+            mapMarkerIconId: "teltIcon",
+            dataModalTarget: "teltText",
+            iconAlt: "Teltplassen"
+        },
+    ];
+
+    /* Lager flexcontainer */
+    const mapWrapper = document.createElement("div");
+    mapWrapper.className = "festivalKartWrapper";
+
+    /* Lager kartbildet */
+    const mapImage = document.createElement("img");
+    mapImage.className = "festivalKart"
+    mapImage.setAttribute("src", "img/kart.jpg");
+    mapImage.setAttribute("alt", "Festivalkart");
+    mapWrapper.appendChild(mapImage);
+
+    /* Loop for å lage repeterende kartelementer med innhenting fra objektliste */
+    for(let i = 0; i < 8; i++){
+        let modal = document.createElement("div");
+        modal.className = "modal outerTextWrapper";
+        modal.id = mapMarkerObjects[i].mapMarkerId;
 
 
-    let modalContent = document.createElement("div");
-    modalContent.className = "modal-content modalKartResponsive";
+        let modalContent = document.createElement("div");
+        modalContent.className = "modal-content modalKartResponsive";
 
-    let modalClose = document.createElement("span");
-    modalClose.className = "modal-close";
-    let textNodeClose = document.createTextNode("x");
-    modalClose.appendChild(textNodeClose);
-    modalContent.appendChild(modalClose);
+        let modalClose = document.createElement("span");
+        modalClose.className = "modal-close";
+        let textNodeClose = document.createTextNode("x");
+        modalClose.appendChild(textNodeClose);
+        modalContent.appendChild(modalClose);
 
-    let headline = document.createElement("h1");
-    let textNodeHeadLine = document.createTextNode(mapMarkerObjects[i].mapMarkerHeadline);
-    headline.appendChild(textNodeHeadLine);
-    modalContent.appendChild(headline);
+        let headline = document.createElement("h1");
+        let textNodeHeadLine = document.createTextNode(mapMarkerObjects[i].mapMarkerHeadline);
+        headline.appendChild(textNodeHeadLine);
+        modalContent.appendChild(headline);
 
-    let text = document.createElement("p");
-    let dummyText = document.createTextNode("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?");
-    text.appendChild(dummyText);
-    modalContent.appendChild(text);
+        let text = document.createElement("p");
+        let dummyText = document.createTextNode("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium ipsa explicabo veritatis non possimus corporis perferendis repellat optio consequatur expedita neque ex tenetur, perspiciatis fugiat, ipsum assumenda, quam illo itaque?");
+        text.appendChild(dummyText);
+        modalContent.appendChild(text);
 
-    modal.appendChild(modalContent);
+        modal.appendChild(modalContent);
 
-    mapWrapper.appendChild(modal);
+        mapWrapper.appendChild(modal);
 
-    let icon = document.createElement("img");
-    icon.id = mapMarkerObjects[i].mapMarkerIconId;
-    icon.className = "mapIcon";
-    /* Her blir det brukt en egenlaget "data modal target" attributt for å velge target for modal_popup.js. */
-    icon.setAttribute("data-modal-target", mapMarkerObjects[i].dataModalTarget);
-    icon.setAttribute("src", "img/mapMarker.png");
-    icon.setAttribute("alt", mapMarkerObjects[i].iconAlt);
-    mapWrapper.appendChild(icon);
+        let icon = document.createElement("img");
+        icon.id = mapMarkerObjects[i].mapMarkerIconId;
+        icon.className = "mapIcon";
+        /* Her blir det brukt en egenlaget "data modal target" attributt for å velge target for modal_popup.js. */
+        icon.setAttribute("data-modal-target", mapMarkerObjects[i].dataModalTarget);
+        icon.setAttribute("src", "img/mapMarker.png");
+        icon.setAttribute("alt", mapMarkerObjects[i].iconAlt);
+        mapWrapper.appendChild(icon);
+
+    };
+    /* Legger til alt i riktig overordnet div */
+    mapContainer.appendChild(mapWrapper);
 
 };
-/* Legger til alt i riktig overordnet div */
-mapContainer.appendChild(mapWrapper);
