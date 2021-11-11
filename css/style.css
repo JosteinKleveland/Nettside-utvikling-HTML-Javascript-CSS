@@ -525,13 +525,13 @@ video {
     width: 100%;
     z-index: -5;
   }
-  /*Reservebilde på forside*/
+/*Reservebilde på forside*/
 #reserve_img{
 	width: 100%;
 }
 
-    /*For visning på små skjermer*/
-@media (max-width: 520px){
+/*For visning på små skjermer*/
+@media (max-width: 600px){
     video {
       display: none;
     }
@@ -554,7 +554,7 @@ video {
 
   }
   /*Viser ikke reservebilde om skjermen er stor nok*/
- @media (min-width: 520px){
+ @media (min-width: 600px){
     #reserve_img {
       display: none;
     }
