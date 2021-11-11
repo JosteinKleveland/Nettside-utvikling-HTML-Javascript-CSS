@@ -1030,6 +1030,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 
     .modalKartResponsive {
         margin: 5% 10% 0 10%;
+        max-height: 60%;
     }
 }
 
