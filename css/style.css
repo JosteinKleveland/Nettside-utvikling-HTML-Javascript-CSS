@@ -982,7 +982,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 }
 /* Spesifikk endring for å etablere riktig informasjonsvisning i kartinfo fra felles flexkode */
 .modalKartResponsive {
-    margin: 20%;
+    margin: 15%;
 }
 
 .modal-content h1 {
