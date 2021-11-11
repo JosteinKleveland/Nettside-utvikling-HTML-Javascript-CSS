@@ -64,7 +64,7 @@ body{
     cursor: pointer;
 }
 
-/* Felles flexbox */
+/* Felles flexbox, brukes på forside, program og om festivalen */
 
 .flexContainerMain {
     display: flex;
@@ -342,32 +342,24 @@ body{
     float: left;
     }
 
-    #soMeButtons img{
-        height: 60px;
-        padding-right: 20px;
-        margin: auto;
-    }
+#soMeButtons img{
+    height: 60px;
+    padding-right: 20px;
+    margin: auto;
+}
 
-    #mainSponsorButtons{
-        width: 300px;
-        padding-top: 35px;
-        float: right;
-        padding-right: 25px;
-    }
+#mainSponsorButtons{
+    width: 300px;
+    padding-top: 65px;
+    float: right;
+    padding-right: 25px;
+}
 
-    #mainSponsorButtons img{
-        width: 80px;
-        padding-left: 20px;
-        float: right;
-    }
-
-    #footerSponsorXXL, #footerSponsorRema1000 {
-        padding-top: 20px;
-    }
-
-    #footerSponsorDNB {
-        padding-top: 5px;
-    }
+#mainSponsorButtons img{
+    width: 80px;
+    padding-left: 10px;
+    float: right;
+}
 
 #toTopOfPageDefault {
     position: absolute;
@@ -416,39 +408,12 @@ body{
 
     #mainSponsorButtons{
         width: 250px;
-        padding-top: 55px;
+        padding-top: 72px;
     }
 
     #mainSponsorButtons img {
-        width: 50px;
-        padding-left: 15px;
-    }
-
-    #footerSponsorDNB {
-        padding-top: 10px;
-    }
-
-    #toTopOfPageDefault, #toTopOfPageHover {
-        width: 60px;
-    }
-
-    #toTopOfPageDefault img {
-        width: 60px;
-    }
-
-    #toTopOfPageHover img {
-        width: 60px;
-    }
-
-    #copyright {
-        width: 60px;
-        font-size: 7px;
-        bottom: 15px;
-    }
-
-    #soMeButtons img{
-        height: 40px;
-        padding-right: 15px;
+        width: 55px;
+        padding-left: 8px;
     }
 
     #soMeButtons{
@@ -456,26 +421,32 @@ body{
         padding-top: 65px;
         float: left;
     }
+
+    #soMeButtons img{
+        height: 40px;
+        padding-right: 15px;
+    }
+
 }
 
 /* Nødvendig justering på 560px for at footerelementer ikke skal kollidere */
 @media screen and (max-width: 560px) {
     #footer  {
-        height: 350px;
+        height: 285px;
     }
 
     #mainSponsorButtons {
-        width: 310px;
+        width: 300px;
         height: 50px;
-        padding: 40px 20px 0px 20px;
+        padding: 40px 0px 0px 0px;
         margin: auto;
         float: none;
     }
 
     #soMeButtons {
-        width: 264px;
+        width: 255px;
         height: 50px;
-        padding: 20px 42px 0px 42px;
+        padding: 30px 0px 0px 0px;
         margin: auto;
         float: none;
     }
@@ -483,12 +454,13 @@ body{
     #soMeButtons img {
         width: 60px;
         height: 60px;
-        margin-left: 10px;
+        padding-left: 10px;
+        padding-right: 10;
     }
 
     #mainSponsorButtons img{
         width: 80px;
-        height: 80px;
+        height: auto;
         float: none;
         padding-left: 10px;
         padding-right: 10px;
@@ -496,16 +468,9 @@ body{
 
     #toTopOfPageDefault, #toTopOfPageHover {
         bottom: 25px;
-        width: 80px;
-    }
-
-    #toTopOfPageDefault img, #toTopOfPageHover img {
-        width: 80px;
     }
 
     #copyright {
-        font-size: 8pt;
-        width: 80px;
         bottom: 7px;
     }
 }
@@ -519,6 +484,14 @@ body{
 
 
 /* ------------------ FORSIDE -------------------------- */
+
+
+/*Spesifikt for slagordet på forsiden*/
+
+#wecomeScreenId + #pageHeading {
+    margin-top: 60px;
+}
+
 
 /*Video på forside*/
 video {
@@ -767,6 +740,8 @@ video {
     margin-left: 10px;
 }
 
+
+/*Inputfeltene som ligger ved siden av hverandre, og ikke trenger full bredde f.eks navn og etternavn*/
 .input1 {
     width: 150px;
     padding: 7px;
@@ -774,6 +749,7 @@ video {
     resize: vertical;
 }
 
+/*Feltene som trenger eksta lengde f.eks epostadresse og kortnr.*/
 .input2 {
     width: 250px;
     padding: 7px;
@@ -956,6 +932,7 @@ individuell "left: X; og krever derfor hver sine css-elementer */
 }
 
 /*-------------------------- OM FESTIVALEN --------------------------*/
+<<<<<<< HEAD
 /* Nødvendige endringer for å opprettholde lesbarhet på mindre skjermer. Her er det likevel ønskelig å utnytte hele bredden på mobilen, grunnet mye tekst */
 @media screen and (max-width: 650px) {
     .omFestivalenResponsive{
@@ -963,8 +940,16 @@ individuell "left: X; og krever derfor hver sine css-elementer */
         margin-bottom: 50px;
     }
 }
+=======
+
+<<<<<<< HEAD
+/*-------------- FESTIVALKART ------------------*/
+
+=======
+>>>>>>> 2ad9db45177d656a112576f9c0827d9e4c1c9661
 /*-------------------------------- FESTIVALKART -----------------------*/
 /* Endringer fra felles flexcontainer som er nødvendige for å få festivalkartet til å fungere riktig */
+>>>>>>> aa8c8c43d439752807e16c3bc2ee20a17a092b5e
 .flexContainerFestivalKart {
     display: flex;
     flex-direction: row;
