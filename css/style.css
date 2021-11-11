@@ -15,11 +15,13 @@ body{
     margin-top: 150px;
     position: relative;
     text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
 }
 
 .pageSubHeadings {
     font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
     text-align: center;
     margin-top: 90px;
@@ -87,11 +89,13 @@ body{
 .infoText {
     flex-direction: column;
     overflow: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .infoText p {
     margin: 1px; /* Gjelder for programsiden som har flere p-elementer i samme div-en */
     font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .infoBilde, .infoBilde2 {
@@ -639,6 +643,7 @@ video {
 /* Overskrift til hvilken dag artistene spiller */
 .consertDay {
     font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
 
