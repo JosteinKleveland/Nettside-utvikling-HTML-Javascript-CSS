@@ -1,4 +1,4 @@
-![Skjermbilde 2023-09-28 kl  09 24 16](https://github.com/JosteinKleveland/Nettside-utvikling-HTML-Javascript-CSS/assets/145903141/11619e6e-a196-4e0f-9a52-b5c120dd52fc)# Marka 2022
+# Marka 2022
 
 Marka er et konsept for en festivalnettside, der brukere i målgruppen unge voksne og voksne kan lese om festivalen, se programmet av artister som skal opptre, kjøpe billetter, og gjøre seg kjent med festivalområdet. Nedenfor ser dere hjemmesiden til Marka 2022. Siden Marka skal være et festivalkonsept med fokus på natur og bærekraft valgte vi et skogstema, og bakgrunnen er en video som zoomer lenger og lenger inn i skogen.
 
